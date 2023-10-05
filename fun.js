@@ -33,8 +33,12 @@ function parse(t){
 
 function fill(k){
   clear();
-  readTextFile(k);
-  setTimeout("parse(allText)", 1000);
+  filePromise(k).then(
+    function(value) {parse(value);},
+    function(error) {console.log(error);}
+  );
+  //readTextFile(k);
+  //setTimeout("parse(allText)", 1000);
 }
 
 function addElements(){
@@ -46,24 +50,26 @@ function addElements(){
   }
 }
 
-function readTextFile(file){
-  var rawFile = new XMLHttpRequest();
-  allText = "";
-  var n = 0;
+let filePromise = function(file) {
+  return new Promise(function(rs, rj) {
+    var rawFile = new XMLHttpRequest();
+    //allText = "";
+    //var n = 0;
 
-  stp = 0;
+    //stp = 0;
 
-  rawFile.open("GET", file, true);
-  rawFile.onreadystatechange = function (){
-    if(rawFile.readyState === 4){
-      if(rawFile.status === 200 || rawFile.status == 0){
-        allText = rawFile.responseText;
-        stp = 1;
+    rawFile.open("GET", file, true);
+    rawFile.onreadystatechange = function (){
+      if(rawFile.readyState === 4){
+        if(rawFile.status === 200 || rawFile.status == 0){
+          //allText = rawFile.responseText;
+          //stp = 1;
+          rs(rawFile.responseText);
+        } else {
+          rj("Not found");
       }
     }
-  }
 
-  rawFile.send(null);
-
-  return null;
-}
+    rawFile.send(null);
+  })
+};
