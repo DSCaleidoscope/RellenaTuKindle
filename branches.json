@@ -1,0 +1,34 @@
+{
+  "Branch": [
+    {
+      "title": "Email",
+      "type": "email", 
+      "value": "dscaleidoscope@gmail.com"
+    },
+    {
+      "title": "TikTok",
+      "type": "link",
+      "value": "https://www.tiktok.com/@dscaleidoscope"
+    },
+    {
+      "title": "Twitter",
+      "type": "link",
+      "value": "https://twitter.com/DSCaleidoscope"
+    },
+    {
+      "title": "Instagram",
+      "type": "link",
+      "value": "https://www.instagram.com/d.s.caleidoscope/"
+    },
+    {
+      "title": "Goodreads",
+      "type": "link",
+      "value": "https://www.goodreads.com/dscaleidoscope"
+    },
+    {
+      "title": "El Aprendiz de Herborista",
+      "type": "link",
+      "value": "https://www.amazon.es/dp/B0CFZFDW49?ref_=cm_sw_r_apann_dp_58H15P0TQK9WCZQ8XD8N"
+    }
+  ]
+}
