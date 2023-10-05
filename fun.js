@@ -76,7 +76,7 @@ function fill(){
   while(authorsDone == false && booksDone == false){
     if(authorsDone){console.log("All authors");}
     if(booksDone){console.log("All books");}
-  };
+  }
   
   console.log("All done!);
 }
