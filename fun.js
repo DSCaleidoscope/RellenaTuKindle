@@ -5,6 +5,7 @@ function parse(t){
   branches = JSON.parse(t);
 
   //add methods
+  /*
   let i = 0;
   let x = branches.Branch.length;
 
@@ -26,19 +27,22 @@ function parse(t){
       return "<div id='" + this.title + "' class='branch'><div class='title' onclick=\"window.open("+ this.getURL() + ")\">" + this.getContent() + "</div></div>";
     };
   }
+  */
 
   console.log(branches);
-  addElements();
+  //addElements();
 }
 
-function fill(k){
+function fill(){
   clear();
-  filePromise(k).then(
-    function(value) {console.log("!!: " + value); parse(value);},
+  filePromise("book_master.json").then(
+    function(value) {parse(value);},
     function(error) {console.log(error);}
   );
-  //readTextFile(k);
-  //setTimeout("parse(allText)", 1000);
+  filePromise("author_master.json").then(
+    function(value) {parse(value);},
+    function(error) {console.log(error);}
+  );
 }
 
 function addElements(){
