@@ -1,8 +1,7 @@
 //global variables
 var authorList = [];
 var bookList = [];
-var authorsDone = false;
-var booksDone = false;
+var promiseList = [];
 
 //helpers & redefines
 function g(id){return document.getElementById(id);}
@@ -77,12 +76,14 @@ function fill(){
     if(authorsDone){console.log("All authors");}
     if(booksDone){console.log("All books");}
   }*/
-  
+
+  Promise.allSettled(promiseList).then((values) => console.log(values));
   console.log("All done!");
 }
 
 let filePromise = function(file) {
-  return new Promise(function(resolve, reject) {
+  //return new Promise(function(resolve, reject) {
+    let p = new Promise(function(resolve, reject) {
     let req = new XMLHttpRequest();
     req.open('GET', file);
     req.onload = function() {
@@ -94,5 +95,8 @@ let filePromise = function(file) {
     };
     
     req.send();
-  })
+  });
+
+  promiseList.push(p);
+  return p;
 };
