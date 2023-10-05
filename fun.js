@@ -50,15 +50,17 @@ function addElements(){
   }
 }
 
-let filePromise = function(file) {
-  return new Promise(function(resolve, reject) {
+//let filePromise = function(file) {
+//  return new Promise(function(resolve, reject) {
+  let filePromise = new Promise(function(resolve, reject) {
     var rawFile = new XMLHttpRequest();
     //allText = "";
     //var n = 0;
 
     //stp = 0;
 
-    rawFile.open("GET", file, true);
+    //rawFile.open("GET", file, true);
+    rawFile.open("GET", "branches.json", true);
     rawFile.onreadystatechange = function (){
       if(rawFile.readyState === 4){
         if(rawFile.status === 200 || rawFile.status == 0){
