@@ -57,7 +57,7 @@ function fill(){
   clear();
 
   filePromise("book_master.json").then(
-    function(value) {parse(value);},
+    function(value) {parseBooks(value);},
     function(error) {console.log(error);}
   );
   
