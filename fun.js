@@ -34,7 +34,7 @@ function parse(t){
 function fill(k){
   clear();
   filePromise(k).then(
-    function(value) {parse(value);},
+    function(value) {console.log("!!: " + value); parse(value);},
     function(error) {console.log(error);}
   );
   //readTextFile(k);
