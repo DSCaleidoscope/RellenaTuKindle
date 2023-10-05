@@ -71,5 +71,6 @@ let filePromise = function(file) {
     }
 
     rawFile.send(null);
+    };
   })
 };
