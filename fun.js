@@ -73,10 +73,10 @@ function fill(){
   );
 
   //wait until done
-  while(authorsDone == false && booksDone == false){
+  /*while(authorsDone == false && booksDone == false){
     if(authorsDone){console.log("All authors");}
     if(booksDone){console.log("All books");}
-  }
+  }*/
   
   console.log("All done!");
 }
