@@ -3,7 +3,7 @@ function clear(){g("bbody").innerHTML = '';}
 function add(t){g("bbody").innerHTML += t;}
 function parse(t){let branches = JSON.parse(t);console.log(branches);}
 
-function parseAuthor(t){
+function parseAuthors(t){
   let authors = JSON.parse(t);
 
   let i = 0;
