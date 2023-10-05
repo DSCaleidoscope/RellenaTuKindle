@@ -2,7 +2,7 @@ function g(id){return document.getElementById(id);}
 function clear(){g("bbody").innerHTML = '';}
 function add(t){g("bbody").innerHTML += t;}
 function parse(t){
-  branches = JSON.parse(t);
+  let branches = JSON.parse(t);
 
   //add methods
   /*
