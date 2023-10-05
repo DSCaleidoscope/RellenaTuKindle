@@ -33,7 +33,7 @@ function parse(t){
 
 function fill(k){
   clear();
-  filePromise(k).then(
+  filePromise.then(
     function(value) {console.log("!!: " + value); parse(value);},
     function(error) {console.log(error);}
   );
