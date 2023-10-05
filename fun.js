@@ -2,6 +2,8 @@
 var authorList = [];
 var bookList = [];
 var promiseList = [];
+var authorsDone = false;
+var booksDone = false;
 
 //helpers & redefines
 function g(id){return document.getElementById(id);}
