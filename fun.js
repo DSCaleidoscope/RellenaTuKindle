@@ -1,36 +1,27 @@
 function g(id){return document.getElementById(id);}
 function clear(){g("bbody").innerHTML = '';}
 function add(t){g("bbody").innerHTML += t;}
-function parse(t){
-  let branches = JSON.parse(t);
+function parse(t){let branches = JSON.parse(t);console.log(branches);}
 
-  //add methods
-  /*
+function parseAuthor(t){
+  let authors = JSON.parse(t);
+
   let i = 0;
-  let x = branches.Branch.length;
+  let x = authors.Author.length;
 
   for(;i < x;i++){
-    branches.Branch[i].getURL = function(){
-      if(this.type === "email"){
-        return "'mailto:" + this.value + "'";
-      }
-
-      return "'" + this.value + "'";
-    };
-    
-    branches.Branch[i].getContent = function(){
-       console.log(this.type);
-       return this.title;
-    };
-
-    branches.Branch[i].getDiv = function(){
-      return "<div id='" + this.title + "' class='branch'><div class='title' onclick=\"window.open("+ this.getURL() + ")\">" + this.getContent() + "</div></div>";
-    };
+      filePromise("author_" + authors.Author.id_author + ".json").then(
+        function(value) {parse(value);parseSingleAuthor(value)},
+        function(error) {console.log(error);}
+      );
   }
-  */
 
-  console.log(branches);
-  //addElements();
+  console.log(authors);
+}
+
+function parseSingleAuthor(t){
+  let singleAuthor = JSON.parse(t);
+  console.log(singleAuthor);
 }
 
 function fill(){
@@ -39,19 +30,11 @@ function fill(){
     function(value) {parse(value);},
     function(error) {console.log(error);}
   );
+  
   filePromise("author_master.json").then(
-    function(value) {parse(value);},
+    function(value) {parse(value);parseAuthors(value)},
     function(error) {console.log(error);}
   );
-}
-
-function addElements(){
-  let i = 0;
-  let x = branches.Branch.length;
-
-  for(;i < x;i++){
-    add(branches.Branch[i].getDiv());
-  }
 }
 
 let filePromise = function(file) {
@@ -63,7 +46,7 @@ let filePromise = function(file) {
       if (req.status == 200) {
         resolve(req.response);
       } else {
-        reject("File not Found");
+        reject("File " + file + "not Found");
       }
     };
     
