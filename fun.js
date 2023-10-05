@@ -10,10 +10,11 @@ function parseAuthors(t){
   let x = authors.Author.length;
 
   for(;i < x;i++){
-      filePromise("author_" + authors.Author.id_author + ".json").then(
-        function(value) {parse(value);parseSingleAuthor(value)},
-        function(error) {console.log(error);}
-      );
+    console.log("author[" + i + "]: " + authors.Author[i]);
+    filePromise("author_" + authors.Author[i].id_author + ".json").then(
+      function(value) {parse(value);parseSingleAuthor(value)},
+      function(error) {console.log(error);}
+    );
   }
 
   console.log(authors);
