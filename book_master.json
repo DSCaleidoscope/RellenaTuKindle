@@ -1,0 +1,24 @@
+{
+  "Author": [
+    {
+      "id_author": "1",
+      "participate": "Y"
+    },
+    {
+      "id_author": "2",
+      "participate": "Y"
+    },
+    {
+      "id_author": "3",
+      "participate": "Y"
+    },
+    {
+      "id_author": "4",
+      "participate": "N"
+    },
+    {
+      "id_author": "5",
+      "participate": "Y"
+    },
+  ]
+}
