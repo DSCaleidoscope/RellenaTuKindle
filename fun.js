@@ -1,6 +1,8 @@
 //global variables
 var authorList = [];
 var bookList = [];
+var authorsDone = false;
+var booksDone = false;
 
 //helpers & redefines
 function g(id){return document.getElementById(id);}
@@ -22,6 +24,8 @@ function parseAuthors(t){
       function(error) {console.log(error);}
     );
   }
+
+  authorsDone = true;
 }
 
 function parseSingleAuthor(t){
@@ -44,6 +48,8 @@ function parseBooks(t){
       function(error) {console.log(error);}
     );
   }
+
+  booksDone = true;
 }
 
 function parseSingleBook(t){
@@ -65,6 +71,14 @@ function fill(){
     function(value) {parseAuthors(value);},
     function(error) {console.log(error);}
   );
+
+  //wait until done
+  while(authorsDone == false && booksDone == false){
+    if(authorsDone){console.log("All authors");}
+    if(booksDone){console.log("All books");}
+  };
+  
+  console.log("All done!);
 }
 
 let filePromise = function(file) {
