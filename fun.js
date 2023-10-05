@@ -72,7 +72,7 @@ function fill(){
   );
 
   //wait until done
-  waitPromise.then(function(value) {console.log("All done!");};
+  waitPromise.then(function(value) {console.log("All done!");});
 }
 
 let filePromise = function(file) {
