@@ -33,7 +33,7 @@ function parse(t){
 
 function fill(k){
   clear();
-  filePromise.then(
+  filePromise(k).then(
     function(value) {console.log("!!: " + value); parse(value);},
     function(error) {console.log(error);}
   );
@@ -50,11 +50,11 @@ function addElements(){
   }
 }
 
-//let filePromise = function(file) {
-//  return new Promise(function(resolve, reject) {
-  let filePromise = new Promise(function(resolve, reject) {
+let filePromise = function(file) {
+  return new Promise(function(resolve, reject) {
+//  let filePromise = new Promise(function(resolve, reject) {
     let req = new XMLHttpRequest();
-    req.open('GET', "branches.json");
+    req.open('GET', file);
     req.onload = function() {
       if (req.status == 200) {
         resolve(req.response);
@@ -65,5 +65,5 @@ function addElements(){
     
     req.send();
   })
-  ;
-//};
+ // ;
+};
