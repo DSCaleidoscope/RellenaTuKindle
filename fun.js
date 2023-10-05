@@ -72,6 +72,8 @@ function fill(){
     function(value) {parseAuthors(value);},
     function(error) {console.log(error);}
   );
+
+  //async function + await???
 }
 
 let filePromise = function(file) {
@@ -94,6 +96,7 @@ let filePromise = function(file) {
 };
 
 /*
+wrap into asyinc function
 let waitPromise = new Promise(function(resolve, reject) {
   while(authorsDone == false && booksDone == false){
     if(authorsDone){console.log("All authors");}
