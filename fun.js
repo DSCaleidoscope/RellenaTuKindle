@@ -97,6 +97,7 @@ let filePromise = function(file) {
   return p;
 };
 
+/*
 let waitPromise = new Promise(function(resolve, reject) {
   while(authorsDone == false && booksDone == false){
     if(authorsDone){console.log("All authors");}
@@ -105,3 +106,4 @@ let waitPromise = new Promise(function(resolve, reject) {
 
   resolve(true);
 });
+*/
