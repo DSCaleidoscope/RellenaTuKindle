@@ -72,18 +72,11 @@ function fill(){
   );
 
   //wait until done
-  /*while(authorsDone == false && booksDone == false){
-    if(authorsDone){console.log("All authors");}
-    if(booksDone){console.log("All books");}
-  }*/
-
-  Promise.allSettled(promiseList).then((values) => console.log(values));
-  console.log("All done!");
+  waitPromise.then(function(value) {console.log("All done!");};
 }
 
 let filePromise = function(file) {
-  //return new Promise(function(resolve, reject) {
-    let p = new Promise(function(resolve, reject) {
+  let p = new Promise(function(resolve, reject) {
     let req = new XMLHttpRequest();
     req.open('GET', file);
     req.onload = function() {
@@ -100,3 +93,12 @@ let filePromise = function(file) {
   promiseList.push(p);
   return p;
 };
+
+let waitPromise = new Promise(function(resolve, reject) {
+  while(authorsDone == false && booksDone == false){
+    if(authorsDone){console.log("All authors");}
+    if(booksDone){console.log("All books");}
+  }
+
+  resolve(true);
+});
