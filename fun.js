@@ -51,7 +51,7 @@ function addElements(){
 }
 
 let filePromise = function(file) {
-  return new Promise(function(rs, rj) {
+  return new Promise(function(resolve, reject) {
     var rawFile = new XMLHttpRequest();
     //allText = "";
     //var n = 0;
@@ -64,9 +64,9 @@ let filePromise = function(file) {
         if(rawFile.status === 200 || rawFile.status == 0){
           //allText = rawFile.responseText;
           //stp = 1;
-          rs(rawFile.responseText);
+          resolve(rawFile.responseText);
         } else {
-          rj("Not found");
+          reject("Not found");
       }
     }
 
