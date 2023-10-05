@@ -1,0 +1,29 @@
+.branch{
+  width: 36%;
+  height: 10%;
+  position: relative;
+  border: 3px solid #123456;
+  text-align: center;
+  padding: 15px;
+  left: 32%;
+  margin: 15px 0px;
+  border-radius: 25px;
+  transition: background 1s;
+  font-family: arial;
+  font-weight:700;
+}
+
+.branch:hover{
+  cursor:pointer;
+  background: #123456;
+  color: white;
+}
+
+#mtitle{
+  position: relative;
+  width: 36%;
+  left: 32%;
+  text-align: center;
+  font-size: 32px;
+  font-family: arial;
+}
