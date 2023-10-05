@@ -60,10 +60,12 @@ function addElements(){
     //stp = 0;
 
     //rawFile.open("GET", file, true);
-    rawFile.open("GET", "branches.json", true);
-    rawFile.onreadystatechange = function (){
-      if(rawFile.readyState === 4){
-        if(rawFile.status === 200 || rawFile.status == 0){
+    rawFile.open("GET", "branches.json");
+    //rawFile.onreadystatechange = function (){
+    rawFile.onload = function() {
+      //if(rawFile.readyState === 4){
+      //  if(rawFile.status === 200 || rawFile.status == 0){
+      if(rawFile.status == 200) {
           //allText = rawFile.responseText;
           //stp = 1;
           resolve(rawFile.responseText);
@@ -72,7 +74,8 @@ function addElements(){
       }
     }
 
-    rawFile.send(null);
+    //rawFile.send(null);
+    rawFile.send();
     };
   })
   ;
