@@ -64,17 +64,18 @@ function fill(){
   clear();
 
   filePromise("book_master.json").then(
-    function(value) {parseBooks(value);},
+    function(value) {
+      parseBooks(value);
+      filePromise("author_master.json").then(
+        function(value) {
+          parseAuthors(value);
+          console.log("All done?");
+        },
+        function(error) {console.log(error);}
+      );
+    },
     function(error) {console.log(error);}
   );
-  
-  filePromise("author_master.json").then(
-    function(value) {parseAuthors(value);},
-    function(error) {console.log(error);}
-  );
-
-  //wait until done
-  waitPromise.then(function(value) {console.log("All done!");});
 }
 
 let filePromise = function(file) {
