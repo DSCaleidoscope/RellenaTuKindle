@@ -77,12 +77,44 @@ function parseSingleBook(t){
   let singleBook = JSON.parse(t);
   
   //create methods
+  singleBook.Book.getID = function(){return this.Id;};
   singleBook.Book.getAuthorsID = function(){return this.Authors};
   singleBook.Book.getGenres = function(){return this.Genres};
-  singleBook.Book.getSinopsis = function(){return this.Sinopsis};
-  singleBook.Book.getCubierta = function(){return this.Cubierta};
-  singleBook.Book.getRedes = function(){return this.Redes};
+  singleBook.Book.getSynopsis = function(){return this.Synopsis};
+  singleBook.Book.getCover = function(){return this.Covers};
+  singleBook.Book.getNetworks = function(){return this.Networks};
   singleBook.Book.getASIN = function(){return this.ASIN};
+  singleBook.Book.createNode = function(id){return document.createElement("div");}
+  singleBook.Book.appendNode = function(node){g('bbody').appendChild(node);}
+  singleBook.Book.addInfo = function(al){
+    let node = this.createNode(this.getID());
+    this.addAuthorInfo(node, al);
+    this.addGenresInfo(node);
+    this.addSynopsisInfo(node);
+    this.addCoverInfo(node);
+    this.addNetworksInfo(node);
+    this.addASINInfo(node);
+    this.addpendNode(node);
+  };
+  singleBook.Book.addAutorInfo(node, al){
+    node.innerHTML += this.getAuthorsID();
+  };
+
+  singleBook.Book.addGenresInfo(node){
+    node.innerHTML += this.getGenres();
+  };
+  singleBook.Book.addSynopsisInfo(node){
+    node.innerHTML += this.getSynopsis();
+  };
+  singleBook.Book.addCoverInfo(node){
+    node.innerHTML += this.getCover();
+  };
+  singleBook.Book.addNetworksInfo(node){
+    node.innerHTML += this.getNetworks();
+  };
+  singleBook.Book.addASINInfo(node){
+    node.innerHTML += this.getASIN();
+  };
 
   console.log(singleBook.Book);
   bookList.push(singleBook.Book);
@@ -117,8 +149,21 @@ async function fill(){
   console.log("Add loaded!");
   console.log("authors: " + authorList);
   console.log("books: " + bookList);
+
+  relate();
 }
 
+//This function relates books & authors
+function relate(){
+  let i = 0;
+  let x = bookList.length;
+
+  for(;i < x;i++){
+    bookList[i].addInfo(authorList);
+  }
+}
+
+//File Reader
 let filePromise = async function(file) {
   let p = new Promise(function(resolve, reject) {
     let req = new XMLHttpRequest();
