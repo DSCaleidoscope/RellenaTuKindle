@@ -1,17 +1,15 @@
 //global variables
 var authorList = [];
 var bookList = [];
-var totalBooks = 0;
-var totalAuthors = 0;
-var currBook = -1;
-var currAuthor = -1;
+var aList = [];
+var bList = [];
+
 
 //helpers & redefines
 function g(id){return document.getElementById(id);}
 function clear(){g("bbody").innerHTML = '';}
 function add(t){g("bbody").innerHTML += t;}
 function parse(t){console.log(JSON.parse(t));}
-const sleep = new Promise((resolve, reject) => {setTimeout(() => {resolve(true);}, 50);});
 
 //AUTHORS
 async function parseAuthors(t){
@@ -22,21 +20,17 @@ async function parseAuthors(t){
   let i = 0;
   let x = authors.Author.length;
 
-  //trigger for wait
-  totalAuthors = x;
-  currAuthor = 0;
-
   for(;i < x;i++){
     let p = filePromise("author_" + authors.Author[i].id_author + ".json").then(
       function(value) {parseSingleAuthor(value);},
       function(error) {console.log(error);}
     );
 
-    pList.push(p);
+    aList.push(p);
   }
 
   //await full completion
-  const results = await Promise.allSettled(pList);
+  const results = await Promise.allSettled(aList);
   console.log("aList: " + results);
 }
 
@@ -58,21 +52,17 @@ async function parseBooks(t){
   let i = 0;
   let x = books.Book.length;
 
-  //trigger for wait
-  totalBooks = x;
-  currBook = 0;
-
   for(;i < x;i++){
     let p = filePromise("book_" + books.Book[i].id_book + ".json").then(
       function(value) {parseSingleBook(value);},
       function(error) {console.log(error);}
     );
 
-    pList.push(p);
+    bList.push(p);
   }
 
   //await full completion
-  const results = await Promise.allSettled(pList);
+  const results = await Promise.allSettled(bList);
   console.log("bList: " + results);
 }
 
@@ -105,9 +95,12 @@ async function fill(){
   fList.push(ap);
 
   //await full completion
-  const results = await Promise.allSettled(fList);
+  await Promise.allSettled(fList);
 
-  await loading();
+  //then wait for authors and books
+  await Promise.allSettled(aList);
+  await Promise.allSettled(bList);
+
   console.log("fList: " + results);
   console.log("authors: " + authorList);
   console.log("books: " + bookList);
@@ -130,16 +123,6 @@ let filePromise = async function(file) {
 
   return p;
 };
-
-async function loading(){
-  let p = new Promise(function(resolve, reject) {
-    while(currBook < totalBooks && currAuthor < totalAuthors) {
-      await sleep;
-      console.log("books: [" + currBook + " / " + totalBooks + "]; authors: [" + currAuthor + " / " + totalAuthors + "]");
-    }
-
-    resolve(true);
-  });
 
   return p;
 }
