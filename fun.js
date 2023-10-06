@@ -1,9 +1,10 @@
 //global variables
 var authorList = [];
 var bookList = [];
+
+//promises
 var aList = [];
 var bList = [];
-
 
 //helpers & redefines
 function g(id){return document.getElementById(id);}
@@ -38,9 +39,6 @@ function parseSingleAuthor(t){
   let singleAuthor = JSON.parse(t);
   console.log(singleAuthor);
   authorList.push(singleAuthor);
-
-  //mark author as parsed
-  currAuthor++;
 }
 
 //BOOKS
@@ -71,8 +69,17 @@ function parseSingleBook(t){
   console.log(singleBook);
   bookList.push(singleBook);
 
-  //mark book as parsed
-  currBook++;
+  //create methods
+  /*
+  singleBook.Book.method = function(){};
+  branches.Branch[i].getURL = function(){
+      if(this.type === "email"){
+        return "'mailto:" + this.value + "'";
+      }
+
+      return "'" + this.value + "'";
+    };
+  */
 }
 
 //LAUNCHER
