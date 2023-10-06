@@ -123,6 +123,3 @@ let filePromise = async function(file) {
 
   return p;
 };
-
-  return p;
-}
