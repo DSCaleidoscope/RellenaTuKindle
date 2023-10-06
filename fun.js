@@ -5,6 +5,7 @@ var bookList = [];
 //promises
 var aList = [];
 var bList = [];
+var rList = [];
 
 //helpers & redefines
 function g(id){return document.getElementById(id);}
@@ -46,7 +47,7 @@ function parseSingleAuthor(t){
   singleAuthor.Auth.getPresentation = function(){return this.Presentation};
   singleAuthor.Auth.getProfilePic = function(){return this.ProfilePic};
   singleAuthor.Auth.addResumedInfo = function(node){
-    node.innerHTML += this.getAuthorName;
+    node.innerHTML += this.getAuthorName();
   }
   
   console.log(singleAuthor.Auth);
@@ -175,23 +176,35 @@ async function fill(){
   console.log("authors: " + authorList);
   console.log("books: " + bookList);
 
+  //relate & print
   relate();
+  await Promise.allSettled(rList);
 }
 
-//This function relates books & authors
-function relate(){
+//This function relates and prints books & authors
+async function relate(){
   let i = 0;
   let x = bookList.length;
 
   for(;i < x;i++){
-    bookList[i].addInfo(authorList);
+    let p = printPromise(bookList[i], authorList).then(
+      function(value) {/*nothing to do, it's all OK*/},
+      function(error) {console.log(error);}
+    );
+
+    rList.push(p);
   }
+
+  //await full completion
+  const results = await Promise.allSettled(rList);
+  console.log("bList: " + results);
 }
 
 //File Reader
 let filePromise = async function(file) {
   let p = new Promise(function(resolve, reject) {
     let req = new XMLHttpRequest();
+    
     req.open('GET', file);
     req.onload = function() {
       if (req.status == 200) {
@@ -202,6 +215,16 @@ let filePromise = async function(file) {
     };
     
     req.send();
+  });
+
+  return p;
+};
+
+//Printer
+let printPromise = async function(book, authroList) {
+  let p = new Promise(function(resolve, reject) {
+    book.addInfo(authorList);
+    resolve(true);
   });
 
   return p;
