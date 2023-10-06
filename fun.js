@@ -40,14 +40,14 @@ function parseSingleAuthor(t){
   let singleAuthor = JSON.parse(t);
 
   //create methods
-  singleAuthor.Auth.getID = function(){return this.Id};
-  singleAuthor.Auth.getAuthorName = function(){return this.AuthorName};
-  singleAuthor.Auth.getName = function(){return this.Name};
-  singleAuthor.Auth.getGenres = function(){return this.Genres};
-  singleAuthor.Auth.getPresentation = function(){return this.Presentation};
-  singleAuthor.Auth.getProfilePic = function(){return this.ProfilePic};
+  singleAuthor.Auth.getID = function(){return this.Id;};
+  singleAuthor.Auth.getAuthorName = function(){return this.AuthorName;};
+  singleAuthor.Auth.getName = function(){return this.Name;};
+  singleAuthor.Auth.getGenres = function(){return this.Genres;};
+  singleAuthor.Auth.getPresentation = function(){return this.Presentation;};
+  singleAuthor.Auth.getProfilePic = function(){return this.ProfilePic;};
   singleAuthor.Auth.addResumedInfo = function(node){
-    node.innerHTML += this.getAuthorName();
+    node.innerHTML += " Autor: " + this.getAuthorName();
   }
   
   console.log(singleAuthor.Auth);
@@ -83,16 +83,18 @@ function parseSingleBook(t){
   //create methods
   singleBook.Book.authList = [];
   singleBook.Book.getID = function(){return this.Id;};
-  singleBook.Book.getAuthorsID = function(){return this.Authors};
-  singleBook.Book.getGenres = function(){return this.Genres};
-  singleBook.Book.getSynopsis = function(){return this.Synopsis};
-  singleBook.Book.getCover = function(){return this.Covers};
-  singleBook.Book.getNetworks = function(){return this.Networks};
-  singleBook.Book.getASIN = function(){return this.ASIN};
+  singleBook.Book.getTitle = function(){return this.Title;};
+  singleBook.Book.getAuthorsID = function(){return this.Authors;};
+  singleBook.Book.getGenres = function(){return this.Genres;};
+  singleBook.Book.getSynopsis = function(){return this.Synopsis;};
+  singleBook.Book.getCover = function(){return this.Covers;};
+  singleBook.Book.getNetworks = function(){return this.Networks;};
+  singleBook.Book.getASIN = function(){return this.ASIN;};
   singleBook.Book.createNode = function(id){return document.createElement("div");}
   singleBook.Book.appendNode = function(node){g('bbody').appendChild(node);}
   singleBook.Book.addInfo = function(al){
     let node = this.createNode(this.getID());
+    this.addTitleInfo(node);
     this.addAuthorInfo(node, al);
     this.addGenresInfo(node);
     this.addSynopsisInfo(node);
@@ -103,6 +105,10 @@ function parseSingleBook(t){
 
     console.log(this.authList);
   };
+
+  singleBook.Book.addTitleInfo = function(node){
+    node.innerHTML += "Titulo: " + this.getTitle();
+  }
   
   singleBook.Book.addAuthorInfo = function(node, al){
     let i = 0;
@@ -127,19 +133,19 @@ function parseSingleBook(t){
   };
 
   singleBook.Book.addGenresInfo = function(node){
-    node.innerHTML += this.getGenres();
+    node.innerHTML += " Generos: " + this.getGenres();
   };
   singleBook.Book.addSynopsisInfo = function(node){
-    node.innerHTML += this.getSynopsis();
+    node.innerHTML += " Synopsis: " + this.getSynopsis();
   };
   singleBook.Book.addCoverInfo = function(node){
-    node.innerHTML += this.getCover();
+    node.innerHTML += " Cubierta: " + this.getCover();
   };
   singleBook.Book.addNetworksInfo = function(node){
-    node.innerHTML += this.getNetworks();
+    node.innerHTML += " Redes: " + this.getNetworks();
   };
   singleBook.Book.addASINInfo = function(node){
-    node.innerHTML += this.getASIN();
+    node.innerHTML += " ASIN: " + this.getASIN();
   };
 
   console.log(singleBook.Book);
