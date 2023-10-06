@@ -1,5 +1,7 @@
 {
   "Book": {
+    "Id": "1",
+    "Title": "El Aprendiz de Herborista",
     "Authors": [1],
     "Genres": ["Romance", "Fantasía"],
     "Sinopsis": "Un accidentado paseo bla bla bla",
