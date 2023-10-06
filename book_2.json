@@ -1,0 +1,12 @@
+{
+  "Book": {
+    "Id": "2",
+    "Title": "Tremendo crossover",
+    "Authors": [1, 2, 5],
+    "Genres": ["Romance"],
+    "Synopsis": "Te imaginas Stephen King escribiendo fantasía?",
+    "Cover": "Aquí iría una foto",
+    "Networks": "Muchas redes, sí",
+    "ASIN": "No sé si sería autupublicado"
+  }
+}
