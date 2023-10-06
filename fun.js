@@ -9,7 +9,7 @@ function add(t){g("bbody").innerHTML += t;}
 function parse(t){console.log(JSON.parse(t));}
 
 //AUTHORS
-function parseAuthors(t){
+async function parseAuthors(t){
   let pList = [];
   let authors = JSON.parse(t);
   console.log(authors);
@@ -38,7 +38,7 @@ function parseSingleAuthor(t){
 }
 
 //BOOKS
-function parseBooks(t){
+async function parseBooks(t){
   let pList = [];
   let books = JSON.parse(t);
   console.log(books);
@@ -67,7 +67,7 @@ function parseSingleBook(t){
 }
 
 //LAUNCHER
-function fill(){
+async function fill(){
   let fList = [];
   clear();
 
@@ -105,18 +105,5 @@ let filePromise = async function(file) {
     req.send();
   });
 
-  promiseList.push(p);
   return p;
 };
-
-/*
-wrap into asyinc function
-let waitPromise = new Promise(function(resolve, reject) {
-  while(authorsDone == false && booksDone == false){
-    if(authorsDone){console.log("All authors");}
-    if(booksDone){console.log("All books");}
-  }
-
-  resolve(true);
-});
-*/
