@@ -99,6 +99,8 @@ function parseSingleBook(t){
     this.addNetworksInfo(node);
     this.addASINInfo(node);
     this.appendNode(node);
+
+    console.log(this.authList);
   };
   
   singleBook.Book.addAuthorInfo = function(node, al){
@@ -116,7 +118,7 @@ function parseSingleBook(t){
     let x = al.length;
 
     for(;i < x;i++){
-      if(auth.getID() == al[i].getID()){
+      if(auth == al[i].getID()){
         this.authList.push(al[i]);
         al[i].addResumedInfo(node);
       }
