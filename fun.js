@@ -45,6 +45,9 @@ function parseSingleAuthor(t){
   singleAuthor.Auth.getGenres = function(){return this.Genres};
   singleAuthor.Auth.getPresentation = function(){return this.Presentation};
   singleAuthor.Auth.getProfilePic = function(){return this.ProfilePic};
+  singleAuthor.Auth.addResumedInfo = function(node){
+    node.innerHTML += this.getAuthorName;
+  }
   
   console.log(singleAuthor.Auth);
   authorList.push(singleAuthor.Auth);
@@ -77,6 +80,7 @@ function parseSingleBook(t){
   let singleBook = JSON.parse(t);
   
   //create methods
+  singleBook.Book.authList = [];
   singleBook.Book.getID = function(){return this.Id;};
   singleBook.Book.getAuthorsID = function(){return this.Authors};
   singleBook.Book.getGenres = function(){return this.Genres};
@@ -96,8 +100,27 @@ function parseSingleBook(t){
     this.addASINInfo(node);
     this.appendNode(node);
   };
+  
   singleBook.Book.addAuthorInfo = function(node, al){
-    node.innerHTML += this.getAuthorsID();
+    let i = 0;
+    let auth = this.getAuthorsID(); 
+    let x = auth.length;
+
+    for(;i < x;i++){
+      this.addSingleAuthor(node, auth[i], al);
+    }
+  };
+
+  singleBook.Book.addSingleAuthor = function (node, auth, al){
+    let i = 0;
+    let x = al.length;
+
+    for(;i < x;i++){
+      if(auth.getID() == al[i].getID()){
+        this.authList.push(al[i]);
+        al[i].addResumedInfo(node);
+      }
+    }
   };
 
   singleBook.Book.addGenresInfo = function(node){
