@@ -101,7 +101,7 @@ async function fill(){
   await Promise.allSettled(aList);
   await Promise.allSettled(bList);
 
-  console.log("fList: " + results);
+  console.log("Add loaded!");
   console.log("authors: " + authorList);
   console.log("books: " + bookList);
 }
