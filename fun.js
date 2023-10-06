@@ -1,9 +1,6 @@
 //global variables
 var authorList = [];
 var bookList = [];
-var promiseList = [];
-var authorsDone = false;
-var booksDone = false;
 
 //helpers & redefines
 function g(id){return document.getElementById(id);}
@@ -29,8 +26,9 @@ function parseAuthors(t){
     pList.push(p);
   }
 
-  authorsDone = true;
-  //waitAll
+  //await full completion
+  const results = await Promise.allSettled(pList);
+  console.log("aList: " + results);
 }
 
 function parseSingleAuthor(t){
@@ -57,8 +55,9 @@ function parseBooks(t){
     pList.push(p);
   }
 
-  booksDone = true;
-  //waitAll
+  //await full completion
+  const results = await Promise.allSettled(pList);
+  console.log("bList: " + results);
 }
 
 function parseSingleBook(t){
@@ -69,6 +68,7 @@ function parseSingleBook(t){
 
 //LAUNCHER
 function fill(){
+  let fList = [];
   clear();
 
   let bp = filePromise("book_master.json").then(
@@ -81,9 +81,13 @@ function fill(){
     function(error) {console.log(error);}
   );
 
+  //put promises into array
+  fList.push(bp);
+  fList.push(ap);
+
   //await full completion
-  await bp;
-  await ap;
+  const results = await Promise.allSettled(fList);
+  console.log("fList: " + results);
 }
 
 let filePromise = async function(file) {
