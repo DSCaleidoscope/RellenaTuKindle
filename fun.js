@@ -23,7 +23,7 @@ async function parseAuthors(t){
 
   for(;i < x;i++){
     let p = filePromise("author_" + authors.Author[i].id_author + ".json").then(
-      function(value) {parseSingleAuthor(value, i);},
+      function(value) {parseSingleAuthor(value);},
       function(error) {console.log(error);}
     );
 
@@ -35,12 +35,11 @@ async function parseAuthors(t){
   console.log("aList: " + results);
 }
 
-function parseSingleAuthor(t, i){
+function parseSingleAuthor(t){
   let singleAuthor = JSON.parse(t);
 
   //create methods
-  singleAuthor.Auth.id = i;
-  singleAuthor.Auth.getID = function(){return this.id};
+  singleAuthor.Auth.getID = function(){return this.Id};
   singleAuthor.Auth.getAuthorName = function(){return this.AuthorName};
   singleAuthor.Auth.getName = function(){return this.Name};
   singleAuthor.Auth.getGenres = function(){return this.Genres};
