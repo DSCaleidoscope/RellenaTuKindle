@@ -87,7 +87,7 @@ function parseSingleBook(t){
   singleBook.Book.getAuthorsID = function(){return this.Authors;};
   singleBook.Book.getGenres = function(){return this.Genres;};
   singleBook.Book.getSynopsis = function(){return this.Synopsis;};
-  singleBook.Book.getCover = function(){return this.Covers;};
+  singleBook.Book.getCover = function(){return this.Cover;};
   singleBook.Book.getNetworks = function(){return this.Networks;};
   singleBook.Book.getASIN = function(){return this.ASIN;};
   singleBook.Book.createNode = function(id){return document.createElement("div");}
