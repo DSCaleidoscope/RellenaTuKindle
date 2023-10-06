@@ -96,23 +96,23 @@ function parseSingleBook(t){
     this.addASINInfo(node);
     this.addpendNode(node);
   };
-  singleBook.Book.addAutorInfo(node, al){
+  singleBook.Book.addAutorInfo = function(node, al){
     node.innerHTML += this.getAuthorsID();
   };
 
-  singleBook.Book.addGenresInfo(node){
+  singleBook.Book.addGenresInfo = function(node){
     node.innerHTML += this.getGenres();
   };
-  singleBook.Book.addSynopsisInfo(node){
+  singleBook.Book.addSynopsisInfo = function(node){
     node.innerHTML += this.getSynopsis();
   };
-  singleBook.Book.addCoverInfo(node){
+  singleBook.Book.addCoverInfo = function(node){
     node.innerHTML += this.getCover();
   };
-  singleBook.Book.addNetworksInfo(node){
+  singleBook.Book.addNetworksInfo = function(node){
     node.innerHTML += this.getNetworks();
   };
-  singleBook.Book.addASINInfo(node){
+  singleBook.Book.addASINInfo = function(node){
     node.innerHTML += this.getASIN();
   };
 
