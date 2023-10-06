@@ -13,6 +13,7 @@ function parse(t){console.log(JSON.parse(t));}
 
 //AUTHORS
 function parseAuthors(t){
+  let pList = [];
   let authors = JSON.parse(t);
   console.log(authors);
 
@@ -20,13 +21,16 @@ function parseAuthors(t){
   let x = authors.Author.length;
 
   for(;i < x;i++){
-    filePromise("author_" + authors.Author[i].id_author + ".json").then(
+    let p = filePromise("author_" + authors.Author[i].id_author + ".json").then(
       function(value) {parseSingleAuthor(value);},
       function(error) {console.log(error);}
     );
+
+    pList.push(p);
   }
 
   authorsDone = true;
+  //waitAll
 }
 
 function parseSingleAuthor(t){
@@ -37,6 +41,7 @@ function parseSingleAuthor(t){
 
 //BOOKS
 function parseBooks(t){
+  let pList = [];
   let books = JSON.parse(t);
   console.log(books);
 
@@ -44,13 +49,16 @@ function parseBooks(t){
   let x = books.Book.length;
 
   for(;i < x;i++){
-    filePromise("book_" + books.Book[i].id_book + ".json").then(
+    let p = filePromise("book_" + books.Book[i].id_book + ".json").then(
       function(value) {parseSingleBook(value);},
       function(error) {console.log(error);}
     );
+
+    pList.push(p);
   }
 
   booksDone = true;
+  //waitAll
 }
 
 function parseSingleBook(t){
@@ -63,20 +71,22 @@ function parseSingleBook(t){
 function fill(){
   clear();
 
-  filePromise("book_master.json").then(
+  let bp = filePromise("book_master.json").then(
     function(value) {parseBooks(value);},
     function(error) {console.log(error);}
   );
 
-  filePromise("author_master.json").then(
+  let ap = filePromise("author_master.json").then(
     function(value) {parseAuthors(value);},
     function(error) {console.log(error);}
   );
 
-  //async function + await???
+  //await full completion
+  await bp;
+  await ap;
 }
 
-let filePromise = function(file) {
+let filePromise = async function(file) {
   let p = new Promise(function(resolve, reject) {
     let req = new XMLHttpRequest();
     req.open('GET', file);
