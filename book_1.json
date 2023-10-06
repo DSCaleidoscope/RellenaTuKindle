@@ -1,0 +1,10 @@
+{
+  "Book": {
+    "Authors": [1],
+    "Genres": ["Romance", "Fantasía"],
+    "Sinopsis": "Un accidentado paseo bla bla bla",
+    "Cubierta": "De proa",
+    "Redes": "De pescar",
+    "ASIN": "Me gusta a mi"
+  }
+}
