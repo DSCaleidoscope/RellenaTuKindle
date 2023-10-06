@@ -11,6 +11,7 @@ function g(id){return document.getElementById(id);}
 function clear(){g("bbody").innerHTML = '';}
 function add(t){g("bbody").innerHTML += t;}
 function parse(t){console.log(JSON.parse(t));}
+const sleep = new Promise((resolve, reject) => {setTimeout(() => {resolve(true);}, 50);});
 
 //AUTHORS
 async function parseAuthors(t){
@@ -133,6 +134,7 @@ let filePromise = async function(file) {
 async function loading(){
   let p = new Promise(function(resolve, reject) {
     while(currBook < totalBooks && currAuthor < totalAuthors) {
+      await sleep;
       console.log("books: [" + currBook + " / " + totalBooks + "]; authors: [" + currAuthor + " / " + totalAuthors + "]");
     }
 
