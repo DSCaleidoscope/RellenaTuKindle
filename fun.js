@@ -88,6 +88,8 @@ async function fill(){
   //await full completion
   const results = await Promise.allSettled(fList);
   console.log("fList: " + results);
+  console.log("authors: " + authorList);
+  console.log("books: " + bookList);
 }
 
 let filePromise = async function(file) {
