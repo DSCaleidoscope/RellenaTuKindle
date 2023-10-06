@@ -23,7 +23,7 @@ async function parseAuthors(t){
 
   for(;i < x;i++){
     let p = filePromise("author_" + authors.Author[i].id_author + ".json").then(
-      function(value) {parseSingleAuthor(value);},
+      function(value) {parseSingleAuthor(value, i);},
       function(error) {console.log(error);}
     );
 
@@ -35,10 +35,20 @@ async function parseAuthors(t){
   console.log("aList: " + results);
 }
 
-function parseSingleAuthor(t){
+function parseSingleAuthor(t, i){
   let singleAuthor = JSON.parse(t);
-  console.log(singleAuthor);
-  authorList.push(singleAuthor);
+
+  //create methods
+  singleAuthor.Auth.id = i;
+  singleAuthor.Auth.getID = function(){return this.id};
+  singleAuthor.Auth.getAuthorName = function(){return this.AuthorName};
+  singleAuthor.Auth.getName = function(){return this.Name};
+  singleAuthor.Auth.getGenres = function(){return this.Genres};
+  singleAuthor.Auth.getPresentation = function(){return this.Presentation};
+  singleAuthor.Auth.getProfilePic = function(){return this.ProfilePic};
+  
+  console.log(singleAuthor.Auth);
+  authorList.push(singleAuthor.Auth);
 }
 
 //BOOKS
@@ -66,20 +76,17 @@ async function parseBooks(t){
 
 function parseSingleBook(t){
   let singleBook = JSON.parse(t);
-  console.log(singleBook);
-  bookList.push(singleBook);
-
+  
   //create methods
-  /*
-  singleBook.Book.method = function(){};
-  branches.Branch[i].getURL = function(){
-      if(this.type === "email"){
-        return "'mailto:" + this.value + "'";
-      }
+  singleBook.Book.getAuthorsID = function(){return this.Authors};
+  singleBook.Book.getGenres = function(){return this.Genres};
+  singleBook.Book.getSinopsis = function(){return this.Sinopsis};
+  singleBook.Book.getCubierta = function(){return this.Cubierta};
+  singleBook.Book.getRedes = function(){return this.Redes};
+  singleBook.Book.getASIN = function(){return this.ASIN};
 
-      return "'" + this.value + "'";
-    };
-  */
+  console.log(singleBook.Book);
+  bookList.push(singleBook.Book);
 }
 
 //LAUNCHER
