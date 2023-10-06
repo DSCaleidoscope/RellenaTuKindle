@@ -94,9 +94,9 @@ function parseSingleBook(t){
     this.addCoverInfo(node);
     this.addNetworksInfo(node);
     this.addASINInfo(node);
-    this.addpendNode(node);
+    this.appendNode(node);
   };
-  singleBook.Book.addAutorInfo = function(node, al){
+  singleBook.Book.addAuthorInfo = function(node, al){
     node.innerHTML += this.getAuthorsID();
   };
 
