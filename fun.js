@@ -1,4 +1,8 @@
 //global variables
+var authorMaster;
+var bookMaster;
+var authorMax = 1;
+var bookMax = 1;
 var authorList = [];
 var bookList = [];
 
@@ -7,33 +11,49 @@ var aList = [];
 var bList = [];
 var rList = [];
 
+//reader help
+var pai = 0;
+var pbi = 0;
+
+//To Do: search best value for this
+var maxRead = 64;
+
 //helpers & redefines
 function g(id){return document.getElementById(id);}
 function clear(){g("bbody").innerHTML = '';}
-function add(t){g("bbody").innerHTML += t;}
+function add(t){g("bbody").innerHTML += t + '<br />';}
 function parse(t){console.log(JSON.parse(t));}
 
 //AUTHORS
 async function parseAuthors(t){
-  let pList = [];
   let authors = JSON.parse(t);
   console.log(authors);
 
   let i = 0;
-  let x = authors.Author.length;
+  //let x = authors.Author.length;
+  authorMax = authors.Author.length;
+  
+  //console.log("Max authors: " + authorMax);
 
-  for(;i < x;i++){
-    let p = filePromise("author_" + authors.Author[i].id_author + ".json").then(
+  //for(;i < x;i++){
+  for(;i < maxRead;i++){
+    //let p = filePromise("author_" + authors.Author[i].id_author + ".json").then(
+    let p = filePromise("author_" + authors.Author[pai].id_author + ".json").then(
       function(value) {parseSingleAuthor(value);},
       function(error) {console.log(error);}
     );
+    
+    pai++
 
     aList.push(p);
   }
 
   //await full completion
+  /*
   const results = await Promise.allSettled(aList);
-  console.log("aList: " + results);
+  console.log("aList: ");
+  console.log(results);
+  */
 }
 
 function parseSingleAuthor(t){
@@ -56,25 +76,35 @@ function parseSingleAuthor(t){
 
 //BOOKS
 async function parseBooks(t){
-  let pList = [];
   let books = JSON.parse(t);
   console.log(books);
 
   let i = 0;
-  let x = books.Book.length;
+  //let x = books.Book.length;
+  
+  bookMax = books.Book.length;
+  
+  //console.log("Max books: " + bookMax);
 
-  for(;i < x;i++){
-    let p = filePromise("book_" + books.Book[i].id_book + ".json").then(
+  //for(;i < x;i++){
+  for(;i < maxRead;i++){
+    //let p = filePromise("book_" + books.Book[i].id_book + ".json").then(
+    let p = filePromise("book_" + books.Book[pbi].id_book + ".json").then(
       function(value) {parseSingleBook(value);},
       function(error) {console.log(error);}
     );
+    
+    pbi++;
 
     bList.push(p);
   }
 
   //await full completion
+  /*
   const results = await Promise.allSettled(bList);
-  console.log("bList: " + results);
+  console.log("bList: ");
+  console.log(results);
+  */
 }
 
 function parseSingleBook(t){
@@ -158,12 +188,12 @@ async function fill(){
   clear();
 
   let bp = filePromise("book_master.json").then(
-    function(value) {parseBooks(value);},
+    function(value) {bookMaster = value},
     function(error) {console.log(error);}
   );
 
   let ap = filePromise("author_master.json").then(
-    function(value) {parseAuthors(value);},
+    function(value) {authorMaster = value},
     function(error) {console.log(error);}
   );
 
@@ -173,10 +203,22 @@ async function fill(){
 
   //await full completion
   await Promise.allSettled(fList);
+  
+  console.log("Master data read!");
+  
+  //start getting real data until all is done
+  //we're getting only small chunks each time to avoid network issues
+  while(pai < authorMax && pbi < bookMax) {
+    parseBooks(bookMaster);
+    parseAuthors(authorMaster);
 
-  //then wait for authors and books
-  await Promise.allSettled(aList);
-  await Promise.allSettled(bList);
+    //then wait for authors and books
+    await Promise.allSettled(aList);
+    await Promise.allSettled(bList);
+    
+    add("Books: [" + pbi + " / " + bookMax + "]"); 
+    add("Authors: [" + pai + " / " + authorMax + "]"); 
+  }
 
   console.log("Add loaded!");
   console.log("authors: " + authorList);
@@ -208,6 +250,7 @@ async function relate(){
 
 //File Reader
 let filePromise = async function(file) {
+  //console.log("Reading file: " + file);
   let p = new Promise(function(resolve, reject) {
     let req = new XMLHttpRequest();
     
