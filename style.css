@@ -151,3 +151,12 @@ a, a:visited, a:hover, a:checked {
   #reload a {
     text-decoration: none;
   }
+
+.genre {
+  position: relative;
+  text-align: center;
+  font-size: 21px;
+  margin-top: 50px;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
