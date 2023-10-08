@@ -1,5 +1,5 @@
-/**
- * Dale Amor a tu Kindle / Ereader (DATK)
+﻿/**
+ * Rellena tu Kindle / Ereader (RTK)
  * 
  * Functions file, created by D. S. Caleidoscope on October, 2023.
  **/
@@ -24,6 +24,10 @@ var pri = 0;
 //params
 var maxRead;
 var reloadPage = false;
+
+//visuals
+var Wcollapsed = false;
+var Bcollapsed = [];
 
 //move it to false only during event days
 var forceRefresh = false;
@@ -66,7 +70,7 @@ function startLoad() {
 }
 
 function endLoad() {
-  g('mbody').style.backgroundColor = "white";
+  g('mbody').style.backgroundColor = "#f3f2ed";
   g('mainScreen').style.visibility = "initial";
   g('loader').style.visibility = "hidden";
 }
@@ -76,6 +80,52 @@ function uploadLoad(curr, tot) {
 
   g('loading').style.width = "" + width + "%";
   g('msg').innerHTML = "" + width + "%";
+}
+
+//visuals
+function collapseWhat(id) {
+  if (Wcollapsed) {
+    //it's collapsed, it will expand
+    g(id).style.visibility = "initial";
+    g(id).style.height = "initial";
+    g("whatSection").style.borderBottom = "none";
+    g("whatSection").style.borderRadius = "25px 25px 0px 0px";
+    Wcollapsed = false;
+  } else {
+    //it's expanded, let's collapse it
+    g(id).style.visibility = "hidden";
+    g(id).style.height = "0";
+    g("whatSection").style.borderBottom = "3px solid #A7A392";
+    g("whatSection").style.borderRadius = "25px 25px 25px 25px";
+    Wcollapsed = true;
+  }
+}
+
+function collapseBook(e) {
+  let childs = e.children;
+  let i = 1;
+  let x = e.childElementCount;
+
+  if (Bcollapsed[e.id] == true) {
+    //it's collapsed, it will expand
+    e.style.height = "initial";
+    Bcollapsed[e.id] = false;
+
+    //show all childs
+    for (; i < x; i++) {
+      childs[i].style.visibility = "initial";
+    }
+  } else {
+    //it's expanded, let's collapse it
+    e.style.height = "26px";
+    Bcollapsed[e.id] = true;
+
+    //hide all childs
+    for (; i < x; i++) {
+      childs[i].style.visibility = "hidden";
+    }
+  }
+  
 }
 
 //AUTHORS
@@ -113,7 +163,7 @@ function addAuthorMethods(auth) {
   auth.getPresentation = function () { return this.Presentation; };
   auth.getProfilePic = function () { return this.ProfilePic; };
   auth.addResumedInfo = function (node) {
-    node.innerHTML += " Autor: " + this.getAuthorName();
+    node.innerHTML += "<div class='author' id=a_" + this.getID() + ">" + this.getAuthorName() + "</div>";
   }
 }
 
@@ -155,9 +205,11 @@ function addBookMethods(book) {
   book.getNetworks = function () { return this.Networks; };
   book.getASIN = function () { return this.ASIN; };
   book.createNode = function (id) { return document.createElement("div"); }
+  book.stylizeNode = function (node) { node.classList.add("book"); node.setAttribute('id', "b_" + this.getID()); node.addEventListener("click", function (e) { collapseBook(this); }); }
   book.appendNode = function (node) { g('bbody').appendChild(node); }
   book.addInfo = function (al) {
     let node = this.createNode(this.getID());
+    this.stylizeNode(node);
     this.addTitleInfo(node);
     this.addAuthorInfo(node, al);
     this.addGenresInfo(node);
@@ -166,12 +218,10 @@ function addBookMethods(book) {
     this.addNetworksInfo(node);
     this.addASINInfo(node);
     this.appendNode(node);
-
-    //add("Relations: [" + pri + " / " + bookMax + "]");
   };
 
   book.addTitleInfo = function (node) {
-    node.innerHTML += "Titulo: " + this.getTitle();
+    node.innerHTML += "<div class='title'>" + this.getTitle() + "</div>";
   }
 
   book.addAuthorInfo = function (node, al) {
@@ -179,9 +229,17 @@ function addBookMethods(book) {
     let auth = this.getAuthorsID();
     let x = auth.length;
 
+    // local node for authors
+    let lnode = this.createNode();
+    lnode.classList.add("authors");
+    lnode.innerHTML = "	&#10002;&#65039;";
+
     for (; i < x; i++) {
-      this.addSingleAuthor(node, auth[i], al);
+      this.addSingleAuthor(lnode, auth[i], al);
     }
+
+    //put local node inside book node
+    node.appendChild(lnode);
   };
 
   book.addSingleAuthor = function (node, auth, al) {
@@ -197,19 +255,27 @@ function addBookMethods(book) {
   };
 
   book.addGenresInfo = function (node) {
-    node.innerHTML += " Generos: " + this.getGenres();
+    //node.innerHTML += " Generos: " + this.getGenres();
+    return;
   };
   book.addSynopsisInfo = function (node) {
-    node.innerHTML += " Synopsis: " + this.getSynopsis();
+    //local node
+    let lnode = this.createNode();
+    lnode.classList.add("syn");
+    lnode.innerHTML = "	&#128209;";
+    lnode.innerHTML += "<div class='synopsis'>" + this.getSynopsis() + "</div>";
+
+    //put local node inside book node
+    node.appendChild(lnode);
   };
   book.addCoverInfo = function (node) {
-    node.innerHTML += " Cubierta: " + this.getCover();
+    //node.innerHTML += "<div class='cover'>" + this.getCover() + "</div>";
   };
   book.addNetworksInfo = function (node) {
-    node.innerHTML += " Redes: " + this.getNetworks();
+    //node.innerHTML += "<div class='networks'>" + this.getNetworks() + "</div>";
   };
   book.addASINInfo = function (node) {
-    node.innerHTML += " ASIN: " + this.getASIN();
+    node.innerHTML += "<div class='ASIN'><a href='https://www.amazon.com/gp/product/" + this.getASIN() + "' target='_blank'>Descargar en Amazon</a></div>";
   };
 }
 
@@ -219,7 +285,7 @@ async function fill(){
   clear();
 
   //check session to pump performance
-  let isDone = localStorage.getItem('datk_done');
+  let isDone = localStorage.getItem('rtk_done');
 
   if (isDone == 1) {
     //user already loaded the page
@@ -230,8 +296,9 @@ async function fill(){
     let ax = 0;
     let bx = 0;
 
-    bookList = JSON.parse(localStorage.getItem('datk_books'));
-    authorList = JSON.parse(localStorage.getItem('datk_authors'));
+    bookList = JSON.parse(localStorage.getItem('rtk_books'));
+    authorList = JSON.parse(localStorage.getItem('rtk_authors'));
+    bookMax = localStorage.getItem('rtk_count');
 
     //restore methods as JSON make them loose
     ax = authorList.length;
@@ -293,14 +360,24 @@ async function fill(){
     }
 
     //save data into local storage
-    localStorage.setItem('datk_books', JSON.stringify(bookList));
-    localStorage.setItem('datk_authors', JSON.stringify(authorList));
-    localStorage.setItem('datk_done', 1);
+    localStorage.setItem('rtk_books', JSON.stringify(bookList));
+    localStorage.setItem('rtk_authors', JSON.stringify(authorList));
+    localStorage.setItem('rtk_count', bookMax);
+    localStorage.setItem('rtk_done', 1);
   }
 
   //relate & print
   relate();
   await Promise.allSettled(rList);
+
+  //collapse all books
+  let i = 0;
+  let x = bookMax;
+
+  for (i = 0; i < x; i++) {
+    collapseBook(g("b_" + i));
+  }
+
   endLoad();
 }
 

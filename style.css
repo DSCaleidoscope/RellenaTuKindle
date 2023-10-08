@@ -1,10 +1,20 @@
+body {
+  color: #34393f;
+  font-family: arial;
+}
+
+a, a:visited, a:hover, a:checked {
+  color: #34393f;
+  text-decoration: none;
+}
+
 #mtitle {
   position: relative;
   width: 36%;
   left: 32%;
   text-align: center;
   font-size: 32px;
-  font-family: arial;
+  font-weight: 700;
 }
 
 #whatIs {
@@ -17,9 +27,9 @@
   left: 32%;
   text-align: center;
   font-size: 32px;
-  font-family: arial;
   margin-top: 50px;
   margin-bottom: 15px;
+  font-weight: 700;
 }
 
 #loader {
@@ -30,7 +40,6 @@
   top: 43%;
   text-align: center;
   font-size: 24px;
-  font-family: arial;
   margin-top: 50px;
   margin-bottom: 15px;
 }
@@ -41,7 +50,7 @@
   height: 100%;
   border-radius: 50px;
   text-align: center;
-  background: green;
+  background: #A7A392;
 }
 
 #loginWrapper {
@@ -51,27 +60,50 @@
   border-radius: 50px;
   text-align: center;
   background: white;
-  border: 1px solid black;
+  border: 3px solid #A7A392;
+}
+
+#whatContent {
+  position: relative;
+  width: 36%;
+  left: 32%;
+  border: 3px solid #A7A392;
+  padding: 15px;
+  border-radius: 0px 0px 25px 25px;
 }
 
 .whatIsTitle {
+  text-align: center;
+  font-size: 24px;
+  margin-top: 35px;
+  margin-bottom: 15px;
+}
+
+.section {
   position: relative;
   width: 36%;
   left: 32%;
   text-align: center;
   font-size: 24px;
-  font-family: arial;
   margin-top: 35px;
-  margin-bottom: 15px;
+  font-weight: 700;
+  padding-top: 15px;
+  padding-bottom: 15px;
+  border-radius: 25px;
+  border: 3px solid #A7A392;
+  transition-property: background;
+  transition-duration: 1s;
+  padding: 15px;
 }
 
+  .section:hover {
+    cursor: pointer;
+    background: #A7A392;
+  }
+
 .whatIsText {
-  position: relative;
-  width: 36%;
-  left: 32%;
   text-align: center;
   font-size: 14px;
-  font-family: arial;
   line-height: 2;
 }
 
@@ -79,19 +111,39 @@
   width: 36%;
   height: 10%;
   position: relative;
-  border: 3px solid #123456;
+  border: 3px solid #A7A392;
   text-align: center;
   padding: 15px;
   left: 32%;
   margin: 15px 0px;
   border-radius: 25px;
   transition: background 1s;
-  font-family: arial;
   font-weight: 700;
 }
 
 .book:hover {
   cursor: pointer;
-  background: #123456;
-  color: white;
+  background: #A7A392;
+}
+
+.title {
+  font-size: 22px;
+}
+
+.authors, .syn, .cover, .networks{
+    text-align: left;
+}
+
+.authors, .syn{
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.author, .synopsis{
+    padding-left: 30px;
+    font-size: initial;
+}
+
+#reload{
+    font-size: 18px;
 }
