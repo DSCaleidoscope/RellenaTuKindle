@@ -1,0 +1,12 @@
+{
+  "Book": {
+    "Id": "1953",
+    "Title": "Libro_1953",
+    "Authors": [1727, 2030, 20, 803, 2970],
+    "Genres": ["Romance", "Fantasía"],
+    "Synopsis": "Buen libro",
+    "Cover": "Imagen",
+    "Networks": "Redes",
+    "ASIN": "123XXX"
+  }
+}

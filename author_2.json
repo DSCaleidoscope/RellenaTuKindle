@@ -1,10 +1,10 @@
 {
   "Auth": {
     "Id": "2",
-    "AuthorName": "Stephen King",
-    "Name": "Estifen Quin",
-    "Genres": ["Terror"],
-    "Presentation": "Un seÃ±os que sale en los sinson",
-    "ProfilePic": "TodavÃ­a no"
+    "AuthorName": "Autor_2",
+    "Name": "Anonymous",
+    "Genres": ["Romance", "Fantasía"],
+    "Presentation": "Aquí un texto random",
+    "ProfilePic": "Todavía no"
   }
 }

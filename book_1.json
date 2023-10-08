@@ -1,12 +1,12 @@
 {
   "Book": {
     "Id": "1",
-    "Title": "El Aprendiz de Herborista",
-    "Authors": [1],
-    "Genres": ["Romance", "FantasÃ­a"],
-    "Synopsis": "Un accidentado paseo bla bla bla",
-    "Cover": "De proa",
-    "Networks": "De pescar",
-    "ASIN": "Me gusta a mi"
+    "Title": "Libro_1",
+    "Authors": [4086, 890, 645, 164, 3510],
+    "Genres": ["Romance", "Fantasía"],
+    "Synopsis": "Buen libro",
+    "Cover": "Imagen",
+    "Networks": "Redes",
+    "ASIN": "123XXX"
   }
 }

@@ -1,0 +1,12 @@
+{
+  "Book": {
+    "Id": "1851",
+    "Title": "Libro_1851",
+    "Authors": [58, 2099, 1984, 4022, 2467],
+    "Genres": ["Romance", "Fantasía"],
+    "Synopsis": "Buen libro",
+    "Cover": "Imagen",
+    "Networks": "Redes",
+    "ASIN": "123XXX"
+  }
+}

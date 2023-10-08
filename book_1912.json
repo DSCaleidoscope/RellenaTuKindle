@@ -1,0 +1,12 @@
+{
+  "Book": {
+    "Id": "1912",
+    "Title": "Libro_1912",
+    "Authors": [2958],
+    "Genres": ["Romance", "Fantasía"],
+    "Synopsis": "Buen libro",
+    "Cover": "Imagen",
+    "Networks": "Redes",
+    "ASIN": "123XXX"
+  }
+}

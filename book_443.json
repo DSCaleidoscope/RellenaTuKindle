@@ -1,0 +1,12 @@
+{
+  "Book": {
+    "Id": "443",
+    "Title": "Libro_443",
+    "Authors": [530, 2434, 2812, 2146, 2855],
+    "Genres": ["Romance", "Fantasía"],
+    "Synopsis": "Buen libro",
+    "Cover": "Imagen",
+    "Networks": "Redes",
+    "ASIN": "123XXX"
+  }
+}

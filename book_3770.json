@@ -1,0 +1,12 @@
+{
+  "Book": {
+    "Id": "3770",
+    "Title": "Libro_3770",
+    "Authors": [2327, 4802, 4410],
+    "Genres": ["Romance", "Fantasía"],
+    "Synopsis": "Buen libro",
+    "Cover": "Imagen",
+    "Networks": "Redes",
+    "ASIN": "123XXX"
+  }
+}

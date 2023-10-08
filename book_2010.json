@@ -1,0 +1,12 @@
+{
+  "Book": {
+    "Id": "2010",
+    "Title": "Libro_2010",
+    "Authors": [3681, 1460, 2431, 4530],
+    "Genres": ["Romance", "Fantasía"],
+    "Synopsis": "Buen libro",
+    "Cover": "Imagen",
+    "Networks": "Redes",
+    "ASIN": "123XXX"
+  }
+}

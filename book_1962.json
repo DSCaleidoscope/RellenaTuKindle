@@ -1,0 +1,12 @@
+{
+  "Book": {
+    "Id": "1962",
+    "Title": "Libro_1962",
+    "Authors": [530, 1828, 950],
+    "Genres": ["Romance", "Fantasía"],
+    "Synopsis": "Buen libro",
+    "Cover": "Imagen",
+    "Networks": "Redes",
+    "ASIN": "123XXX"
+  }
+}

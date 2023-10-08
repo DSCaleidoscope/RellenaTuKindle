@@ -1,0 +1,12 @@
+{
+  "Book": {
+    "Id": "594",
+    "Title": "Libro_594",
+    "Authors": [3161, 1861, 1692, 1991],
+    "Genres": ["Romance", "Fantasía"],
+    "Synopsis": "Buen libro",
+    "Cover": "Imagen",
+    "Networks": "Redes",
+    "ASIN": "123XXX"
+  }
+}

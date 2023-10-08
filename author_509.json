@@ -1,0 +1,10 @@
+{
+  "Auth": {
+    "Id": "509",
+    "AuthorName": "Autor_509",
+    "Name": "Anonymous",
+    "Genres": ["Romance", "Fantasía"],
+    "Presentation": "Aquí un texto random",
+    "ProfilePic": "Todavía no"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "Book": {
+    "Id": "3316",
+    "Title": "Libro_3316",
+    "Authors": [1362, 1990],
+    "Genres": ["Romance", "Fantasía"],
+    "Synopsis": "Buen libro",
+    "Cover": "Imagen",
+    "Networks": "Redes",
+    "ASIN": "123XXX"
+  }
+}

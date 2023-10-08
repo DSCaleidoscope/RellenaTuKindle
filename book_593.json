@@ -1,0 +1,12 @@
+{
+  "Book": {
+    "Id": "593",
+    "Title": "Libro_593",
+    "Authors": [1528, 4112, 3388, 2020],
+    "Genres": ["Romance", "Fantasía"],
+    "Synopsis": "Buen libro",
+    "Cover": "Imagen",
+    "Networks": "Redes",
+    "ASIN": "123XXX"
+  }
+}

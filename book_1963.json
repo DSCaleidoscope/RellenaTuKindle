@@ -1,0 +1,12 @@
+{
+  "Book": {
+    "Id": "1963",
+    "Title": "Libro_1963",
+    "Authors": [1351, 3320, 1634, 1810],
+    "Genres": ["Romance", "Fantasía"],
+    "Synopsis": "Buen libro",
+    "Cover": "Imagen",
+    "Networks": "Redes",
+    "ASIN": "123XXX"
+  }
+}

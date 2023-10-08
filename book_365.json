@@ -1,0 +1,12 @@
+{
+  "Book": {
+    "Id": "365",
+    "Title": "Libro_365",
+    "Authors": [1090],
+    "Genres": ["Romance", "Fantasía"],
+    "Synopsis": "Buen libro",
+    "Cover": "Imagen",
+    "Networks": "Redes",
+    "ASIN": "123XXX"
+  }
+}

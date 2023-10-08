@@ -1,0 +1,12 @@
+{
+  "Book": {
+    "Id": "4935",
+    "Title": "Libro_4935",
+    "Authors": [4768, 1871, 1711, 1057],
+    "Genres": ["Romance", "Fantasía"],
+    "Synopsis": "Buen libro",
+    "Cover": "Imagen",
+    "Networks": "Redes",
+    "ASIN": "123XXX"
+  }
+}

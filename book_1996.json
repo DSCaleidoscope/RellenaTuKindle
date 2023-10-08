@@ -1,0 +1,12 @@
+{
+  "Book": {
+    "Id": "1996",
+    "Title": "Libro_1996",
+    "Authors": [3607, 623],
+    "Genres": ["Romance", "Fantasía"],
+    "Synopsis": "Buen libro",
+    "Cover": "Imagen",
+    "Networks": "Redes",
+    "ASIN": "123XXX"
+  }
+}

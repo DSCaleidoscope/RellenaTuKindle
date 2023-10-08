@@ -1,0 +1,12 @@
+{
+  "Book": {
+    "Id": "3479",
+    "Title": "Libro_3479",
+    "Authors": [1171, 971, 2091, 1687, 1876],
+    "Genres": ["Romance", "Fantasía"],
+    "Synopsis": "Buen libro",
+    "Cover": "Imagen",
+    "Networks": "Redes",
+    "ASIN": "123XXX"
+  }
+}

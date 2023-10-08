@@ -1,0 +1,12 @@
+{
+  "Book": {
+    "Id": "1972",
+    "Title": "Libro_1972",
+    "Authors": [4879, 2412, 864, 163, 570],
+    "Genres": ["Romance", "Fantasía"],
+    "Synopsis": "Buen libro",
+    "Cover": "Imagen",
+    "Networks": "Redes",
+    "ASIN": "123XXX"
+  }
+}

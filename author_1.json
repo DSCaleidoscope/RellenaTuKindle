@@ -1,10 +1,10 @@
 {
   "Auth": {
     "Id": "1",
-    "AuthorName": "D. S. Caleidoscope",
+    "AuthorName": "Autor_1",
     "Name": "Anonymous",
-    "Genres": ["Romance", "FantasÃ­a"],
-    "Presentation": "AquÃ­ un texto random",
-    "ProfilePic": "TodavÃ­a no"
+    "Genres": ["Romance", "Fantasía"],
+    "Presentation": "Aquí un texto random",
+    "ProfilePic": "Todavía no"
   }
 }

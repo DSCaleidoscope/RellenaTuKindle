@@ -1,10 +1,10 @@
 {
   "Auth": {
     "Id": "5",
-    "AuthorName": "Cinquillo",
-    "Name": "Me saltÃ© varios",
-    "Genres": ["Romance", "FantasÃ­a"],
-    "Presentation": "SÃ­",
-    "ProfilePic": "TodavÃ­a no"
+    "AuthorName": "Autor_5",
+    "Name": "Anonymous",
+    "Genres": ["Romance", "Fantasía"],
+    "Presentation": "Aquí un texto random",
+    "ProfilePic": "Todavía no"
   }
 }

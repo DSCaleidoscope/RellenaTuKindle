@@ -1,12 +1,12 @@
 {
   "Book": {
     "Id": "5",
-    "Title": "Autor inexistente",
-    "Authors": [4, 8],
-    "Genres": ["Romance"],
-    "Synopsis": "XXX",
-    "Cover": "YYY",
-    "Networks": "ZZZ",
-    "ASIN": "TTT"
+    "Title": "Libro_5",
+    "Authors": [4039, 2237],
+    "Genres": ["Romance", "Fantasía"],
+    "Synopsis": "Buen libro",
+    "Cover": "Imagen",
+    "Networks": "Redes",
+    "ASIN": "123XXX"
   }
 }

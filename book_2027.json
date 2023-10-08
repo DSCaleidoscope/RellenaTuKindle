@@ -1,0 +1,12 @@
+{
+  "Book": {
+    "Id": "2027",
+    "Title": "Libro_2027",
+    "Authors": [3515, 1956],
+    "Genres": ["Romance", "Fantasía"],
+    "Synopsis": "Buen libro",
+    "Cover": "Imagen",
+    "Networks": "Redes",
+    "ASIN": "123XXX"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "Book": {
+    "Id": "4257",
+    "Title": "Libro_4257",
+    "Authors": [4661, 2003],
+    "Genres": ["Romance", "Fantasía"],
+    "Synopsis": "Buen libro",
+    "Cover": "Imagen",
+    "Networks": "Redes",
+    "ASIN": "123XXX"
+  }
+}

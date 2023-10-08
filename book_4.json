@@ -1,12 +1,12 @@
 {
   "Book": {
     "Id": "4",
-    "Title": "Cinquillo el Terrible",
-    "Authors": [5],
-    "Genres": ["Terror"],
-    "Synopsis": "No hay",
-    "Cover": "TÃ­pica portada fea",
-    "Networks": "No tiene",
-    "ASIN": "123"
+    "Title": "Libro_4",
+    "Authors": [4446, 3413, 3146, 4323, 2996],
+    "Genres": ["Romance", "Fantasía"],
+    "Synopsis": "Buen libro",
+    "Cover": "Imagen",
+    "Networks": "Redes",
+    "ASIN": "123XXX"
   }
 }

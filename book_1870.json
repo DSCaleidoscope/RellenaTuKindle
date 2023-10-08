@@ -1,0 +1,12 @@
+{
+  "Book": {
+    "Id": "1870",
+    "Title": "Libro_1870",
+    "Authors": [1791, 996, 3099, 1056, 1745],
+    "Genres": ["Romance", "Fantasía"],
+    "Synopsis": "Buen libro",
+    "Cover": "Imagen",
+    "Networks": "Redes",
+    "ASIN": "123XXX"
+  }
+}

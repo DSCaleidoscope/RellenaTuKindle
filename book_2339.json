@@ -1,0 +1,12 @@
+{
+  "Book": {
+    "Id": "2339",
+    "Title": "Libro_2339",
+    "Authors": [4235, 2083, 1982],
+    "Genres": ["Romance", "Fantasía"],
+    "Synopsis": "Buen libro",
+    "Cover": "Imagen",
+    "Networks": "Redes",
+    "ASIN": "123XXX"
+  }
+}

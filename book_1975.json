@@ -1,0 +1,12 @@
+{
+  "Book": {
+    "Id": "1975",
+    "Title": "Libro_1975",
+    "Authors": [4635, 4069],
+    "Genres": ["Romance", "Fantasía"],
+    "Synopsis": "Buen libro",
+    "Cover": "Imagen",
+    "Networks": "Redes",
+    "ASIN": "123XXX"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "Book": {
+    "Id": "2025",
+    "Title": "Libro_2025",
+    "Authors": [2565],
+    "Genres": ["Romance", "Fantasía"],
+    "Synopsis": "Buen libro",
+    "Cover": "Imagen",
+    "Networks": "Redes",
+    "ASIN": "123XXX"
+  }
+}

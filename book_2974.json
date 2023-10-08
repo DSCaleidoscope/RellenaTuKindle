@@ -1,0 +1,12 @@
+{
+  "Book": {
+    "Id": "2974",
+    "Title": "Libro_2974",
+    "Authors": [1980, 3964, 1890, 802],
+    "Genres": ["Romance", "Fantasía"],
+    "Synopsis": "Buen libro",
+    "Cover": "Imagen",
+    "Networks": "Redes",
+    "ASIN": "123XXX"
+  }
+}

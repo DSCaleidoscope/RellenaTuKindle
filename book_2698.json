@@ -1,0 +1,12 @@
+{
+  "Book": {
+    "Id": "2698",
+    "Title": "Libro_2698",
+    "Authors": [2664],
+    "Genres": ["Romance", "Fantasía"],
+    "Synopsis": "Buen libro",
+    "Cover": "Imagen",
+    "Networks": "Redes",
+    "ASIN": "123XXX"
+  }
+}

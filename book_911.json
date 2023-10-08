@@ -1,0 +1,12 @@
+{
+  "Book": {
+    "Id": "911",
+    "Title": "Libro_911",
+    "Authors": [3383, 1762],
+    "Genres": ["Romance", "Fantasía"],
+    "Synopsis": "Buen libro",
+    "Cover": "Imagen",
+    "Networks": "Redes",
+    "ASIN": "123XXX"
+  }
+}

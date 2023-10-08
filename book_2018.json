@@ -1,0 +1,12 @@
+{
+  "Book": {
+    "Id": "2018",
+    "Title": "Libro_2018",
+    "Authors": [239],
+    "Genres": ["Romance", "Fantasía"],
+    "Synopsis": "Buen libro",
+    "Cover": "Imagen",
+    "Networks": "Redes",
+    "ASIN": "123XXX"
+  }
+}

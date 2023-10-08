@@ -1,0 +1,12 @@
+{
+  "Book": {
+    "Id": "1937",
+    "Title": "Libro_1937",
+    "Authors": [716],
+    "Genres": ["Romance", "Fantasía"],
+    "Synopsis": "Buen libro",
+    "Cover": "Imagen",
+    "Networks": "Redes",
+    "ASIN": "123XXX"
+  }
+}

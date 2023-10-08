@@ -1,0 +1,12 @@
+{
+  "Book": {
+    "Id": "4361",
+    "Title": "Libro_4361",
+    "Authors": [2183, 1953, 1857, 1856],
+    "Genres": ["Romance", "Fantasía"],
+    "Synopsis": "Buen libro",
+    "Cover": "Imagen",
+    "Networks": "Redes",
+    "ASIN": "123XXX"
+  }
+}
