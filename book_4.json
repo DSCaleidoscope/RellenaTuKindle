@@ -2,7 +2,7 @@
   "Book": {
     "Id": "4",
     "Title": "Libro_4",
-    "Authors": [4446, 3413, 3146, 4323, 2996],
+    "Authors": [51],
     "Genres": ["Romance", "Fantasía"],
     "Synopsis": "Buen libro",
     "Cover": "Imagen",
