@@ -206,7 +206,35 @@ function addBookMethods(book) {
   book.getASIN = function () { return this.ASIN; };
   book.createNode = function (id) { return document.createElement("div"); }
   book.stylizeNode = function (node) { node.classList.add("book"); node.setAttribute('id', "b_" + this.getID()); node.addEventListener("click", function (e) { collapseBook(this); }); }
-  book.appendNode = function (node) { g('bbody').appendChild(node); }
+  book.appendNode = function (node) {
+    //add it to any genre that the book has.
+    let genres = this.getGenres();
+    let i = 0;
+    let x = genres.length;
+
+    for (; i < x; i++) {
+      let mnode = g(genres[i]);
+
+      //clonning node so we can attach it several times
+      let lnode = node.cloneNode(true);
+      lnode.setAttribute('id', "b_" + (parseInt(this.getID()) + (i * bookMax)));
+
+      if (mnode == null) {
+        //it's a new genre. Create it!
+        let gnode = this.createNode();
+        gnode.classList.add("genre");
+        gnode.setAttribute('id', genres[i]);
+        g('bbody').appendChild(gnode);
+
+        //now, fetch it again
+        mnode = g(genres[i]);
+      }
+
+      mnode.appendChild(lnode);
+    }
+
+    //g('bbody').appendChild(node);
+  }
   book.addInfo = function (al) {
     let node = this.createNode(this.getID());
     this.stylizeNode(node);
@@ -258,6 +286,7 @@ function addBookMethods(book) {
     //node.innerHTML += " Generos: " + this.getGenres();
     return;
   };
+
   book.addSynopsisInfo = function (node) {
     //local node
     let lnode = this.createNode();
@@ -268,12 +297,15 @@ function addBookMethods(book) {
     //put local node inside book node
     node.appendChild(lnode);
   };
+
   book.addCoverInfo = function (node) {
     //node.innerHTML += "<div class='cover'>" + this.getCover() + "</div>";
   };
+
   book.addNetworksInfo = function (node) {
     //node.innerHTML += "<div class='networks'>" + this.getNetworks() + "</div>";
   };
+
   book.addASINInfo = function (node) {
     node.innerHTML += "<div class='ASIN'><a href='https://www.amazon.com/gp/product/" + this.getASIN() + "' target='_blank'>Descargar en Amazon</a></div>";
   };
@@ -371,11 +403,19 @@ async function fill(){
   await Promise.allSettled(rList);
 
   //collapse all books
+  let genres = document.getElementsByClassName("genre");
   let i = 0;
-  let x = bookMax;
+  let x = genres.length;
 
-  for (i = 0; i < x; i++) {
-    collapseBook(g("b_" + i));
+  for (; i < x; i++) {
+    //for each genre, collapse each book
+    let children = genres[i].children;
+    let chCount = genres[i].childElementCount;
+    let j = 0;
+
+    for (; j < chCount; j++) {
+      collapseBook(children[j]);
+    }
   }
 
   endLoad();
