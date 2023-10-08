@@ -205,7 +205,11 @@ function addBookMethods(book) {
   book.getNetworks = function () { return this.Networks; };
   book.getASIN = function () { return this.ASIN; };
   book.createNode = function (id) { return document.createElement("div"); }
-  book.stylizeNode = function (node) { node.classList.add("book"); node.setAttribute('id', "b_" + this.getID()); node.addEventListener("click", function (e) { collapseBook(this); }); }
+  book.stylizeNode = function (node, offset) {
+    node.classList.add("book");
+    node.setAttribute('id', (parseInt(this.getID()) + offset));
+    node.addEventListener("click", function (e) { collapseBook(this); });
+  }
   book.appendNode = function (node) {
     //add it to any genre that the book has.
     let genres = this.getGenres();
@@ -217,7 +221,7 @@ function addBookMethods(book) {
 
       //clonning node so we can attach it several times
       let lnode = node.cloneNode(true);
-      lnode.setAttribute('id', "b_" + (parseInt(this.getID()) + (i * bookMax)));
+      this.stylizeNode(lnode, (i * bookMax));
 
       if (mnode == null) {
         //it's a new genre. Create it!
@@ -237,7 +241,7 @@ function addBookMethods(book) {
   }
   book.addInfo = function (al) {
     let node = this.createNode(this.getID());
-    this.stylizeNode(node);
+    //this.stylizeNode(node, 0);
     this.addTitleInfo(node);
     this.addAuthorInfo(node, al);
     this.addGenresInfo(node);
