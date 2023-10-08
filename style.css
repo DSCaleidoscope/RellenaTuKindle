@@ -1,4 +1,81 @@
-.branch{
+#mtitle {
+  position: relative;
+  width: 36%;
+  left: 32%;
+  text-align: center;
+  font-size: 32px;
+  font-family: arial;
+}
+
+#whatIs {
+  margin-top: 25px;
+}
+
+#bookTitle {
+  position: relative;
+  width: 36%;
+  left: 32%;
+  text-align: center;
+  font-size: 32px;
+  font-family: arial;
+  margin-top: 50px;
+  margin-bottom: 15px;
+}
+
+#loader {
+  position: fixed;
+  width: 36%;
+  height: 50px;
+  left: 32%;
+  top: 43%;
+  text-align: center;
+  font-size: 24px;
+  font-family: arial;
+  margin-top: 50px;
+  margin-bottom: 15px;
+}
+
+#loading {
+  position: relative;
+  width: 0%;
+  height: 100%;
+  border-radius: 50px;
+  text-align: center;
+  background: green;
+}
+
+#loginWrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: 50px;
+  text-align: center;
+  background: white;
+  border: 1px solid black;
+}
+
+.whatIsTitle {
+  position: relative;
+  width: 36%;
+  left: 32%;
+  text-align: center;
+  font-size: 24px;
+  font-family: arial;
+  margin-top: 35px;
+  margin-bottom: 15px;
+}
+
+.whatIsText {
+  position: relative;
+  width: 36%;
+  left: 32%;
+  text-align: center;
+  font-size: 14px;
+  font-family: arial;
+  line-height: 2;
+}
+
+.book {
   width: 36%;
   height: 10%;
   position: relative;
@@ -10,20 +87,11 @@
   border-radius: 25px;
   transition: background 1s;
   font-family: arial;
-  font-weight:700;
+  font-weight: 700;
 }
 
-.branch:hover{
-  cursor:pointer;
+.book:hover {
+  cursor: pointer;
   background: #123456;
   color: white;
-}
-
-#mtitle{
-  position: relative;
-  width: 36%;
-  left: 32%;
-  text-align: center;
-  font-size: 32px;
-  font-family: arial;
 }

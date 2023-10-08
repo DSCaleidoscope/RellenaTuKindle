@@ -1,3 +1,8 @@
+/**
+ * Dale Amor a tu Kindle / Ereader (DATK)
+ * 
+ * Functions file, created by D. S. Caleidoscope on October, 2023.
+ **/
 //global variables
 var authorMaster;
 var bookMaster;
@@ -16,13 +21,18 @@ var pai = 0;
 var pbi = 0;
 var pri = 0;
 
-//Params
+//params
 var maxRead;
+var reloadPage = false;
+
+//move it to false only during event days
+var forceRefresh = false;
 
 //helpers & redefines
 function g(id){return document.getElementById(id);}
 function clear(){g("bbody").innerHTML = '';}
-function add(t){g("bbody").innerHTML += t + '<br />';}
+function add(t) { g("bbody").innerHTML += t + '<br />'; }
+function reload() { if (reloadPage) { location.replace(".");;}}
 
 //Params
 function getParams(){
@@ -31,6 +41,7 @@ function getParams(){
   const urlParams = new URLSearchParams(queryString);
   const mr = urlParams.get('mr');
   const cs = urlParams.get('cs');
+  const rl = urlParams.get('rl');
   
   maxRead = 64;
   
@@ -38,9 +49,33 @@ function getParams(){
     maxRead = mr;
   }
 
-  if (cs == 1) {
+  if (cs == 1 || forceRefresh) {
     localStorage.clear();
   }
+
+  //when clicking link it will lead to cs=1, so we will reload page with base URL for next reload
+  if (rl == 1) {
+    reloadPage = true;
+  }
+}
+
+//Loading screen
+function startLoad() {
+  g('mbody').style.backgroundColor = "#80808087";
+  g('mainScreen').style.visibility = "hidden";
+}
+
+function endLoad() {
+  g('mbody').style.backgroundColor = "white";
+  g('mainScreen').style.visibility = "initial";
+  g('loader').style.visibility = "hidden";
+}
+
+function uploadLoad(curr, tot) {
+  let width = (curr * 100) / tot;
+
+  g('loading').style.width = "" + width + "%";
+  g('msg').innerHTML = "" + width + "%";
 }
 
 //AUTHORS
@@ -195,7 +230,6 @@ async function fill(){
     let ax = 0;
     let bx = 0;
 
-    add("Session is up!");
     bookList = JSON.parse(localStorage.getItem('datk_books'));
     authorList = JSON.parse(localStorage.getItem('datk_authors'));
 
@@ -235,7 +269,8 @@ async function fill(){
     //await full completion
     await Promise.allSettled(fList);
 
-    add("MaxRead: " + maxRead);
+    //performance (uncomment when needed)
+    //add("MaxRead: " + maxRead);
 
     //start getting real data until all is done
     //we're getting only small chunks each time to avoid network issues
@@ -252,6 +287,9 @@ async function fill(){
 
       //performance (uncomment when needed)
       //add("Time: " + (Date.now() - ini));
+
+      //update loading bar
+      uploadLoad((pai + pbi), (authorMax + bookMax));
     }
 
     //save data into local storage
@@ -263,14 +301,13 @@ async function fill(){
   //relate & print
   relate();
   await Promise.allSettled(rList);
+  endLoad();
 }
 
 //This function relates and prints books & authors
 async function relate(){
   let i = 0;
   let x = bookList.length;
-
-  console.log("x: " + x);
 
   for(;i < x;i++){
     let p = printPromise(bookList[i], authorList).then(
