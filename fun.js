@@ -30,7 +30,7 @@ var Wcollapsed = false;
 var Bcollapsed = [];
 
 //move it to false only during event days
-var forceRefresh = false;
+var forceRefresh = true;
 
 //helpers & redefines
 function g(id){return document.getElementById(id);}
@@ -321,10 +321,11 @@ async function fill(){
   let fList = [];
   clear();
 
-  //check session to pump performance
+  //check session to pump performance. doneValue will change the day before launch to force the restart
   let isDone = localStorage.getItem('rtk_done');
+  let doneValue = 1;
 
-  if (isDone == 1) {
+  if (isDone == doneValue) {
     //user already loaded the page
     let brList = [];
     let arList = [];
@@ -400,7 +401,7 @@ async function fill(){
     localStorage.setItem('rtk_books', JSON.stringify(bookList));
     localStorage.setItem('rtk_authors', JSON.stringify(authorList));
     localStorage.setItem('rtk_count', bookMax);
-    localStorage.setItem('rtk_done', 1);
+    localStorage.setItem('rtk_done', doneValue);
   }
 
   //relate & print
