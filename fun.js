@@ -312,7 +312,7 @@ function addBookMethods(book) {
   };
 
   book.addASINInfo = function (node) {
-    node.innerHTML += "<div class='ASIN'><a href='https://www.amazon.com/gp/product/" + this.getASIN() + "' target='_blank'>Descargar en Amazon</a></div>";
+    node.innerHTML += "<div class='ASIN'><a href='https://rellenatukindle.000webhostapp.com/analytics.php?id=" + this.getID() + "&ASIN=" + this.getASIN() + "' target='_blank'>Descargar en Amazon</a></div>";
   };
 }
 
