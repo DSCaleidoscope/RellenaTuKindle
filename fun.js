@@ -135,15 +135,17 @@ async function parseAuthors(t){
   
   let i = 0;
 
-  for(;i < maxRead;i++){
-    let p = filePromise("author_" + authors.Author[pai].id_author + ".json").then(
-      function(value) {parseSingleAuthor(value);},
-      function(error) {console.log(error);}
-    );
-    
-    pai++
+  for (; i < maxRead; i++){
+    if (pai < authorMax) {
+      let p = filePromise("author_" + authors.Author[pai].id_author + ".json").then(
+        function (value) { parseSingleAuthor(value); },
+        function (error) { console.log(error); }
+      );
 
-    aList.push(p);
+      pai++
+
+      aList.push(p);
+    }
   }
 }
 
@@ -174,15 +176,17 @@ async function parseBooks(t){
   
   let i = 0;
   
-  for(;i < maxRead;i++){
-    let p = filePromise("book_" + books.Book[pbi].id_book + ".json").then(
-      function(value) {parseSingleBook(value);},
-      function(error) {console.log(error);}
-    );
-    
-    pbi++;
+  for (; i < maxRead; i++){
+    if (pbi < bookMax) {
+      let p = filePromise("book_" + books.Book[pbi].id_book + ".json").then(
+        function (value) { parseSingleBook(value); },
+        function (error) { console.log(error); }
+      );
 
-    bList.push(p);
+      pbi++;
+
+      bList.push(p);
+    }
   }
 }
 
