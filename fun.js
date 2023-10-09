@@ -145,6 +145,9 @@ async function parseAuthors(t){
       pai++
 
       aList.push(p);
+    } else {
+      //force quit
+      i = maxRead + 1;
     }
   }
 }
@@ -186,6 +189,9 @@ async function parseBooks(t){
       pbi++;
 
       bList.push(p);
+    } else {
+      //force quit
+      i = maxRead + 1;
     }
   }
 }
