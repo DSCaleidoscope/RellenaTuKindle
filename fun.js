@@ -334,9 +334,10 @@ async function fill(){
   let fList = [];
   clear();
 
-  //check session to pump performance. doneValue will change the day before launch to force the restart
+  //check session to pump performance. It will renew each day to reflect latest changes.
   let isDone = localStorage.getItem('rtk_done');
-  let doneValue = 1;
+  let dv = new Date();
+  let doneValue = "" + dv.getFullYear() + String(dv.getMonth() + 1).padStart(2, "0") + String(dv.getDate()).padStart(2, "0");
 
   if (isDone == doneValue) {
     //user already loaded the page
