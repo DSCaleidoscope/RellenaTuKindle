@@ -128,6 +128,37 @@ function collapseBook(e) {
   
 }
 
+//listing
+function getAll() {
+  let i = 0;
+  let x = bookList.length;
+  let n = [];
+
+  n.push("[{");
+
+  for (; i < x; i++) {
+    n.push("\"book\":");
+    n.push(JSON.stringify(bookList[i]));
+    n.push("},{");
+  }
+
+  n[n.length - 1] = "}]";
+
+  dlfr = new FileReader();
+
+  dlfr.onload = function (event) {
+    dlfs = document.createElement('a');
+    dlfs.href = event.target.result;
+    dlfs.target = '_blank';
+    dlfs.download = 'allData.txt';
+    dlfc = new MouseEvent('click', { 'view': window, 'bubbles': true, 'cancelable': true });
+    dlfs.dispatchEvent(dlfc);
+    (window.URL || window.webkitURL).revokeObjectURL(dlfs.href)
+  };
+
+  dlfr.readAsDataURL(new Blob(n, { type: 'application/ json'}));
+}
+
 //AUTHORS
 async function parseAuthors(t){
   let authors = JSON.parse(t);
@@ -222,7 +253,8 @@ function addBookMethods(book) {
     node.classList.add("book");
     node.setAttribute('id', (parseInt(this.getID()) + offset));
     node.addEventListener("click", function (e) { collapseBook(this); });
-  }
+  };
+
   book.appendNode = function (node) {
     //add it to any genre that the book has.
     let genres = this.getGenres();
@@ -250,12 +282,10 @@ function addBookMethods(book) {
 
       mnode.appendChild(lnode);
     }
+  };
 
-    //g('bbody').appendChild(node);
-  }
   book.addInfo = function (al) {
     let node = this.createNode(this.getID());
-    //this.stylizeNode(node, 0);
     this.addTitleInfo(node);
     this.addAuthorInfo(node, al);
     this.addGenresInfo(node);
@@ -268,7 +298,7 @@ function addBookMethods(book) {
 
   book.addTitleInfo = function (node) {
     node.innerHTML += "<div class='title'>" + this.getTitle() + "</div>";
-  }
+  };
 
   book.addAuthorInfo = function (node, al) {
     let i = 0;
@@ -301,7 +331,6 @@ function addBookMethods(book) {
   };
 
   book.addGenresInfo = function (node) {
-    //node.innerHTML += " Generos: " + this.getGenres();
     return;
   };
 

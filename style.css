@@ -152,6 +152,10 @@ a, a:visited, a:hover, a:checked {
     text-decoration: none;
   }
 
+  #reload span {
+    cursor: pointer;
+  }
+
 .genre {
   position: relative;
   text-align: center;
