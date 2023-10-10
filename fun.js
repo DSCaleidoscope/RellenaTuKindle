@@ -142,9 +142,9 @@ async function parseAuthors(t){
         function (error) { console.log(error); }
       );
 
-      pai++
-
       aList.push(p);
+
+      pai++
     } else {
       //force quit
       i = maxRead + 1;
@@ -181,14 +181,17 @@ async function parseBooks(t){
   
   for (; i < maxRead; i++){
     if (pbi < bookMax) {
-      let p = filePromise("book_" + books.Book[pbi].id_book + ".json").then(
-        function (value) { parseSingleBook(value); },
-        function (error) { console.log(error); }
-      );
+      if (books.Book[pbi].participate == "Y") {
+        //only add if participate
+        let p = filePromise("book_" + books.Book[pbi].id_book + ".json").then(
+          function (value) { parseSingleBook(value); },
+          function (error) { console.log(error); }
+        );
+
+        bList.push(p);
+      }
 
       pbi++;
-
-      bList.push(p);
     } else {
       //force quit
       i = maxRead + 1;
