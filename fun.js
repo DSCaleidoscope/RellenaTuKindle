@@ -273,11 +273,14 @@ function addBookMethods(book) {
         let gnode = this.createNode();
         gnode.classList.add("genre");
         gnode.setAttribute('id', genres[i]);
-        gnode.innerHTML = genres[i];
+        gnode.innerHTML = '<a id="' + genres[i] + '">' + genres[i] + '</a> | <a href="#gList">&#128285;</a>';
         g('bbody').appendChild(gnode);
 
         //now, fetch it again
         mnode = g(genres[i]);
+
+        //after create it, add it to the list
+        g('genresContent').innerHTML += '<a href="#' +genres[i] +'">' + genres[i] + '</a> | ';
       }
 
       mnode.appendChild(lnode);

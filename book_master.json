@@ -2,7 +2,7 @@
   "Book": [
     {
       "id_book": "0",
-      "participate": "N"
+      "participate": "Y"
     },
     {
       "id_book": "1",
@@ -197,7 +197,7 @@
       "participate": "Y"
     },
     {
-      "id_book": "49",
+      "id_book": "50",
       "participate": "Y"
     }
   ]

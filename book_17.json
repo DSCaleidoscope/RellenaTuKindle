@@ -2,8 +2,8 @@
   "Book": {
     "Id": "17",
     "Title": "Libro_17",
-    "Authors": [28, 16, 7, 13],
-    "Genres": ["Romance", "Fantasía"],
+    "Authors": [16, 18, 17, 26],
+    "Genres": ["Romance", "Fantasia"],
     "Synopsis": "Buen libro",
     "Cover": "Imagen",
     "Networks": "Redes",

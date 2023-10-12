@@ -164,3 +164,13 @@ a, a:visited, a:hover, a:checked {
   margin-bottom: 15px;
   font-weight: 700;
 }
+
+.genre a{
+  text-decoration: none;
+}
+
+.genresTitle {
+  text-align: center;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
