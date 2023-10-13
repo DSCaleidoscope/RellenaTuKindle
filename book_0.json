@@ -1,10 +1,10 @@
 {
   "Book": {
     "Id": "0",
-    "Title": "Libro_0",
-    "Authors": [1],
-    "Genres": ["Romance", "Fantasia"],
-    "Synopsis": "Buen libro",
+    "Title": "¡Pulsa aquí!",
+    "Authors": [0],
+    "Genres": ["Todos los géneros"],
+    "Synopsis": "¡El próximo 27/Diciembre, aquí aparecerán todos los libros!",
     "Cover": "Imagen",
     "Networks": "Redes",
     "ASIN": "123XXX"
