@@ -148,13 +148,14 @@ a, a:visited, a:hover, a:checked {
     font-size: 18px;
 }
 
-  #reload a {
+#reload a {
     text-decoration: none;
-  }
 
-  #reload span {
+}
+
+#reload span {
     cursor: pointer;
-  }
+}
 
 .genre {
   position: relative;
@@ -173,4 +174,35 @@ a, a:visited, a:hover, a:checked {
   text-align: center;
   font-size: 24px;
   margin-bottom: 15px;
+}
+
+input[type='text'] {
+  height: 30px;
+  margin-bottom: 5px;
+  border: 1px solid #A7A392;
+  border-radius: 25px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: #34393f;
+  transition-property: background;
+  transition-duration: 1s;
+}
+
+input[type='button'] {
+  border: 1px solid #A7A392;
+  background: none;
+  width: 35%;
+  height: 35px;
+  color: #34393f;
+  transition-property: background;
+  transition-duration: 1s;
+}
+
+input[type='button']:hover {
+    background-color: #A7A392;
+    cursor: pointer;
+}
+
+input[type='text']:hover {
+    background-color: #A7A392;
 }
