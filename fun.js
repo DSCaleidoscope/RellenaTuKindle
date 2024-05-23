@@ -1,4 +1,4 @@
-﻿/**
+/**
  * Rellena tu Kindle / Ereader (RTK)
  * 
  * Functions file, created by D. S. Caleidoscope on October, 2023.
@@ -534,4 +534,16 @@ let restoreAuthPromise = async function (auth) {
     addAuthorMethods(auth);
     resolve(true);
   });
+}
+
+//Register
+function sendReg() {
+  //grab form values
+  let asin = g('RegASIN').value;
+  let social = g('RegSocial').value;
+  let data = new FormData();
+  data.append("ASIN", asin);
+  data.append("social", social);
+
+  navigator.sendBeacon("https://rellenatukindle.000webhostapp.com/reg.php", data);
 }
