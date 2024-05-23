@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Web para descargar ebooks gratis durante el evento 'Rellena tu Kindle'">
+  <meta name="keywords" content="ebook gratis amazon">
+  <meta name="author" content="D. S. Caleidoscope">
+  <title>Rellena tu Kindle</title>
+  <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
+  <script type="text/javascript" src="fun.js"></script>
+</head>
+<body style="background-color: rgb(243, 242, 237);">
+  <div id="mainScreen">
+    <div id="reload"><a href="./?cs=1&rl=1">&#128260; Recargar</a> | <a href="./?cs=1&rl=1">&#128209; P&aacute;gina principal</a> | <span onclick="getAll();">&#128193; Cat&aacute;logo</span></div>
+    <div id="mtitle">Rellena Tu Kindle / Ereader</div>
+    <div id="whatIs">
+      <div class="section" id="whatSection" onclick="collapseWhat('whatContent');">Registro</div>
+      <div id="whatContent">
+        <div class="whatIsTitle">&iexcl;Inscribe tu obra!</div>
+        <div class="whatIsText"><input type="text" placeholder="ASIN" id="RegASIN" /></div>
+        <div class="whatIsText"><input type="text" placeholder="https://www.tiktok.com/@dscaleidoscope" id="RegSocial" /></div>
+        <div class="whatIsText"><input type="button" value="Enviar" onclick="sendReg();" /></div>
+      </div>
+    </div>
+  </div>
+  <div id="bbody">
+    <script type="text/javascript">
+      collapseWhat('whatContent');
+      collapseWhat('whatContent');
+    </script>
+  </div>
+</body>
