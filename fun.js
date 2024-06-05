@@ -538,7 +538,8 @@ let restoreAuthPromise = async function (auth) {
 
 //Register
 function sendReg() {
-  //grab form values
+  g('fsub').submit();
+ /* //grab form values
   let asin = g('RegASIN').value;
   let social = g('RegSocial').value;
   let data = new FormData();
@@ -546,5 +547,5 @@ function sendReg() {
   data.append("social", social);
 
   navigator.sendBeacon("https://rellenatukindle.000webhostapp.com/reg.php", data);
-  g('RegResult').innerHTML = "Registro efectuado";
+  g('RegResult').innerHTML = "Registro efectuado";*/
 }
