@@ -3,6 +3,10 @@
     {
       "id_book": "0",
       "participate": "Y"
+    },
+    {
+      "id_book": "1",
+      "participate": "Y"
     }
   ]
 }
