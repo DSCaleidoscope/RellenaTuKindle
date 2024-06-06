@@ -2,4 +2,4 @@
 En pocas palabras... Es el Stuff your Kindle Day, pero en español.
 
 ## Participa!
-Búscame en redes, envíame un mensaje, y colaboremos!
+B&uacute;scame en redes, env&iacute;ame un mensaje, y colaboremos!
