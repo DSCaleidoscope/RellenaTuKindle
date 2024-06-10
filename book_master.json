@@ -11,6 +11,10 @@
     {
       "id_book": "2",
       "participate": "N"
+    },
+    {
+      "id_book": "3",
+      "participate": "N"
     }
   ]
 }
