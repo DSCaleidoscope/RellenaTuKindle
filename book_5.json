@@ -1,0 +1,12 @@
+{
+  "Book": {
+    "Id": "4",
+    "Title": "El Hijo del Sol y las Estrellas",
+    "Authors": [ 1 ],
+    "Genres": [ "Fantas&iacutea", "Romance" ],
+    "Synopsis": "El eco de la guerra ruge.<br /><br />El Heredero despierta.<br /><br />En la distancia, la sangre llama.<br /><br /><br />En &quot;El Hijo del Sol y las Estrellas&quot; nos encontramos un mundo convulso, sumido en un torbellino de acontecimientos que desaf&iacute;an con desatar un conflicto que lo cambiar&aacute; todo, y a todos.<br /><br />Los clanes fae y los pueblos &eacute;lficos mueven sus fichas en el peligroso tablero de la guerra, mientras Did queda atrapado en la gran urbe de los fae, a merced del voluble Or&aacute;culo y sus caprichos.<br /><br />Sum&eacute;rgete en la contienda que decidir&aacute; el destino de elfos y fae, en la que surgir&aacute;n tanto alianzas como traiciones inesperadas, todo ello envuelto con el delicado lazo del amor.<br /><br />S&oacute;lo queda una inc&oacute;gnita: ¿Dar&aacute; comienzo la Era del Or&aacute;culo?",
+    "Cover": "",
+    "Networks": "",
+    "ASIN": "B0CZY2LNR7"
+  }
+}
