@@ -2,35 +2,35 @@
   "Book": [
     {
       "id_book": "0",
-      "participate": "Y"
+      "participate": "N"
     },
     {
       "id_book": "1",
-      "participate": "N"
+      "participate": "Y"
     },
     {
       "id_book": "2",
-      "participate": "N"
+      "participate": "Y"
     },
     {
       "id_book": "3",
-      "participate": "N"
+      "participate": "Y"
     },
     {
       "id_book": "4",
-      "participate": "N"
+      "participate": "Y"
     },
     {
       "id_book": "5",
-      "participate": "N"
+      "participate": "Y"
     },
     {
       "id_book": "6",
-      "participate": "N"
+      "participate": "Y"
     },
     {
       "id_book": "7",
-      "participate":  "N"
+      "participate":  "Y"
     }
   ]
 }

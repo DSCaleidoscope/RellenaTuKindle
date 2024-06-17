@@ -29,14 +29,19 @@ var reloadPage = false;
 var Wcollapsed = false;
 var Bcollapsed = [];
 
-//move it to false only during event days
-var forceRefresh = true;
+//Config
+var forceRefresh = true; //During the event, move it to false to avoid forcing refresh!
+var eventDate = "24/Junio";
+var isEventWaiting = true; //Move it to false to show links to Amazon
 
 //helpers & redefines
 function g(id){return document.getElementById(id);}
 function clear(){g("bbody").innerHTML = '';}
 function add(t) { g("bbody").innerHTML += t + '<br />'; }
-function reload() { if (reloadPage) { location.replace(".");;}}
+function reload() { if (reloadPage) { location.replace(".");; } }
+
+//Register
+function sendReg() { g('fsub').submit(); }
 
 //Params
 function getParams(){
@@ -357,7 +362,11 @@ function addBookMethods(book) {
   };
 
   book.addASINInfo = function (node) {
-    node.innerHTML += "<div class='ASIN'><a href='https://rellenatukindle.000webhostapp.com/analytics.php?id=" + this.getID() + "&ASIN=" + this.getASIN() + "' target='_blank'>Descargar en Amazon</a></div>";
+    if (isEventWaiting) {
+      node.innerHTML += "<div class='ASIN'>Gratis el pr&oacute;ximo " + eventDate + "</div>";
+    } else {
+      node.innerHTML += "<div class='ASIN'><a href='https://rellenatukindle.000webhostapp.com/analytics.php?id=" + this.getID() + "&ASIN=" + this.getASIN() + "' target='_blank'>Descargar en Amazon</a></div>";
+    }
   };
 }
 
@@ -534,18 +543,4 @@ let restoreAuthPromise = async function (auth) {
     addAuthorMethods(auth);
     resolve(true);
   });
-}
-
-//Register
-function sendReg() {
-  g('fsub').submit();
- /* //grab form values
-  let asin = g('RegASIN').value;
-  let social = g('RegSocial').value;
-  let data = new FormData();
-  data.append("ASIN", asin);
-  data.append("social", social);
-
-  navigator.sendBeacon("https://rellenatukindle.000webhostapp.com/reg.php", data);
-  g('RegResult').innerHTML = "Registro efectuado";*/
 }
