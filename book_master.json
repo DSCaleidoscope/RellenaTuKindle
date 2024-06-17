@@ -30,7 +30,11 @@
     },
     {
       "id_book": "7",
-      "participate":  "Y"
+      "participate": "Y"
+    },
+    {
+      "id_book": "8",
+      "participate": "Y"
     }
   ]
 }
