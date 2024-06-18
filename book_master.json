@@ -51,6 +51,10 @@
     {
       "id_book": "12",
       "participate": "Y"
+    },
+    {
+      "id_book": "13",
+      "participate": "Y"
     }
   ]
 }

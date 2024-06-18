@@ -111,6 +111,7 @@ function collapseBook(e) {
   let i = 1;
   let x = e.childElementCount;
   let defHeight = 26;
+  let finalHeight = 0;
 
   //searching for title node
   let si = 0;
@@ -119,22 +120,30 @@ function collapseBook(e) {
     if (childs[si].className == "title") {
       defHeight = childs[si].clientHeight;
     }
+
+    finalHeight += childs[si].clientHeight;
   }
 
   if (Bcollapsed[e.id] == true) {
     //it's collapsed, it will expand
-    e.style.height = "initial";
+    //e.style.height = "initial";
     Bcollapsed[e.id] = false;
 
     //show all childs
     for (; i < x; i++) {
       childs[i].style.visibility = "initial";
+      childs[i].style.height = "initial";
 
       //Don't show synopsis if we're short on space
-      if (childs[i].className == "syn" && defHeight > 70) {
-        childs[i].style.visibilty = "hidden";
+      if (childs[i].className == "syn" && defHeight > 50) {
+        finalHeight -= childs[i].clientHeight;
+        childs[i].style.visibility = "hidden";
+        childs[i].style.height = "0px";
       }
     }
+
+    //adding 40px because of padding
+    e.style.height = (finalHeight + 40) + "px";
   } else {
     //it's expanded, let's collapse it
     e.style.height = defHeight + "px";
@@ -143,6 +152,7 @@ function collapseBook(e) {
     //hide all childs
     for (; i < x; i++) {
       childs[i].style.visibility = "hidden";
+      childs[i].style.height = "initial";
     }
   }
   
