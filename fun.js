@@ -110,14 +110,14 @@ function collapseBook(e) {
   let childs = e.children;
   let i = 1;
   let x = e.childElementCount;
-  let defHeight = "26px";
+  let defHeight = 26;
 
   //searching for title node
   let si = 0;
 
   for (; si < x; si++) {
     if (childs[si].className == "title") {
-      defHeight = childs[si].clientHeight + "px";
+      defHeight = childs[si].clientHeight;
     }
   }
 
@@ -129,11 +129,15 @@ function collapseBook(e) {
     //show all childs
     for (; i < x; i++) {
       childs[i].style.visibility = "initial";
+
+      //Don't show synopsis if we're short on space
+      if (childs[i].className == "syn" && defHeight > 70) {
+        childs[i].style.visibilty = "hidden";
+      }
     }
   } else {
     //it's expanded, let's collapse it
-    //e.style.height = "26px";
-    e.style.height = defHeight;
+    e.style.height = defHeight + "px";
     Bcollapsed[e.id] = true;
 
     //hide all childs
