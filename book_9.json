@@ -1,0 +1,12 @@
+{
+  "Book": {
+    "Id": "9",
+    "Title": "VITTO",
+    "Authors": [ 7 ],
+    "Genres": [ "Fantas&iacute;a juvenil", "Fantas&iacute;a urbana" ],
+    "Synopsis": "Lucca es un adolescente de diecis&eacute;is a&ntilde;os con una vida completamente normal, o al menos eso pensaba &eacute;l, ya que todo cambia el d&iacute;a que visita una misteriosa cueva, descubriendo un nuevo mundo lleno de criaturas fant&aacute;sticas que viven entre nosotros pasando desapercibidas ante nuestros ojos, controlado por sociedades secretas que luchan entre s&iacute; en una guerra eterna",
+    "Cover": "",
+    "Networks": "",
+    "ASIN": "B0BFJKSRP2"
+  }
+}
