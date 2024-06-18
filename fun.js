@@ -110,6 +110,16 @@ function collapseBook(e) {
   let childs = e.children;
   let i = 1;
   let x = e.childElementCount;
+  let defHeight = "26px";
+
+  //searching for title node
+  let si = 0;
+
+  for (; si < x; si++) {
+    if (childs[si].className == "title") {
+      defHeight = childs[si].clientHeight + "px";
+    }
+  }
 
   if (Bcollapsed[e.id] == true) {
     //it's collapsed, it will expand
@@ -122,7 +132,8 @@ function collapseBook(e) {
     }
   } else {
     //it's expanded, let's collapse it
-    e.style.height = "26px";
+    //e.style.height = "26px";
+    e.style.height = defHeight;
     Bcollapsed[e.id] = true;
 
     //hide all childs
