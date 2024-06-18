@@ -161,7 +161,7 @@ function getAll() {
     (window.URL || window.webkitURL).revokeObjectURL(dlfs.href)
   };
 
-  dlfr.readAsDataURL(new Blob(n, { type: 'application/ json'}));
+  dlfr.readAsDataURL(new Blob(n, { type: 'application/json'}));
 }
 
 //AUTHORS
@@ -365,7 +365,7 @@ function addBookMethods(book) {
     if (isEventWaiting) {
       node.innerHTML += "<div class='ASIN'>Gratis el pr&oacute;ximo " + eventDate + "</div>";
     } else {
-      node.innerHTML += "<div class='ASIN'><a href='https://rellenatukindle.000webhostapp.com/analytics.php?id=" + this.getID() + "&ASIN=" + this.getASIN() + "' target='_blank'>Descargar en Amazon</a></div>";
+      node.innerHTML += "<div class='ASIN'><a href='https://amazon.es/dp/" + this.getASIN() + "' target='_blank'>Descargar en Amazon</a></div>";
     }
   };
 }
