@@ -1,0 +1,12 @@
+{
+  "Book": {
+    "Id": "47",
+    "Title": "Promesas de Amor",
+    "Authors": [ 34 ],
+    "Genres": [ "Romance hist&oacute;rico", "Romance contempor&aacute;neo" ],
+    "Synopsis": "-Al ritmo del peligro: Andrea Palacios ama al famoso violinista Matt Jones, pero &iquest;qu&eacute; suceder&aacute; cuando lo conozca en persona y sepa quien es realmente?<br /><br />- Por siempre t&uacute;: Rebecca Bennett tiene todo lo que una mujer de su edad, en el lejano oeste, podr&iacute;a querer; excepto un marido. Su primer amor fue James McLary, un aprendiz de caballeriza, pero el destino los separ&oacute;. Quince a&ntilde;os despu&eacute;s, James vuelve convertido en doctor, para alterar los planes de Rebecca.<br /><br />- Amor en las sombras: Catherine Bradford era la nueva duquesa de Rothersay. Su matrimonio con Thomas no era lo que imagin&oacute;, mas cuando este sufre un accidente, su personalidad cambia por completo. &iquest;Ser&aacute; que el fantasma del castillo, Edward Green, ten&iacute;a algo que ver?<br /><br />- Desafiando al destino: Cuando Brianna es secuestrada por error, debe buscar la forma de escapar de sus captores. Pero c&oacute;mo reaccionar&aacute; al saber que uno de ellos es Erik, el hombre que siempre am&oacute; en secreto. Erik no quer&iacute;a participar del secuestro de la princesa, mas no ten&iacute;a opci&oacute;n. Pero qu&eacute; hacer cuando al ver su error descubre al amor de su vida encerrada y con precio por su cabeza.",
+    "Cover": "",
+    "Networks": "",
+    "ASIN": "B0BVDTCQWZ"
+  }
+}

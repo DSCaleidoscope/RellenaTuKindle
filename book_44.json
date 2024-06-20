@@ -1,0 +1,12 @@
+{
+  "Book": {
+    "Id": "44",
+    "Title": "Soy el infrah&eacute;roe",
+    "Authors": [ 31 ],
+    "Genres": ["Ficci&oacute;n", "Drama"],
+    "Synopsis": "&iquest;Se puede ser un h&eacute;roe cuando arrastras pesadas cadenas? &iquest;Puedes salvar a otra persona cuando el mismo pozo te ahoga? David obtendr&aacute; un &laquo;poder&raquo; que le permitir&aacute; detectar el sufrimiento de la gente y, aun cargando con la depresi&oacute;n, la ansiedad, la falta de autoestima y la inseguridad, har&aacute; cuanto est&eacute; en su mano por ayudar. Esto lo llevar&aacute; a presenciar crueles realidades, monstruos oscuros m&aacute;s da&ntilde;inos que algunos mitos y, sin embargo, no tan conocidos. Enfrentar&aacute; amargas situaciones, pero, sobre todo, se enfrentar&aacute; a s&iacute; mismo.<br /><br />&laquo;Soy el infrah&eacute;roe&raquo; es una novela visceral, una historia cruda. Un libro, por desgracia, basado en el mundo real. Acompa&ntilde;a a David en su lucha, la lucha de muchos, que pocos se atreven a contar.",
+    "Cover": "",
+    "Networks": "",
+    "ASIN": "B09LSGKGRC"
+  }
+}

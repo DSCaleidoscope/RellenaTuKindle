@@ -1,0 +1,12 @@
+{
+  "Book": {
+    "Id": "43",
+    "Title": "Hay un lugar en el Norte",
+    "Authors": [ 31 ],
+    "Genres": [ "Fantas&iacute;a &eacute;pica" ],
+    "Synopsis": "La huida en busca de una libertad muy diferente a los abusos del corrupto reino de R&oacute;sevart termina torci&eacute;ndose pronto para Deinal, quien solo pretend&iacute;a refugiarse en las cercanas tierras de los elfos. En su escabroso viaje hallar&aacute; algo de tanto valor que le har&aacute; cambiar de direcci&oacute;n, y ser&aacute; en esa direcci&oacute;n por la que encontrar&aacute; inesperados y exc&eacute;ntricos compa&ntilde;eros, quienes, por un motivo u otro, caminar&aacute;n junto a &eacute;l a trav&eacute;s del gran reino del norte. Y luchar&aacute;n, luchar&aacute;n para salvarse, para sobrevivir y alcanzar sus metas; luchar&aacute;n por la libertad de R&oacute;sevart, pues la huida de aquel muchacho un tanto cobarde estaba siendo guiada por algo m&aacute;s que sus propios anhelos.",
+    "Cover": "",
+    "Networks": "",
+    "ASIN": "B0779PHP7G"
+  }
+}
