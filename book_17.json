@@ -1,0 +1,12 @@
+{
+  "Book": {
+    "Id": "17",
+    "Title": "Las Cenizas de Isolda",
+    "Authors": [ 13 ],
+    "Genres": [ "Rom&aacute;ntica" ],
+    "Synopsis": "&quot;Trist&aacute;n es nerd, asiduo a los videojuegos, a la cocina y al orden. Su sue&ntilde;o es vivir en un smial.<br />Isolda tiene c&aacute;ncer y le encanta leer a Emilio Salgari, le gusta la flor del cerezo y confecciona garzas de papiroflexia. Su sue&ntilde;o es hacer el amor antes de morir.<br />Ninguno de los dos tiene ni idea de lo mucho que transformar&aacute;n la vida del otro.&quot;<br /><br />En esta edici&oacute;n se incluye un recetario completo y una lista detallada de las pel&iacute;culas que descubren los protagonistas y de los libros que leen.<br /><br />Las Cenizas de Isolda es una revisi&oacute;n contempor&aacute;nea de la Leyenda de Trist&aacute;n e Isolda, un amor que se condensa y perdura a lo largo del tiempo.",
+    "Cover": "",
+    "Networks": "",
+    "ASIN": "B0CHRRJW87"
+  }
+}

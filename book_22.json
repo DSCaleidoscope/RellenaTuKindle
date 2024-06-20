@@ -1,0 +1,12 @@
+{
+  "Book": {
+    "Id": "22",
+    "Title": "Los muros que nos separan",
+    "Authors": [ 18 ],
+    "Genres": [ "Distop&iacute;a", "Thriller" ],
+    "Synopsis": "Cuatro semanas. Ese era el tiempo que hab&iacute;a estado desaparecida Am, mi hermana. Solo cuatro semanas, y ya la hab&iacute;an dado por muerta.<br /><br />Levana es la menor de dos hijas de una de las tres familias m&aacute;s poderosas de Vitiana, una gran ciudad tecnol&oacute;gica dentro de una c&uacute;pula que protege a sus habitantes del exterior.<br /><br />Amatista, la hermana mayor de Levana, ha desaparecido. Mientras todos la dan por muerta, Levana se sumerge en una oscura investigaci&oacute;n, convencida de que sigue con vida, desentra&ntilde;ando una red de traiciones y ambiciones donde nada es lo que parece. Ya no sabe qui&eacute;n es amigo o enemigo. &iquest;Puede confiar en Marc, un intrigante joven de la Periferia que parece conocer m&aacute;s de lo que revela? Levana sabe que puede encontrarla, pero teme que cuando descubra la verdad, sea demasiado tarde.",
+    "Cover": "",
+    "Networks": "",
+    "ASIN": "B0CXJQF4FR"
+  }
+}
