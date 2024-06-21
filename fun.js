@@ -41,7 +41,7 @@ function add(t) { g("bbody").innerHTML += t + '<br />'; }
 function reload() { if (reloadPage) { location.replace(".");; } }
 
 //Register
-function sendReg() { g('fsub').submit(); }
+function sendReg() { return;/*g('fsub').submit();*/ /*form is closed*/ }
 
 //Params
 function getParams(){

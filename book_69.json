@@ -1,0 +1,12 @@
+{
+  "Book": {
+    "Id": "69",
+    "Title": "La ruta del Llop",
+    "Authors": [ 44 ],
+    "Genres": [ "Thriller" ],
+    "Synopsis": "Troian se siente tan sola y perdida tras la muerte de su marido que incluso tiene alucinaciones y sue&ntilde;os muy reales.<br />Sus amigos, cansados de verla apagada y triste, deciden acompa&ntilde;arla en una escapada por un bosque plagado de &aacute;rboles de gran tama&ntilde;o y kil&oacute;metros de senderos, aunque hay varios peligros que la acechan muy de cerca.<br /><br />El bosque de Garesuvie contiene historias de fantasmas y lobos. Si te adentras en &eacute;l, deber&aacute;s seguir el mapa y no salir de la ruta definida o ser&aacute; tu fin. Nada es lo que parece cuando estas dentro.<br /><br />&laquo;Se dice que, una vez, el bosque fue un lugar tranquilo, hasta que un d&iacute;a toda esa paz termin&oacute;&raquo;",
+    "Cover": "",
+    "Networks": "",
+    "ASIN": "B09S9WMRJF"
+  }
+}
