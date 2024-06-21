@@ -1,0 +1,12 @@
+{
+  "Book": {
+    "Id": "74",
+    "Title": "La flor del fuego",
+    "Authors": [ 50 ],
+    "Genres": [ "Poemario" ],
+    "Synopsis": "La flor del fuego es el primer poemario que recoge parte de la producci&oacute;n po&eacute;tica del joven Felipe Itriago Coiman, nacido en el a&ntilde;o 2000, quien vive en las altas monta&ntilde;as del estado M&eacute;rida, Venezuela. Su particular manera de ver y traducir el mundo, reflejada tambi&eacute;n en su obra pl&aacute;stica plena de im&aacute;genes y met&aacute;foras, le asegura un sitial en la vanguardia de los creadores venezolanos.",
+    "Cover": "",
+    "Networks": "",
+    "ASIN": "B08CBJBXSH"
+  }
+}

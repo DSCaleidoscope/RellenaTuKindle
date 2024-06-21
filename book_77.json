@@ -1,0 +1,12 @@
+{
+  "Book": {
+    "Id": "77",
+    "Title": "Proyecto: tu amor",
+    "Authors": [ 52 ],
+    "Genres": [ "Romance contempor&aacute;neo" ],
+    "Synopsis": "Elsa Evans, la due&ntilde;a de Empresas Evans, recibe el encargo de desarrollar un conjunto arquitect&oacute;nico en la reserva india Nisqually, en el estado de Washington. Sabe que es un proyecto que le puede otorgar un gran prestigio, por lo que decide contratar a cuatro j&oacute;venes brillantes en sus respectivos campos. Hugh y Emma son ingenieros. Jared y Tessa, un arquitecto y una licenciada en Ciencias Medioambientales. Y son el equipo multidisciplinar perfecto.<br />Sin embargo, para formar parte del proyecto de mayor envergadura con el que jam&aacute;s se han encontrado, hay una condici&oacute;n poco usual, aunque ineludible: vivir juntos.<br />Compartir techo con unos desconocidos no deber&iacute;a ser problema para este grupo de profesionales. Ni que Hugh tenga que lidiar con el car&aacute;cter de Emma. O que Jared no vea con buenos ojos que Markus, el hijo del jefe indio, est&eacute; demasiado interesado en Tessa.<br />&iquest;Aceptar&aacute;n? Ser&iacute;a una oportunidad &uacute;nica de catapultar su carrera. A no ser que antiguos enemigos y fantasmas del pasado vuelvan para tratar de impedirlo. &iquest;Deber&aacute;n invertir mucho m&aacute;s que trabajo? Quiz&aacute; sean sus vidas las que queden involucradas para siempre. O sus corazones.",
+    "Cover": "",
+    "Networks": "",
+    "ASIN": "B0BCZY5KQ2"
+  }
+}
