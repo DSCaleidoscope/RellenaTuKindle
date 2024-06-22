@@ -52,7 +52,7 @@ function getParams(){
   const cs = urlParams.get('cs');
   const rl = urlParams.get('rl');
   
-  maxRead = 1;//64;
+  maxRead = 64;
   
   if(mr > 0) {
     maxRead = mr;
