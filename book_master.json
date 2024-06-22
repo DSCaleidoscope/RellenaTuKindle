@@ -1,14 +1,6 @@
 {
   "Book": [
     {
-      "id_book": "0",
-      "participate": "N"
-    },
- {
-      "id_book": "80",
-      "participate": "Y"
- }, 
-    {
       "id_book": "1",
       "participate": "Y"
     },
@@ -91,10 +83,6 @@
     {
       "id_book": "21",
       "participate": "Y"
-    },
-    {
-      "id_book": "22",
-      "participate": "N"
     },
     {
       "id_book": "23",
