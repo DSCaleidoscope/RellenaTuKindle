@@ -1,12 +1,12 @@
 {
   "Book": {
     "Id": "80",
-    "Title": "El jard&iacute;n de espinas: Algunos recuerdos lastiman la piel",
+    "Title": "Titulo",
     "Authors": [ 1 ],
-    "Genres": [ "Distop&iacute;a" ],
-    "Synopsis": "",
+    "Genres": [ "Distop&iacute;a", "Fantas&iacute;a" ],
+    "Synopsis": "x",
     "Cover": "",
     "Networks": "",
-    "ASIN": "B0CSX4JFVP"
+    "ASIN": ""
   }
 } 
