@@ -84,7 +84,7 @@ function uploadLoad(curr, tot) {
   let width = (curr * 100) / tot;
 
   g('loading').style.width = "" + width + "%";
-  g('msg').innerHTML = "" + width + "%";
+  g('msg').innerHTML = "" + Math.round(width) + "%";
 }
 
 //visuals
