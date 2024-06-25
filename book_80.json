@@ -1,12 +1,12 @@
 {
   "Book": {
-    "Id": "1",
-    "Title": "El Aprendiz de Herborist",
-    "Authors": [ 1 ],
-    "Genres": [ "Fantas&iacute;a", "Romance" ],
-    "Synopsis": "Un accidentado paseo por el bosque.<br />Una ayuda inesperada.<br />Un romance prohibido.<br /><br />&quot;El Aprendiz de Herborista&quot; narra una historia de amores, desamores, traiciones, y una mara&ntilde;a de oscuras mentiras arraigadas en la profundidad del tiempo. Solo con la esperanza que brinda la profec&iacute;a se podr&aacute; conseguir resolver el conflicto que atenaza al mundo.",
+    "Id": "81",
+    "Title": "El jard&iacute;n de espinas: Algunos recuerdos lastiman la piel",
+    "Authors": [ 54 ],
+    "Genres": [ "Thriller" ],
+    "Synopsis": "",
     "Cover": "",
     "Networks": "",
-    "ASIN": "B0CG2SPBWC"
+    "ASIN": "B0CSX4JFVP"
   }
-} 
+}
