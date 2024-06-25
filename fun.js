@@ -32,7 +32,7 @@ var Bcollapsed = [];
 //Config
 var forceRefresh = true; //During the event, move it to false to avoid forcing refresh!
 var eventDate = "evento";
-var isEventWaiting = true; //Move it to false to show links to Amazon
+var isEventWaiting = false; //Move it to false to show links to Amazon
 
 //helpers & redefines
 function g(id){return document.getElementById(id);}
@@ -192,7 +192,6 @@ function getAll() {
 //AUTHORS
 async function parseAuthors(t){
   let authors = JSON.parse(t);
-  authorMax = authors.Author.length;
   
   let i = 0;
 
@@ -236,7 +235,6 @@ function addAuthorMethods(auth) {
 //BOOKS
 async function parseBooks(t){
   let books = JSON.parse(t);
-  bookMax = books.Book.length;
   
   let i = 0;
   
@@ -459,7 +457,15 @@ async function fill(){
 
     //start getting real data until all is done
     //we're getting only small chunks each time to avoid network issues
-    while (pai < authorMax && pbi < bookMax) {
+
+    //Counting items before entering loop
+    let books = JSON.parse(bookMaster);
+    let authors = JSON.parse(authorMaster);
+    
+    bookMax = books.Book.length;
+    authorMax = authors.Author.length;
+
+    while (pai < authorMax || pbi < bookMax) {
       //performance (uncomment when needed)
       //let ini = Date.now();
 
