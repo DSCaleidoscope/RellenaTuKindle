@@ -197,7 +197,7 @@ async function parseAuthors(t){
 
   for (; i < maxRead; i++){
     if (pai < authorMax) {
-      let p = filePromise("author_" + authors.Author[pai].id_author + ".json").then(
+      let p = filePromise("data/author_" + authors.Author[pai].id_author + ".json").then(
         function (value) { parseSingleAuthor(value); },
         function (error) { console.log(error); }
       );
@@ -242,7 +242,7 @@ async function parseBooks(t){
     if (pbi < bookMax) {
       if (books.Book[pbi].participate == "Y") {
         //only add if participate
-        let p = filePromise("book_" + books.Book[pbi].id_book + ".json").then(
+        let p = filePromise("data/book_" + books.Book[pbi].id_book + ".json").then(
           function (value) { parseSingleBook(value); },
           function (error) { console.log(error); }
         );
