@@ -72,6 +72,13 @@ a, a:visited, a:hover, a:checked {
   border-radius: 0px 0px 25px 25px;
 }
 
+.mbodyca {
+  position: relative;
+  top: 100px;
+  background-image: url('462576443_599465762436219_2521808324849147485_n.jpg');
+  background-size: contain;
+}
+
 .whatIsTitle {
   text-align: center;
   font-size: 24px;
@@ -96,10 +103,10 @@ a, a:visited, a:hover, a:checked {
   padding: 15px;
 }
 
-  .section:hover {
-    cursor: pointer;
-    background: #A7A392;
-  }
+.section:hover {
+  cursor: pointer;
+  background: #A7A392;
+}
 
 .whatIsText {
   text-align: center;
@@ -124,6 +131,25 @@ a, a:visited, a:hover, a:checked {
 .book:hover {
   cursor: pointer;
   background: #A7A392;
+}
+
+.adviento {
+  border-color: #007300;
+  left: 27%
+}
+
+.adviento:hover {
+  background: #ff7575;
+}
+
+.cover {
+  transition-property: opacity;
+  transition-duration: 2s;
+  opacity: 0;
+}
+
+.c2 {
+  opacity: 1;
 }
 
 .title {
