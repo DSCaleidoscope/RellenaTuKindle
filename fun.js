@@ -393,7 +393,11 @@ function addBookMethods(book) {
     if (isEventWaiting) {
       node.innerHTML += "<div class='ASIN'>Gratis el pr&oacute;ximo " + eventDate + "</div>";
     } else {
-      node.innerHTML += "<div class='ASIN'><a href='https://amazon.es/dp/" + this.getASIN() + "' target='_blank'>Descargar en Amazon</a></div>";
+      if (tz == "Europe") {
+        node.innerHTML += "<div class='ASIN'><a href='https://amazon.es/dp/" + this.getASIN() + "' target='_blank'>Descargar en Amazon</a></div>";
+      } else {
+        node.innerHTML += "<div class='ASIN'><a href='https://amazon.com/dp/" + this.getASIN() + "' target='_blank'>Descargar en Amazon</a></div>";
+      }
     }
   };
 }
