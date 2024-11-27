@@ -394,7 +394,15 @@ function addBookMethods(book) {
   };
 
   book.addCoverInfo = function (node) {
-    node.innerHTML += "<div class='cover'><a href='https://amazon.es/dp/" + this.getASIN() + "' target='_blank'><img src='./data/" + this.getCover() + "' width='150px' /></a></div>";
+    let tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    tz = tz.split("/");
+    tz = tz[0];
+
+    if (tz == "Europe") {
+      node.innerHTML += "<div class='cover'><a href='https://amazon.es/dp/" + this.getASIN() + "' target='_blank'><img src='./data/" + this.getCover() + "' width='150px' /></a></div>";
+    } else {
+      node.innerHTML += "<div class='cover'><a href='https://amazon.com/dp/" + this.getASIN() + "' target='_blank'><img src='./data/" + this.getCover() + "' width='150px' /></a></div>";
+    }
   };
 
   book.addNetworksInfo = function (node) {

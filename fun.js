@@ -11,6 +11,11 @@ var bookMax = 1;
 var authorList = [];
 var bookList = [];
 
+//locale
+var tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+tz = tz.split("/");
+tz = tz[0];
+
 //promises
 var aList = [];
 var bList = [];
