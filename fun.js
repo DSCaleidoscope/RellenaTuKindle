@@ -629,3 +629,16 @@ let restoreAuthPromise = async function (auth) {
     resolve(true);
   });
 }
+
+//Brevo special
+function submitBrevo() {
+  let a = g("ASIN").value;
+  let e = g("EMAIL").value;
+  let x = e.split("@");
+  let y = x[0].split("+");
+
+  g("EMAIL").value = y[0] + "+" + a + "@" + x[1];
+  console.log(g("EMAIL").value);
+
+  g("sib-form").submit();
+}
