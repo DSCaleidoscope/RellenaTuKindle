@@ -208,6 +208,13 @@ a, a:visited, a:hover, a:checked {
   margin-bottom: 15px;
 }
 
+#important {
+  display: block;
+  font-size: 18px;
+  margin: 10px;
+  font-weight: 700;
+}
+
 input[type='text'] {
   height: 30px;
   margin-bottom: 5px;
