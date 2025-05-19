@@ -73,6 +73,45 @@ function getParams(){
   }
 }
 
+//help
+function help(type) {
+  g('loader').style.visibility = "initial";
+  g('mbody').style.backgroundColor = "#80808087";
+  g('mainScreen').style.visibility = "hidden";
+  g('whatContent').style.visibility = "hidden";
+  clear();
+  g('loginWrapper').innerHTML = getHTML(type);
+  g('loader').style.height = "initial";
+  g('loader').style.width = "initial";
+  g('loader').style.top = "initial";
+  g('loader').style.position = "initial";
+}
+
+function getHTML(type) {
+  let ret = "";
+  ret += "<div id='helpClose' onclick='closeHelp();'>X</div>";
+  ret += "<div id='helpContent'>" + getHTMLText(type) + "</div>";
+
+  return ret;
+}
+
+function getHTMLText(type) {
+  let ret = "";
+
+  if (type == "ASIN") {
+    ret += "Entra en <a href='https://kdp.amazon.com/es_ES/bookshelf' target='_blank'>Amazon</a> y busca tu libro. Ah&iacute; encontrar&aacute;s el ASIN<br/><img src='./help/ASIN-1.png' width='90%' style='padding:20px'/>"
+  }
+
+  return ret;
+}
+
+function closeHelp() {
+  clear();
+  g('loader').style.position = "fixed";
+  endLoad();
+  g('whatContent').style.visibility = "initial";
+}
+
 //Loading screen
 function startLoad() {
   g('mbody').style.backgroundColor = "#80808087";
@@ -382,7 +421,10 @@ function addBookMethods(book) {
   };
 
   book.addCoverInfo = function (node) {
-    //node.innerHTML += "<div class='cover'>" + this.getCover() + "</div>";
+    if (this.getCover() == "") { }
+    else {
+      node.innerHTML += "<img src='./data/" + this.getCover() + "' width='150px' />";
+    }
   };
 
   book.addNetworksInfo = function (node) {
@@ -390,13 +432,16 @@ function addBookMethods(book) {
   };
 
   book.addASINInfo = function (node) {
-    if (isEventWaiting) {
-      node.innerHTML += "<div class='ASIN'>Gratis el pr&oacute;ximo " + eventDate + "</div>";
-    } else {
-      if (tz == "Europe") {
-        node.innerHTML += "<div class='ASIN'><a href='https://amazon.es/dp/" + this.getASIN() + "' target='_blank'>Descargar en Amazon</a></div>";
+    if (this.getASIN() == "") { }
+    else {
+      if (isEventWaiting) {
+        node.innerHTML += "<div class='ASIN'>Gratis el pr&oacute;ximo " + eventDate + "</div>";
       } else {
-        node.innerHTML += "<div class='ASIN'><a href='https://amazon.com/dp/" + this.getASIN() + "' target='_blank'>Descargar en Amazon</a></div>";
+        if (tz == "Europe") {
+          node.innerHTML += "<div class='ASIN'><a href='https://amazon.es/dp/" + this.getASIN() + "' target='_blank'>Descargar en Amazon</a></div>";
+        } else {
+          node.innerHTML += "<div class='ASIN'><a href='https://amazon.com/dp/" + this.getASIN() + "' target='_blank'>Descargar en Amazon</a></div>";
+        }
       }
     }
   };
