@@ -423,7 +423,8 @@ function addBookMethods(book) {
   book.addCoverInfo = function (node) {
     if (this.getCover() == "") { }
     else {
-      node.innerHTML += "<img src='./data/" + this.getCover() + "' width='150px' />";
+      //node.innerHTML += "<img src='./data/" + this.getCover() + "' width='150px' />";
+      node.innerHTML += "<img src='https://m.media-amazon.com/images/I/" + this.getCover() + "' width='150px' />";
     }
   };
 
