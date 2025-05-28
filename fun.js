@@ -73,7 +73,7 @@ function getParams(){
   }
 }
 
-//help
+//Help INI - for register only
 function help(type) {
   g('loader').style.visibility = "initial";
   g('mbody').style.backgroundColor = "#80808087";
@@ -111,8 +111,9 @@ function closeHelp() {
   endLoad();
   g('whatContent').style.visibility = "initial";
 }
+//Help END - for register only
 
-//Loading screen
+//Loading screen - INI
 function startLoad() {
   g('mbody').style.backgroundColor = "#80808087";
   g('mainScreen').style.visibility = "hidden";
@@ -130,8 +131,9 @@ function uploadLoad(curr, tot) {
   g('loading').style.width = "" + width + "%";
   g('msg').innerHTML = "" + Math.round(width) + "%";
 }
+//Loading screen - END
 
-//visuals
+//visuals - INI
 function collapseWhat(id) {
   if (Wcollapsed) {
     //it's collapsed, it will expand
@@ -201,6 +203,7 @@ function collapseBook(e) {
   }
   
 }
+//visuals - END
 
 //listing
 function getAll() {
@@ -233,7 +236,7 @@ function getAll() {
   dlfr.readAsDataURL(new Blob(n, { type: 'application/json'}));
 }
 
-//AUTHORS
+//AUTHORS - INI
 async function parseAuthors(t){
   let authors = JSON.parse(t);
   
@@ -275,8 +278,9 @@ function addAuthorMethods(auth) {
     node.innerHTML += "<div class='author' id=a_" + this.getID() + ">" + this.getAuthorName() + "</div>";
   }
 }
+//AUTHORS - END
 
-//BOOKS
+//BOOKS - INI
 async function parseBooks(t){
   let books = JSON.parse(t);
   
@@ -312,12 +316,14 @@ function parseSingleBook(t){
 
 function addBookMethods(book) {
   book.authList = [];
+  book.size = "._SY425_."; //Don't blame me! I didn't made this codes. Blame Amazon.
   book.getID = function () { return this.Id; };
   book.getTitle = function () { return this.Title; };
   book.getAuthorsID = function () { return this.Authors; };
   book.getGenres = function () { return this.Genres; };
   book.getSynopsis = function () { return this.Synopsis; };
   book.getCover = function () { return this.Cover; };
+  book.getSize = function () { return this.size; };
   book.getNetworks = function () { return this.Networks; };
   book.getASIN = function () { return this.ASIN; };
   book.createNode = function (id) { return document.createElement("div"); }
@@ -424,7 +430,8 @@ function addBookMethods(book) {
     if (this.getCover() == "") { }
     else {
       //node.innerHTML += "<img src='./data/" + this.getCover() + "' width='150px' />";
-      node.innerHTML += "<img src='https://m.media-amazon.com/images/I/" + this.getCover() + "' width='150px' />";
+      node.innerHTML += "<img src='https://m.media-amazon.com/images/I/" + this.getCover() + this.getSize() + "jpg' width='150px' />";
+      
     }
   };
 
@@ -447,6 +454,7 @@ function addBookMethods(book) {
     }
   };
 }
+//BOOKS - END
 
 //LAUNCHER
 async function fill(){
