@@ -182,7 +182,9 @@ function collapseBook(e) {
       childs[i].style.height = "initial";
 
       //Don't show synopsis if we're short on space
-      if (childs[i].className == "syn" && defHeight > 50) {
+      //if (childs[i].className == "syn" && defHeight > 50) {
+      if (childs[i].className == "syn" && document.documentElement.clientWidth <= '430') { 
+        //mobile!
         finalHeight -= childs[i].clientHeight;
         childs[i].style.visibility = "hidden";
         childs[i].style.height = "0px";
