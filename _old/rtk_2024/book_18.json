@@ -1,0 +1,12 @@
+{
+  "Book": {
+    "Id": "18",
+    "Title": "SOMBRA, LO QUE DESCONOZCO DE TI",
+    "Authors": [ 14 ],
+    "Genres": [ "Romance", "Suspense" ],
+    "Synopsis": "Hace dos a&ntilde;os Raquel se traslad&oacute; a Madrid para trabajar en el departamento de publicidad en la empresa propiedad de Enrique y Carlos, pero &iquest;es esto verdad?<br />Un viaje de negocios a Londres cambiar&aacute; el curso de su hasta ahora apaciguada vida. El amor, el miedo, las dudas y un terrible crimen inquietar&aacute;n a Raquel, que, desesperada, intentar&aacute; aferrarse, a ciegas, a la protecci&oacute;n de una persona totalmente desconocida. Sombra, nombre con el que ella apoda a este ser misterioso, tras negarse a revelarle ni tan siquiera su identidad, intentar&aacute; convencerla del peligro que corre. Pero &iquest;puede realmente confiar en un extra&ntilde;o?",
+    "Cover": "61oPLKqfPSL._SL1000_.jpg",
+    "Networks": "",
+    "ASIN": "B0D5WXJ2RF"
+  }
+}

@@ -1,10 +1,1 @@
-{
-  "Auth": {
-    "Id": "25",
-    "AuthorName": "F&aacute;tima Tirado Garc&iacute;a",
-    "Name": "Anonymous",
-    "Genres": ["Romance", "Contempor&aacute;neo"],
-    "Presentation": "",
-    "ProfilePic": ""
-  }
-}
+{ "Auth": { "Id": "25", "AuthorName": "Olga Valiente", "Name": "Anonymous", "Genres": [], "Presentation": "", "ProfilePic": ""}}

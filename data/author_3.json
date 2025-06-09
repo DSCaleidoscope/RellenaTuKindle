@@ -1,10 +1,1 @@
-{
-  "Auth": {
-    "Id": "3",
-    "AuthorName": "Andry Milan Ferreiro",
-    "Name": "Anonymous",
-    "Genres": [ "Fantas&iacute;a" ],
-    "Presentation": "",
-    "ProfilePic": ""
-  }
-}
+{ "Auth": { "Id": "3", "AuthorName": "Aneizar", "Name": "Anonymous", "Genres": [], "Presentation": "", "ProfilePic": ""}}

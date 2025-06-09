@@ -1,12 +1,1 @@
-{
-  "Book": {
-    "Id": "22",
-    "Title": "Los muros que nos separan",
-    "Authors": [ 18 ],
-    "Genres": [ "Distop&iacute;a", "Thriller" ],
-    "Synopsis": "Cuatro semanas. Ese era el tiempo que hab&iacute;a estado desaparecida Am, mi hermana. Solo cuatro semanas, y ya la hab&iacute;an dado por muerta.<br /><br />Levana es la menor de dos hijas de una de las tres familias m&aacute;s poderosas de Vitiana, una gran ciudad tecnol&oacute;gica dentro de una c&uacute;pula que protege a sus habitantes del exterior.<br /><br />Amatista, la hermana mayor de Levana, ha desaparecido. Mientras todos la dan por muerta, Levana se sumerge en una oscura investigaci&oacute;n, convencida de que sigue con vida, desentra&ntilde;ando una red de traiciones y ambiciones donde nada es lo que parece. Ya no sabe qui&eacute;n es amigo o enemigo. &iquest;Puede confiar en Marc, un intrigante joven de la Periferia que parece conocer m&aacute;s de lo que revela? Levana sabe que puede encontrarla, pero teme que cuando descubra la verdad, sea demasiado tarde.",
-    "Cover": "",
-    "Networks": "",
-    "ASIN": "B0CXJQF4FR"
-  }
-}
+{ "Book": {"Id": "22", "Title": "El Himno del Desierto 2: La leyenda del viento", "Authors": [ 8 ], "Genres": [ "SCIFI / DISTOPIA"], "Synopsis": "La guerra contra el Odio está a punto de estallar. La verdad sobre la Gente del Desierto es mucho más cruel de lo que Jon imaginaba y tiene que ver con el Plan, la suma de ideales que hostigan y segregan a la humanidad sobreviviente.<br /><br />El momento de unir a la última ciudad del mundo con el exterior ha llegado: mientras Helena sienta las bases de la revolución y las fuerzas del Regente intentan arrasar con cualquier esperanza, Jon deberá enfrentar un camino repleto de peligros, donde será acechado por bestias espeluznantes, hostiles avanzadas de la Guardia, y misteriosos individuos expertos en tender despiadadas trampas.<br /><br />En medio de este mundo tan distinto a la frialdad metálica de Umbrilland, Jon se siente inmerso en una vieja leyenda contada por las Andasueños. Thaellori, el Caminante que lo acompaña, está de acuerdo: la Leyenda del Viento, la famosa Canción del Himno del Desierto, se escribe a medida que la lucha de los jóvenes rebeldes toma fuerza y se desata con el poder de una gloriosa tempestad.<br /><br />", "Cover": "61mnFhGo5lL", "Networks": "", "ASIN": "B0CW1M28T2"}}

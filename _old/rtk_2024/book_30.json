@@ -1,0 +1,12 @@
+{
+  "Book": {
+    "Id": "30",
+    "Title": "Cuando se dejan de o&iacute;r las tormentas",
+    "Authors": [ 25 ],
+    "Genres": [ "Romance", "Contempor&aacute;neo" ],
+    "Synopsis": "Una llamada hace que tiemblen de nuevo los cimientos de Jimena. Las tormentas del pasado vuelven y decide emprender un viaje para reencontrarse a s&iacute; misma y escapar de los miedos que vuelven a destrozar su vida.<br /><br />Un camino lleno de espiritualidad, naturaleza y personas inesperadas que le har&aacute;n plantearse el sentido de su vida. Nuevos sentimientos aflorar&aacute;n en su alma, convirti&eacute;ndose en un salvavidas para ella.<br /><br />Una historia desgarradora y a la vez motivadora llena de fuerza para salir a flote de las situaciones que te marcan de por vida.<br /><br />Una novela rom&aacute;ntica sobre superaci&oacute;n y segundas oportunidades enclavada en el Camino De Santiago.",
+    "Cover": "",
+    "Networks": "",
+    "ASIN": "B0CWKMZWYN"
+  }
+}

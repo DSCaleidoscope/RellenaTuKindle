@@ -1,0 +1,12 @@
+{
+  "Book": {
+    "Id": "10",
+    "Title": "Oniria, el arte de los sue&ntilde;os",
+    "Authors": [ 8 ],
+    "Genres": [ "Fantas&iacute;a urbana" ],
+    "Synopsis": "Elizabeth y H&eacute;ctor son dos amigos que acuden al Caixaforum de Zaragoza para ver una exposici&oacute;n. Un plan ideal para un domingo lluvioso. Pero el destino les tiene preparada una sorpresa que cambiar&aacute; sus vidas para siempre. Un incidente transformar&aacute; el arte de los cuadros en el acaecimiento de una guerra por el dominio de la magia. Una historia de fantas&iacute;a como nunca antes la hab&iacute;as visto. Una batalla donde la ciudad y todos sus habitantes correr&aacute;n un peligro que nadie comprende. &iquest;Te atreves a entrar en Oniria?",
+    "Cover": "",
+    "Networks": "",
+    "ASIN": "B08LVVL635"
+  }
+}

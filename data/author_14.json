@@ -1,10 +1,1 @@
-{
-  "Auth": {
-    "Id": "14",
-    "AuthorName": "LUZ V&Aacute;ZQUEZ VICENTE",
-    "Name": "Anonymous",
-    "Genres": [ "Romance" ],
-    "Presentation": "",
-    "ProfilePic": ""
-  }
-}
+{ "Auth": { "Id": "14", "AuthorName": "J. Casanova", "Name": "Anonymous", "Genres": [], "Presentation": "", "ProfilePic": ""}}

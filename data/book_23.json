@@ -1,12 +1,1 @@
-{
-  "Book": {
-    "Id": "23",
-    "Title": "Los Miedos de Sophie (Madden III)",
-    "Authors": [ 19 ],
-    "Genres": [ "Romance contempor&aacute;neo" ],
-    "Synopsis": "Los retos y secretos de Sophie han hecho que se encuentre sola. Sin amigos, sin familia y sobre todo, sin amor...<br />Una nueva vida.<br /><br />Los Miedos de Sophie es la &uacute;ltima novela de la trilog&iacute;a Madden. La tensi&oacute;n, la venganza y el empoderamiento son los protagonistas de esta historia, donde Sophie luchar&aacute; con los demonios de sus peores pesadillas.<br /><br />SU FAMILIA, SUS SERES QUERIDOS EST&Aacute;N EN PELIGRO Y SOPHIE SE HA CONVERTIDO EN OTRA PERSONA. &iquest;SER&Aacute; CAPAZ DE SOPORTAR EL DOLOR M&Aacute;S INTENSO DE SU VIDA?<br />Una &uacute;ltima oportunidad para mostrar su fortaleza.<br />SOPHIE SE ENFRENTA A SUS MIEDOS, &iquest;PODR&Aacute; CON ELLOS?",
-    "Cover": "81nzYeYTDlL._SL1500_.jpg",
-    "Networks": "",
-    "ASIN": "B09NL911D9"
-  }
-}
+{ "Book": {"Id": "23", "Title": "Elentari: el renacer", "Authors": [ 1 ], "Genres": [ "FANTASÍA"], "Synopsis": "Los Kraftig están en movimiento. La torre de luz se iluminó por la llegada al mundo de La Portadora. Ahora la carrera por encontrarla ha comenzado.<br /><br />Quien la tenga en su poder tendrá la llave para conseguir que El creador, o Padre, pueda cumplir con la profecía de engendrar a su hijo o evitarlo.<br /><br />Sin embargo, no será tarea fácil.<br /><br />Los Oscuros, Los blancos, Los Hermanos de la Luz, seres superiores e incluso los humanos, lucharán para encontrarla primero.<br /><br />Mientras tanto, un grupo de humanos sin más poderes que su propia fuerza, cargarán con el peso de protegerla hasta que llegue el momento en el que sea revelada al mundo y su destino pueda cumplirse.", "Cover": "71xzMh6fAwL", "Networks": "", "ASIN": "B0DJTCH1FY"}}

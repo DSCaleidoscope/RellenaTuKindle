@@ -1,10 +1,1 @@
-{
-  "Auth": {
-    "Id": "22",
-    "AuthorName": "Iv&aacute;n P. Roche",
-    "Name": "Anonymous",
-    "Genres": [ "Contempor&aacute;neo", "Hechos reales" ],
-    "Presentation": "",
-    "ProfilePic": ""
-  }
-}
+{ "Auth": { "Id": "22", "AuthorName": "Montse R.D.", "Name": "Anonymous", "Genres": [], "Presentation": "", "ProfilePic": ""}}

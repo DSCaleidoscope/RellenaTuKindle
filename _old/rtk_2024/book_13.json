@@ -1,0 +1,12 @@
+{
+  "Book": {
+    "Id": "13",
+    "Title": "Filos",
+    "Authors": [ 10 ],
+    "Genres": [ "Terror" ],
+    "Synopsis": "Una familia busca algo por toda Europa. Un hombre se obsesiona con una estatua humana. Un padre descubre que las pesadillas de su hijo pueden ser verdad. Un hombre porta el fr&iacute;o consigo mientras una mujer arrastra una caja misteriosa en todas sus mudanzas &iquest;Qu&eacute; tienen en com&uacute;n estos relatos? Que te har&aacute;n ver la realidad que te rodea de una forma distinta... Inquietantes, impactantes y sin concesiones.<br /><br />Historias que caminan asom&aacute;ndose al precipicio sin fondo, arrastr&aacute;ndote con ellos hacia un destino desconocido. Siempre al filo. Blog Dentro del Monolito<br /><br />Filos es un conjunto de aristas de melancol&iacute;a, amargura y locura; inquietante, s&iacute;, pero sobre todo porque habla del ser humano. Anabel Samani.<br /><br />Filos es una antolog&iacute;a de cuentos terror&iacute;ficos distinta a cualquier otra que haya le&iacute;do antes. El aventurero de papel.",
+    "Cover": "71Jln7cDAML._SL1500_.jpg",
+    "Networks": "",
+    "ASIN": "B08PKZ2C6W"
+  }
+}

@@ -2,327 +2,175 @@
   "Book": [
     {
       "id_book": "0",
-      "participate": "Y"
+      "participate": "N"
     },
     {
       "id_book": "1",
-      "participate": "N"
+      "participate": "Y"
     },
     {
       "id_book": "2",
-      "participate": "N"
+      "participate": "Y"
     },
     {
       "id_book": "3",
-      "participate": "N"
+      "participate": "Y"
     },
     {
       "id_book": "4",
-      "participate": "N"
+      "participate": "Y"
     },
     {
       "id_book": "5",
-      "participate": "N"
+      "participate": "Y"
     },
     {
       "id_book": "6",
-      "participate": "N"
+      "participate": "Y"
     },
     {
       "id_book": "7",
-      "participate": "N"
+      "participate": "Y"
     },
     {
       "id_book": "8",
-      "participate": "N"
+      "participate": "Y"
     },
     {
       "id_book": "9",
-      "participate": "N"
+      "participate": "Y"
     },
     {
       "id_book": "10",
-      "participate": "N"
+      "participate": "Y"
     },
     {
       "id_book": "11",
-      "participate": "N"
+      "participate": "Y"
     },
     {
       "id_book": "12",
-      "participate": "N"
+      "participate": "Y"
     },
     {
       "id_book": "13",
-      "participate": "N"
+      "participate": "Y"
     },
     {
       "id_book": "14",
-      "participate": "N"
+      "participate": "Y"
     },
     {
       "id_book": "15",
-      "participate": "N"
+      "participate": "Y"
     },
     {
       "id_book": "16",
-      "participate": "N"
+      "participate": "Y"
     },
     {
       "id_book": "17",
-      "participate": "N"
+      "participate": "Y"
     },
     {
       "id_book": "18",
-      "participate": "N"
+      "participate": "Y"
     },
     {
       "id_book": "19",
-      "participate": "N"
+      "participate": "Y"
     },
     {
       "id_book": "20",
-      "participate": "N"
+      "participate": "Y"
     },
     {
       "id_book": "21",
-      "participate": "N"
+      "participate": "Y"
     },
     {
       "id_book": "22",
-      "participate": "N"
+      "participate": "Y"
     },
     {
       "id_book": "23",
-      "participate": "N"
+      "participate": "Y"
     },
     {
       "id_book": "24",
-      "participate": "N"
+      "participate": "Y"
     },
     {
       "id_book": "25",
-      "participate": "N"
+      "participate": "Y"
     },
     {
       "id_book": "26",
-      "participate": "N"
+      "participate": "Y"
     },
     {
       "id_book": "27",
-      "participate": "N"
+      "participate": "Y"
     },
     {
       "id_book": "28",
-      "participate": "N"
+      "participate": "Y"
     },
     {
       "id_book": "29",
-      "participate": "N"
+      "participate": "Y"
     },
     {
       "id_book": "30",
-      "participate": "N"
+      "participate": "Y"
     },
     {
       "id_book": "31",
-      "participate": "N"
+      "participate": "Y"
     },
     {
       "id_book": "32",
-      "participate": "N"
+      "participate": "Y"
     },
     {
       "id_book": "33",
-      "participate": "N"
+      "participate": "Y"
     },
     {
       "id_book": "34",
-      "participate": "N"
+      "participate": "Y"
     },
     {
       "id_book": "35",
-      "participate": "N"
+      "participate": "Y"
     },
     {
       "id_book": "36",
-      "participate": "N"
+      "participate": "Y"
     },
     {
       "id_book": "37",
-      "participate": "N"
+      "participate": "Y"
     },
     {
       "id_book": "38",
-      "participate": "N"
+      "participate": "Y"
     },
     {
       "id_book": "39",
-      "participate": "N"
+      "participate": "Y"
     },
     {
       "id_book": "40",
-      "participate": "N"
+      "participate": "Y"
     },
     {
       "id_book": "41",
-      "participate": "N"
+      "participate": "Y"
     },
     {
       "id_book": "42",
-      "participate": "N"
-    },
-    {
-      "id_book": "43",
-      "participate": "N"
-    },
-    {
-      "id_book": "44",
-      "participate": "N"
-    },
-    {
-      "id_book": "45",
-      "participate": "N"
-    },
-    {
-      "id_book": "46",
-      "participate": "N"
-    },
-    {
-      "id_book": "47",
-      "participate": "N"
-    },
-    {
-      "id_book": "48",
-      "participate": "N"
-    },
-    {
-      "id_book": "49",
-      "participate": "N"
-    },
-    {
-      "id_book": "50",
-      "participate": "N"
-    },
-    {
-      "id_book": "51",
-      "participate": "N"
-    },
-    {
-      "id_book": "52",
-      "participate": "N"
-    },
-    {
-      "id_book": "53",
-      "participate": "N"
-    },
-    {
-      "id_book": "54",
-      "participate": "N"
-    },
-    {
-      "id_book": "55",
-      "participate": "N"
-    },
-    {
-      "id_book": "56",
-      "participate": "N"
-    },
-    {
-      "id_book": "57",
-      "participate": "N"
-    },
-    {
-      "id_book": "58",
-      "participate": "N"
-    },
-    {
-      "id_book": "59",
-      "participate": "N"
-    },
-    {
-      "id_book": "60",
-      "participate": "N"
-    },
-    {
-      "id_book": "61",
-      "participate": "N"
-    },
-    {
-      "id_book": "62",
-      "participate": "N"
-    },
-    {
-      "id_book": "63",
-      "participate": "N"
-    },
-    {
-      "id_book": "64",
-      "participate": "N"
-    },
-    {
-      "id_book": "65",
-      "participate": "N"
-    },
-    {
-      "id_book": "66",
-      "participate": "N"
-    },
-    {
-      "id_book": "67",
-      "participate": "N"
-    },
-    {
-      "id_book": "68",
-      "participate": "N"
-    },
-    {
-      "id_book": "69",
-      "participate": "N"
-    },
-    {
-      "id_book": "70",
-      "participate": "N"
-    },
-    {
-      "id_book": "71",
-      "participate": "N"
-    },
-    {
-      "id_book": "72",
-      "participate": "N"
-    },
-    {
-      "id_book": "73",
-      "participate": "N"
-    },
-    {
-      "id_book": "74",
-      "participate": "N"
-    },
-    {
-      "id_book": "75",
-      "participate": "N"
-    },
-    {
-      "id_book": "76",
-      "participate": "N"
-    },
-    {
-      "id_book": "77",
-      "participate": "N"
-    },
-    {
-      "id_book": "78",
-      "participate": "N"
-    },
-    {
-      "id_book": "79",
-      "participate": "N"
-    },
-    {
-      "id_book": "80",
-      "participate": "N"
+      "participate": "Y"
     }
   ]
 }

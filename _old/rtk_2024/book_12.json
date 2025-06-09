@@ -1,0 +1,12 @@
+{
+  "Book": {
+    "Id": "12",
+    "Title": "La luz del ocaso",
+    "Authors": [ 9 ],
+    "Genres": [ "Fantas&iacute;a &eacute;pica", "Young Adult", "Steampunk" ],
+    "Synopsis": "La vor&aacute;gine de decadencia que asola a Bardea es el caldo de cultivo perfecto para el caos. &iquest;C&oacute;mo puedes salvar a un pueblo que no te escucha?<br /><br />El Festival del Ocaso pone en marcha la cuenta atr&aacute;s. Esto no pasa desapercibido para Fenrir Ballington, el Minth, representante de la Iglesia y las artes m&aacute;gicas. Existen fuerzas que se mueven entre las sombras del tablero, un poder ancestral que le obligar&aacute; a recurrir a cualquier medio con tal de evitar el colapso de su pueblo.<br /><br />Ese mismo d&iacute;a, Eric Rainer emprende su viaje como Z&aacute;miner junto a su zamin, Elyss Fletcher, en su b&uacute;squeda por cambiar la sociedad injusta y discriminatoria que lo rodea. Lo que &eacute;l jam&aacute;s podr&iacute;a haber previsto era que ese camino lo llevar&iacute;a a estar en el punto de mira de los Hijos de Herin, cuya ansia por un poder capaz de doblegar los planos de la realidad debe ser detenida.<br /><br />Sus caminos est&aacute;n entrelazados, su enemigo com&uacute;n lo sabe y no tiene intenci&oacute;n de permitir que le arrebaten su regreso. &iquest;Tendr&aacute;n la voluntad suficiente para no doblegarse ante la sombra que pretende llevar a Bardea a su ocaso?",
+    "Cover": "",
+    "Networks": "",
+    "ASIN": "B0CFG5P65V"
+  }
+}

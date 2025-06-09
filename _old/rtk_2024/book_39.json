@@ -1,0 +1,12 @@
+{
+  "Book": {
+    "Id": "39",
+    "Title": "Madre de acero",
+    "Authors": [ 31 ],
+    "Genres": ["Fantas&iacute;a &eacute;pica"],
+    "Synopsis": "Un elegido por la sangre, por su destino. Un viaje inesperado m&aacute;s all&aacute; del hogar. Pero, &iquest;y si esta no fuera su historia? &iquest;Y si se tratara del cantar de aquella que qued&oacute; atr&aacute;s? Pues la madre no ver&iacute;a m&aacute;s que un hijo raptado, no habr&iacute;a m&aacute;s que dolor al que abrazar. Por ello partir&iacute;a, cruzar&iacute;a fronteras y desafiar&iacute;a a cualquiera que se interpusiera entre ella y quien m&aacute;s amaba. Acompa&ntilde;ada por valientes guerreras, no importar&iacute;a que la profec&iacute;a fuera real o no, ni que estallara la guerra. Rithian luchar&iacute;a en nombre de lo &uacute;nico cierto en mitad de un reino perturbado: el amor al hijo del hogar arrancado. Y mientras los dioses contemplaban, solo Athrisona sab&iacute;a lo que la melod&iacute;a del destino ocultaba.",
+    "Cover": "",
+    "Networks": "",
+    "ASIN": "B0933P81DP"
+  }
+}

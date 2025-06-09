@@ -1,12 +1,1 @@
-{
-  "Book": {
-    "Id": "4",
-    "Title": "Clasmathia: Un lugar mejor",
-    "Authors": [ 4 ],
-    "Genres": [ "Distop&iacute;a", "Ciencia ficci&oacute;n", "Young Adult" ],
-    "Synopsis": "Siglos tras la &Uacute;ltima Guerra, los humanos se esfuerzan por sobrevivir en las resecas llanuras de Clasmathia. Entre las altas monta&ntilde;as y la Niebla que les separa del oscuro mar, sus leyendas hablan de otros seres, Extra&ntilde;os hijos de sus mismos antepasados, cuya prosperidad se alza amenazante sobre la fr&aacute;gil supervivencia humana.<br />Eithrie, una joven humana de piel tostada, lucha por ofrecer a su hermana Maisha una vida mejor, pero la comida y el agua escasean. En otro lugar de la llanura, B&eacute;la, un Extra&ntilde;o de ojos verdes, se prepara para la caza, sus odres rebosantes de agua y su mente tranquila. En ese paisaje lleno de peligrosos felinos y silenciosas ruinas de una civilizaci&oacute;n perdida, se cruzar&aacute;n los caminos de nuestros tres protagonistas, cuyos mundos opuestos est&aacute;n destinados a encontrarse. Pronto sus destinos quedar&aacute;n entrelazados para siempre, pero &iquest;conseguir&aacute;n ellas ese lugar mejor que tanto ans&iacute;an, esa pieza clave para la supervivencia de los humanos en Clasmathia?",
-    "Cover": "",
-    "Networks": "",
-    "ASIN": "B0CDVM4G3J"
-  }
-}
+{ "Book": {"Id": "4", "Title": "La vida es el canto de un pájaro", "Authors": [ 20 ], "Genres": [ "CONTEMPORÁNEO"], "Synopsis": "Esta no es una historia de amor.<br /><br />Es una historia de dolor, de ilusión, de pérdida, de miedo, de esperanza.<br /><br />Es la historia del caos de Johnny Joe Mason, un rockero que ha tocado fondo entre alcohol y drogas, y la historia del caos de Prisha Palmer, una extraña chica que esconde un turbio secreto y de la que uno nunca sabe que esperar. Y un día cualquiera, los caos de ambos colisionan convirtiéndose en uno solo, en un nuevo universo, fugaz, bello, siniestro, efímero, como el canto de un pájaro en medio de una noche de tinieblas.", "Cover": "61Cx+idiiXL", "Networks": "", "ASIN": "B0BMF8F3HD"}}

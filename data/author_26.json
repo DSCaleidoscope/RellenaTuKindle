@@ -1,10 +1,1 @@
-{
-  "Auth": {
-    "Id": "26",
-    "AuthorName": "Ana Agudo",
-    "Name": "Anonymous",
-    "Genres": [ "Suspense", "Thriller rom&aacute;ntico" ],
-    "Presentation": "",
-    "ProfilePic": ""
-  }
-}
+{ "Auth": { "Id": "26", "AuthorName": "PEBOL SÁNCHEZ", "Name": "Anonymous", "Genres": [], "Presentation": "", "ProfilePic": ""}}

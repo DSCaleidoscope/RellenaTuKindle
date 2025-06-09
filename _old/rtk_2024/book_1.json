@@ -1,0 +1,12 @@
+{
+  "Book": {
+    "Id": "1",
+    "Title": "El Aprendiz de Herborista",
+    "Authors": [ 6 ],
+    "Genres": [ "FANTASÍA" ],
+    "Synopsis": "Un accidentado paseo por el bosque.<br /><br />Una ayuda inesperada.<br /><br />Un romance prohibido.<br /><br /><br /><br />“El Aprendiz de Herborista” narra una historia de amores, desamores, traiciones, y una maraña de oscuras mentiras arraigadas en la profundidad del tiempo. Solo con la esperanza que brinda la profecía se podrá conseguir resolver el conflicto que atenaza al mundo.<br /><br />",
+    "Cover": "81a5ntDEGmL",
+    "Networks": "",
+    "ASIN": "B0CG2SPBWC"
+  }
+}

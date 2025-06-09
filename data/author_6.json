@@ -1,10 +1,20 @@
 {
   "Auth": {
     "Id": "6",
-    "AuthorName": "Simon D. Luscombe",
+    "AuthorName": "D. S. Caleidoscope",
     "Name": "Anonymous",
-    "Genres": [ "Fantas&iacute;a" ],
+    "Genres": [],
     "Presentation": "",
-    "ProfilePic": ""
+    "ProfilePic": "",
+    "Networks": [
+      {
+        "type": "INSTAGRAM",
+        "user": "d.s.caleidoscope"
+      },
+      {
+        "type": "TIKTOK",
+        "user": "dscaleidoscope"
+      }
+    ]
   }
 }

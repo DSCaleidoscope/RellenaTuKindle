@@ -1,12 +1,1 @@
-{
-  "Book": {
-    "Id": "37",
-    "Title": "OJOS DE FUEGO",
-    "Authors": [ 29 ],
-    "Genres": [ "Fantas&iacute;a juvenil" ],
-    "Synopsis": "Alex es un joven inteligente e introvertido que hace lo posible por terminar su &uacute;ltimo a&ntilde;o de secundaria sin ser notado por sus compa&ntilde;eros. En casa, su madre enferma est&aacute; perdiendo la batalla, y el futuro de Alex se ve incierto y l&uacute;gubre. Resentido con el mundo y la vida que le toca vivir, desconoce que, dentro del Gran Libro del Universo, y tan solo a una p&aacute;gina de distancia, su esencia ser&aacute; tan codiciada como temida por dos bandos de una guerra que el mundo no sabe que existe.",
-    "Cover": "71QyoFX51UL._SL1500_.jpg",
-    "Networks": "",
-    "ASIN": "B0BRGFMSXQ"
-  }
-}
+{ "Book": {"Id": "37", "Title": "¡QUE VIENE EL LOBO!", "Authors": [ 9 ], "Genres": [ "ROMANCE"], "Synopsis": "Raquel odia San Valentín. En su vida laboral como organizadora de eventos ha visto de todo, y si tiene que elegir, prefiere unos polvos mágicos, o un buen revolcón, a caer en las flechas del amor.<br /><br />Su último cliente es Hugo Blanch, uno de los hombres más adinerados del país; serio, buen orador y con un increíble olfato para los negocios; por eso le llaman el Lobo de las finanzas.<br /><br /><br /><br />Como en el cuento, el lobo es grande y fuerte, y desde el primer momento quiere comérsela, pero ella no es Caperucita, es una tigresa indomable dispuesta a sacar sus garras si hace falta.<br /><br /><br /><br />Él es bueno en su juego. Ella también en el suyo.<br /><br /><br /><br />¿Será el lobo capaz de domar a la Tigresa o será un lobo con piel de cordero?", "Cover": "71wbYMzN28L", "Networks": "", "ASIN": "B0B5PNN43B"}}

@@ -1,10 +1,1 @@
-{
-  "Auth": {
-    "Id": "9",
-    "AuthorName": "Ra&uacute;l Sanz Jodar",
-    "Name": "Anonymous",
-    "Genres": [ "Fantas&iacute;a &eacute;pica", "Young Adult", "Steampunk" ],
-    "Presentation": "",
-    "ProfilePic": ""
-  }
-}
+{ "Auth": { "Id": "9", "AuthorName": "Elisabeth Gilmore", "Name": "Anonymous", "Genres": [], "Presentation": "", "ProfilePic": ""}}

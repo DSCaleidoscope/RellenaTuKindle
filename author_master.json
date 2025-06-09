@@ -1,6 +1,5 @@
 {
   "Author": [
-    { "id_author": "0" },
     { "id_author": "1" },
     { "id_author": "2" },
     { "id_author": "3" },
@@ -30,30 +29,6 @@
     { "id_author": "27" },
     { "id_author": "28" },
     { "id_author": "29" },
-    { "id_author": "30" },
-    { "id_author": "31" },
-    { "id_author": "32" },
-    { "id_author": "33" },
-    { "id_author": "34" },
-    { "id_author": "35" },
-    { "id_author": "36" },
-    { "id_author": "37" },
-    { "id_author": "38" },
-    { "id_author": "39" },
-    { "id_author": "40" },
-    { "id_author": "41" },
-    { "id_author": "42" },
-    { "id_author": "43" },
-    { "id_author": "44" },
-    { "id_author": "45" },
-    { "id_author": "46" },
-    { "id_author": "47" },
-    { "id_author": "48" },
-    { "id_author": "49" },
-    { "id_author": "50" },
-    { "id_author": "51" },
-    { "id_author": "52" },
-    { "id_author": "53" },
-    { "id_author": "54" }
+    { "id_author": "30" }
   ]
 }

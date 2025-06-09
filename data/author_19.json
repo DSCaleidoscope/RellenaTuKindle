@@ -1,10 +1,1 @@
-{
-  "Auth": {
-    "Id": "19",
-    "AuthorName": "Rachel Amat",
-    "Name": "Anonymous",
-    "Genres": ["Rom&aacute;ntica"],
-    "Presentation": "",
-    "ProfilePic": ""
-  }
-}
+{ "Auth": { "Id": "19", "AuthorName": "M.R.Flower", "Name": "Anonymous", "Genres": [], "Presentation": "", "ProfilePic": ""}}

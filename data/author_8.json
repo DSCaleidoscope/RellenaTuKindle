@@ -1,10 +1,1 @@
-{
-  "Auth": {
-    "Id": "8",
-    "AuthorName": "Pebol S&aacute;nchez",
-    "Name": "Anonymous",
-    "Genres": [ "Fantas&iacute;a juvenil", "Young Adult", "Rom&aacute;ntica", "Romantasy" ],
-    "Presentation": "",
-    "ProfilePic": ""
-  }
-}
+{ "Auth": { "Id": "8", "AuthorName": "Eduardo D. Allen", "Name": "Anonymous", "Genres": [], "Presentation": "", "ProfilePic": ""}}

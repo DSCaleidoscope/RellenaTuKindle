@@ -1,12 +1,1 @@
-{
-  "Book": {
-    "Id": "33",
-    "Title": "Un encuentro casual (La casualidad lleva tu nombre n&ordm; 1)",
-    "Authors": [ 26 ],
-    "Genres": [ "Suspense", "Thriller rom&aacute;ntico" ],
-    "Synopsis": "Por si no hubiera sido suficiente con encontrar a su novio en la cama con su mejor amiga, Nuria recibe el encargo de realizar el reportaje fotogr&aacute;fico de la boda. Este ser&aacute; el punto de inflexi&oacute;n que le har&aacute; recapacitar y desear un cambio de vida.<br />Para empezar, decide visitar a su hermana Julia, quien vive en Washington, por Acci&oacute;n de Gracias. Sin embargo, una parada previa en Nueva York har&aacute; tambalear su vida.<br />Amor, enga&ntilde;os, secuestros... &iquest;En la vida hay algo casual?",
-    "Cover": "",
-    "Networks": "",
-    "ASIN": "B0CZP27837"
-  }
-}
+{ "Book": {"Id": "33", "Title": "¿Y si te vuelvo a sonreír?", "Authors": [ 23 ], "Genres": [ "ROMANCE"], "Synopsis": "¿Y si el amor fuera un juego de idas y venidas? ¿Y si la única forma de ganar fuera atreverse a dejar atrás el miedo?Mario siempre ha sido arrogante, seguro de sí mismo y acostumbrado a controlar cada detalle de su vida. Sin embargo, existe algo que escapa a su control: lo que siente por Sara. Para él, su historia siempre ha sido como la de Ícaro persiguiendo al sol; sabe que acercarse demasiado podría acabar quemándolo, pero la idea de renunciar jamás ha sido una opción.<br /><br />Sara es brillante, caótica e impredecible, un torbellino emocional que nunca ha sabido apostar por lo que quiere por temor a no ser suficiente.<br /><br />Durante años, ambos se han visto atrapados en silencios que pesaban más que cualquier palabra, ocultando tras el orgullo lo que realmente sentían.<br /><br />Ahora que el destino vuelve a unir sus caminos, tendrán que decidir si son capaces de romper ese círculo o si están dispuestos a arriesgarlo todo, incluso sus propios corazones.<br /><br />Porque hay historias que merecen reescribirse, especialmente cuando descubres que existen sonrisas por las que vale la pena volver a intentarlo una y mil veces.", "Cover": "71Twqbm+xUL", "Networks": "", "ASIN": "B0F3DL439H"}}

@@ -1,10 +1,1 @@
-{
-  "Auth": {
-    "Id": "20",
-    "AuthorName": "Iris Infantes",
-    "Name": "Anonymous",
-    "Genres": [ "Terror", "Misterio", "Fantas&iacute;a oscura", "Ciencia ficci&oacute;n" ],
-    "Presentation": "",
-    "ProfilePic": ""
-  }
-}
+{ "Auth": { "Id": "20", "AuthorName": "Martha Barilari", "Name": "Anonymous", "Genres": [], "Presentation": "", "ProfilePic": ""}}

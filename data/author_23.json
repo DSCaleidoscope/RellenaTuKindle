@@ -1,10 +1,1 @@
-{
-  "Auth": {
-    "Id": "23",
-    "AuthorName": "Teo Soler",
-    "Name": "Anonymous",
-    "Genres": [ "Contempor&aacute;neo", "Hechos reales" ],
-    "Presentation": "",
-    "ProfilePic": ""
-  }
-}
+{ "Auth": { "Id": "23", "AuthorName": "Nerea Martín", "Name": "Anonymous", "Genres": [], "Presentation": "", "ProfilePic": ""}}

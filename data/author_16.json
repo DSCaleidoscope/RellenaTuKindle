@@ -1,10 +1,1 @@
-{
-  "Auth": {
-    "Id": "16",
-    "AuthorName": "Melanie Alexander",
-    "Name": "Anonymous",
-    "Genres": ["Fantas&iacute;a urbana", "Thriller paranormal", "Romance", "Romance paranormal", "Romance contempor&aacute;neo", "Comedia rom&aacute;ntica", "Misterio", "Fantas&iacute;a"],
-    "Presentation": "",
-    "ProfilePic": ""
-  }
-}
+{ "Auth": { "Id": "16", "AuthorName": "Libertad Herrera", "Name": "Anonymous", "Genres": [], "Presentation": "", "ProfilePic": ""}}

@@ -36,8 +36,9 @@ var Bcollapsed = [];
 
 //Config
 var forceRefresh = true; //During the event, move it to false to avoid forcing refresh!
-var eventDate = "evento";
-var isEventWaiting = false; //Move it to false to show links to Amazon
+var eventDate = "24 de Junio";
+var isEventWaiting = true; //Move it to false to show links to Amazon
+var tracking = false; //Move it to false to avoid calling tracking function
 
 //helpers & redefines
 function g(id){return document.getElementById(id);}
@@ -275,7 +276,28 @@ function addAuthorMethods(auth) {
   auth.getPresentation = function () { return this.Presentation; };
   auth.getProfilePic = function () { return this.ProfilePic; };
   auth.addResumedInfo = function (node) {
-    node.innerHTML += "<div class='author' id=a_" + this.getID() + ">" + this.getAuthorName() + "</div>";
+    node.innerHTML += "<div class='author' id=a_" + this.getID() + ">" + this.getAuthorName() + this.getNetworks() + "</div>";
+  }
+
+  auth.getNetworks = function () { 
+    //temp override
+    return "";
+
+    let gni = 0;
+    let gnr = "";
+
+    //try/catch to be removed once every auth has networks node
+    try {
+      for (gni = 0; gni < this.Networks.length; gni++) {
+        if (this.Networks[gni].type == "INSTAGRAM") {
+          gnr += "<a href='https://www.instagram.com/" + this.Networks[gni].user + "' target='_blank'><img src='./img/ig_logo.png' style='position: relative;top: 7px;width: 25px;margin-left: 12px;'/></a>";
+        } else if (this.Networks[gni].type == "TIKTOK") {
+          gnr += "<a href='https://www.tiktok.com/@" + this.Networks[gni].user + "' target='_blank'><img src='./img/tt_logo.png' style='position: relative;top: 6px;width: 20px;margin-left: 12px;'/></a>";
+        }
+      }
+    } catch (e) { }
+
+    return gnr;
   }
 }
 //AUTHORS - END
@@ -351,14 +373,16 @@ function addBookMethods(book) {
         let gnode = this.createNode();
         gnode.classList.add("genre");
         gnode.setAttribute('id', genres[i]);
-        gnode.innerHTML = '<a id="' + genres[i] + '">' + genres[i] + '</a> | <a href="#gList">&#128285;</a>';
+        gnode.innerHTML = '<a id="' + genres[i] + '">' + genres[i].charAt(0).toUpperCase() + genres[i].slice(1).toLowerCase() + '</a> | <a href="#gList">&#128285;</a>';
         g('bbody').appendChild(gnode);
 
         //now, fetch it again
         mnode = g(genres[i]);
 
         //after create it, add it to the list
-        g('genresContent').innerHTML += '<a href="#' +genres[i] +'">' + genres[i] + '</a> | ';
+
+        //string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
+        g('genresContent').innerHTML += '<a href="#' + genres[i] +'">' + genres[i].charAt(0).toUpperCase() + genres[i].slice(1).toLowerCase() + '</a> | ';
       }
 
       mnode.appendChild(lnode);
@@ -445,14 +469,22 @@ function addBookMethods(book) {
       if (isEventWaiting) {
         node.innerHTML += "<div class='ASIN'>Gratis el pr&oacute;ximo " + eventDate + "</div>";
       } else {
-        if (tz == "Europe") {
-          node.innerHTML += "<div class='ASIN'><a href='https://amazon.es/dp/" + this.getASIN() + "' target='_blank'>Descargar en Amazon</a></div>";
+        if (tracking) {
+          node.innerHTML += "<div class='ASIN' onclick=\"navigate('" + this.getASIN() + "', " + this.getID() + ")\">Descargar en Amazon</div>";
         } else {
-          node.innerHTML += "<div class='ASIN'><a href='https://amazon.com/dp/" + this.getASIN() + "' target='_blank'>Descargar en Amazon</a></div>";
+          node.innerHTML += "<div class='ASIN'><a href='" + getAmazonLink(tz, this.getASIN()) + "' target='_blank'>Descargar en Amazon</a></div>";
         }
       }
     }
   };
+}
+
+function getAmazonLink(tz, ASIN) {
+  if (tz == "Europe") {
+    return "https://amazon.es/dp/" + ASIN;
+  }
+
+  return "https://amazon.com/dp/" + ASIN;
 }
 //BOOKS - END
 
@@ -650,4 +682,16 @@ function submitBrevo() {
   console.log(g("EMAIL").value);
 
   g("sib-form").submit();
+}
+
+//Analytics
+function navigate(asin, bookId) {
+
+  try {
+    var xhttp = new XMLHttpRequest();
+    xhttp.open("GET", "https://dohitb.ddns.net/rtklog.rtk?bookid=" + bookId, true);
+    xhttp.send();
+  } catch (e) {}
+
+  window.open(getAmazonLink(tz, asin), '_blank');
 }

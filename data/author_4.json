@@ -1,10 +1,1 @@
-{
-  "Auth": {
-    "Id": "4",
-    "AuthorName": "Narya A. Vicens",
-    "Name": "Anonymous",
-    "Genres": [ "Fantas&iacute;a", "Ciencia Ficci&oacute;n" ],
-    "Presentation": "",
-    "ProfilePic": ""
-  }
-}
+{ "Auth": { "Id": "4", "AuthorName": "Celia Esgar", "Name": "Anonymous", "Genres": [], "Presentation": "", "ProfilePic": ""}}

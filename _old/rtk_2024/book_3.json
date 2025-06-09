@@ -1,0 +1,12 @@
+{
+  "Book": {
+    "Id": "3",
+    "Title": "El Legado del Ciervo Negro: La era de &Eacute;rlik",
+    "Authors": [ 3 ],
+    "Genres": [ "Fantas&iacute;a juvenil" ],
+    "Synopsis": "Mientras el rey &Eacute;rlik contin&uacute;a su lucha por convertir a Ouven en el reino m&aacute;s poderoso de Vitia Mar, en su capital, &Eacute;cer, los ni&ntilde;os olvidados se agrupan en clanes para poder sobrevivir.<br /><br />Las Columnas, los ni&ntilde;os m&aacute;s fuertes de cada clan, lideran al resto para resistir la vor&aacute;gine de violencia, miseria y emociones desgarradoras, donde la muerte no es lo peor que les puede pasar.",
+    "Cover": "",
+    "Networks": "",
+    "ASIN": "B0CY45GGPF"
+  }
+}

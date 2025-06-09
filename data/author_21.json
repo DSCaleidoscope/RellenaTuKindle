@@ -1,10 +1,1 @@
-{
-  "Auth": {
-    "Id": "21",
-    "AuthorName": "Katy Bertrand P.",
-    "Name": "Anonymous",
-    "Genres": [ "Contempor&aacute;neo", "Hechos reales" ],
-    "Presentation": "",
-    "ProfilePic": ""
-  }
-}
+{ "Auth": { "Id": "21", "AuthorName": "Mónica Steller", "Name": "Anonymous", "Genres": [], "Presentation": "", "ProfilePic": ""}}

@@ -1,10 +1,1 @@
-{
-  "Auth": {
-    "Id": "5",
-    "AuthorName": "Ricardo &Aacute;lvarez",
-    "Name": "Anonymous",
-    "Genres": [ "Romance" ],
-    "Presentation": "",
-    "ProfilePic": ""
-  }
-}
+{ "Auth": { "Id": "5", "AuthorName": "Claudia Winchester", "Name": "Anonymous", "Genres": [], "Presentation": "", "ProfilePic": ""}}

@@ -1,0 +1,12 @@
+{
+  "Book": {
+    "Id": "34",
+    "Title": "Casualmente la muerte (La casualidad lleva tu nombre n&ordm; 2)",
+    "Authors": [ 26 ],
+    "Genres": [ "Suspense", "Thriller rom&aacute;ntico" ],
+    "Synopsis": "Un pinchazo en la nuca, el coraz&oacute;n bombeando fren&eacute;ticamente, la humedad en mis manos, el fr&iacute;o en mi espalda y la sequedad de mi boca, me avisan del peligro.<br />No veo su rostro.<br />No s&eacute; qu&eacute; forma tiene.<br />Pero s&eacute; que est&aacute; tras de m&iacute;. Husmeando. Acechando.<br />Estoy solo.<br />Siempre me ha gustado trabajar en solitario, me resulta m&aacute;s c&oacute;modo decidir sin esperar a estar de acuerdo con otra persona, sin preocuparme por nadie, sin lamentar m&aacute;s da&ntilde;os que los propios.<br />Pero ahora me siento solo. Y desear&iacute;a no estarlo.<br />&iquest;Est&aacute;s preparado para acompa&ntilde;arme?",
+    "Cover": "",
+    "Networks": "",
+    "ASIN": "B0CZP1LC5G"
+  }
+}
