@@ -1,11 +1,1 @@
-{
-  "Auth": {
-    "Id": "43",
-    "AuthorName": "Victoria F. Leffingwell",
-    "Name": "Anonymous",
-    "Genres": [],
-    "Presentation": "",
-    "ProfilePic": "",
-    "Networks": []
-  }
-}
+{ "Auth": { "Id": "43", "AuthorName": "Pino Betancor", "Name": "Anonymous", "Genres": [], "Presentation": "", "ProfilePic": "","Networks": []}}
