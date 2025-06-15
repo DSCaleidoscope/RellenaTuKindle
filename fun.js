@@ -209,7 +209,7 @@ function collapseBook(e) {
 //visuals - END
 
 //listing
-function getAll() {
+/*function getAll() {
   let i = 0;
   let x = bookList.length;
   let n = [];
@@ -237,7 +237,7 @@ function getAll() {
   };
 
   dlfr.readAsDataURL(new Blob(n, { type: 'application/json'}));
-}
+}*/
 
 //AUTHORS - INI
 async function parseAuthors(t){

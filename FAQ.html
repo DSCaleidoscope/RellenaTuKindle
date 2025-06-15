@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <!--TEMP REDIRECTS-->
+  <!--<meta http-equiv="refresh" content="0; URL=./calendarioAdviento.html" />-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Web para descargar ebooks gratis durante el evento 'Rellena tu Kindle'">
+  <meta name="keywords" content="ebook gratis amazon">
+  <meta name="author" content="D. S. Caleidoscope">
+  <title>Rellena tu Kindle</title>
+  <link rel="stylesheet" href="style.css" media="print" onload="this.media='all'">
+  <script type="text/javascript" src="fun.js"></script>
+</head>
+<body id="mbody">
+  <a id="gList"></a>
+  <div id="loader">
+    <div class="loaderMsg">Dame un minuto que lea todos los libros</div>
+    <div id="msg"></div>
+    <div id="loginWrapper">
+      <div id="loading"></div>
+    </div>
+  </div>
+  <div id="mainScreen">
+    <div id="reload"><a href="./?cs=1&rl=1">&#128260; Recargar</a> | <a href="./register.html">&#128209; Contacto / Participa</a> | <a href="./?cs=1&rl=1">&#128209; P&aacute;gina principal</a><!--<span onclick="getAll();">&#128193; Cat&aacute;logo</span>--></div>
+    <div id="mtitle">Rellena Tu Kindle / Ereader</div>
+    <div id="whatIs">
+      <div class="section" id="whatSection" onclick="collapseWhat('whatContent');">Preguntas Frecuentes</div>
+      <div id="whatContent">
+        <div class="whatIsTitle">Índice</div>
+        <div class="whatIsText" style="text-align:justify;">
+          <a href="#faq2">¿Cómo me apunto?</a><br />
+          <a href="#faq1">¿Cómo pongo gratis mi ebook?</a><br />
+          <a href="#faq5">¿Puedo hacer promo?</a><br />
+          <a href="#faq3">¿Por qué no puedo poner gratis mi ebook? ¿Me vais a echar?</a><br />
+          <a href="#faq4">¡Ayuda! ¡Ha llegado el evento y mi libro no sale gratis!</a><br />
+        </div>
+        <a id="faq2"></a><div class="whatIsTitle">¿Cómo me apunto?</div>
+        <div class="whatIsText" style="text-align:justify;">
+          ¡Esta es fácil!<br />
+          Entra en el <a href="./register.html" target="_blank">formulario de inscripción</a> y rellena los datos.<br />
+          Pronto recibirás un email pidiendo que confirmes información extra (la sinopsis y la cubierta de tu ebook). ¡Es importante que respondas para que podamos estar seguros de usar tus datos en la web!
+        </div>
+        <a id="faq1"></a><div class="whatIsTitle">¿Cómo pongo gratis mi ebook?</div>
+        <div class="whatIsText" style="text-align:justify;">
+          Para poner gratis tu ebook, primero debes acceder a tu <a href="https://kdp.amazon.com/es_ES/bookshelf" target="_blank">librería de Amazon</a>.<br />
+          Busca el título que quieras poner gratis, y, en la parte del ebook, localiza el botón "Promocionar y anunciar" y púlsalo.<br /><br />
+          <img src="./help/faq_1_1.png" style="width:100%;" /><br /><br />
+          Ahora, busca la sección "Realizar una promoción de precio" (En la sección del medio, a la iquierda). Allí, selecciona "Promoción de libro gratuito" y luego pulsa el botón "Crear una nueva promoción de libros gratuitos".<br /><br />
+          <img src="./help/faq_1_2.png" style="width:100%;" /><br /><br />
+          ¡Ya casi estamos! Ahora, haz click en el área vacía al lado de "Fecha de inicio", esto hará que aparezca un calendario. Busca la fecha del evento y pulsa sobre el día concreto.<br />
+          Ahora, repite lo mismo con "Fecha final", y elige el mismo día para que tu ebook esté gratis solo durante esa fecha concreta.<br /><br />
+          <img src="./help/faq_1_3.png" style="width:100%;" /><br /><br />
+          Pulsa el botón "Guardar cambios".<br /><br />
+          <img src="./help/faq_1_4.png" style="width:100%;" /><br /><br />
+          Verás un mensaje confirmando que se está creando la promoción, y volverás a la página anterior. Ahora, si bajas hasta el fondo de la página, verás que en la sección "Promociones de este libro" aparece una línea indicando la fecha del libro, y en estado "Programado".<br /><br />
+          <img src="./help/faq_1_5.png" style="width:100%;" /><br /><br />
+          ¡Enhorabuena! ¡Ya tienes gratis tu ebook!<br />
+          Ya solo queda esperar al evento y disfrutar.
+        </div>
+        <a id="faq5"></a><div class="whatIsTitle">¿Puedo hacer promo?</div>
+        <div class="whatIsText" style="text-align:justify;">
+          Respuesta corta: Sí.<br />
+          Respuesta larga: ¡Por supuesto! De hecho, os animamos a que hagáis promoción del evento.<br /><br />
+          Podéis promocionar el evento como queráis: Un post en redes, un vídeo largo, en el podcast de una amiga...<br />
+          No hay limitación en el formato ni en el estilo. Podéis etiquetar la cuenta de @rellenatukindle o añadirla como colaboradora.<br />
+          Si buscáis algún tipo de plantilla, preguntad y os ayudamos.<br /><br />
+          Estad atentas al grupo de Instagram (al que os aconsejamos que os unáis), ya que muchas autoras hacen iniciativas conjuntas para promocionar los libros que participan.<br />
+          ¡También podéis aprovechar y empezar vosotras una colaboración con otras autoras!
+        </div>
+        <a id="faq3"></a><div class="whatIsTitle">¿Por qué no puedo poner gratis mi ebook? ¿Me vais a echar?</div>
+        <div class="whatIsText" style="text-align:justify;">
+          Empezando por la segunda pregunta... ¡Por supuesto que no!<br /><br />
+          Bromas a parte, si no puedes poner gratis tu ebook para el día del evento, hay un par de cosas que puedes revisar.<br />
+          Primero, revisa que tu libro esté inscrito en KDP Select. Esto es imprescindible para poder ponerlo gratis.<br />
+          Para saberlo, accede a tu <a href="https://kdp.amazon.com/es_ES/bookshelf" target="_blank">librería de Amazon</a>, y busca el título que quieras poner gratis.<br />
+          En la parte del ebook, localiza el botón "Promocionar y anunciar" y púlsalo.<br /><br />
+          <img src="./help/faq_1_1.png" style="width:100%;" /><br /><br />
+          En la parte superior, verás una sección que se llama "KDP Select". Ahí, busca el "estado actual de KDP Select". Debería poner "Inscrito".<br /><br />
+          <img src="./help/faq_3_1.png" style="width:100%;" /><br /><br />
+          Si aparece como "Inscrito", vas por buen camino.<br />
+          Sin moverte de donde estás, verás que abajo te marca la "Fecha de inicio de plazo" y la "Fecha de finalización de plazo"<br /><br />
+          <img src="./help/faq_3_2.png" style="width:100%;" /><br /><br />
+          Ten en cuenta que solo puedes poner el libro gratis dentro de esas fechas.<br />
+          Si el plazo de finalización es anterior a la fecha del evento, simplemente espera a que se renueve el plazo de KDP Select y ya deberías poder seleccionar el día del evento.
+        </div>
+        <a id="faq4"></a><div class="whatIsTitle">¡Ayuda! ¡Ha llegado el evento y mi libro no sale gratis!</div>
+        <div class="whatIsText" style="text-align:justify;">
+          Que no cunda el pánico.<br /><br />
+          Si has puesto gratis el ebook y todavía no sale gratis en Amazon, recuerda que Amazon trabaja en PDT (Horario del Pacífico).<br /><br />
+          Eso significa que hay un pequeño decalaje de tiempo. En <a href="https://time.is/PDT" target="_blank">esta web</a> puedes ver el tiempo en la zona horaria PDT.<br />
+          Cuando marque las 00:00, tu libro estará gratis, y lo estará durante 24 horas, así que tus lectores podrán descargarlo durante parte del día siguiente.
+        </div>
+      </div>
+    </div>  
+    <div id="bbody">
+      <script type="text/javascript">
+        collapseWhat('whatContent');
+        collapseWhat('whatContent');
+        endLoad();
+      </script>
+    </div>
+  </div>
+</body>
+</html>
