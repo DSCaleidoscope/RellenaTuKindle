@@ -1,1 +1,1 @@
-{ "Auth": { "Id": "2", "AuthorName": "AlexaStices", "Name": "Anonymous", "Genres": [], "Presentation": "", "ProfilePic": "","Networks": []}}
+{ "Auth": { "Id": "2", "AuthorName": "AlexaStices", "Name": "Anonymous", "Genres": [], "Presentation": "", "ProfilePic": "","Networks": [{"type":  "INSTAGRAM", "user": "sinfoniasdegallevya"},{"type": "TIKTOK", "user": "sinfoniasdegallevya"}]}}

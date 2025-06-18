@@ -1,1 +1,1 @@
-{ "Auth": { "Id": "6", "AuthorName": "Aria Wanderlust", "Name": "Anonymous", "Genres": [], "Presentation": "", "ProfilePic": "","Networks": []}}
+{ "Auth": { "Id": "6", "AuthorName": "Aria Wanderlust", "Name": "Anonymous", "Genres": [], "Presentation": "", "ProfilePic": "","Networks": [{"type":  "INSTAGRAM", "user": "aria_wanderlust"},{"type": "TIKTOK", "user": "aria_wanderlust"}]}}

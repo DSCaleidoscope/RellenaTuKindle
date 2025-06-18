@@ -282,9 +282,6 @@ function addAuthorMethods(auth) {
   }
 
   auth.getNetworks = function () { 
-    //temp override
-    return "";
-
     let gni = 0;
     let gnr = "";
 
