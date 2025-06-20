@@ -4,12 +4,51 @@
   <title>Rellena tu Kindle</title>
 </head>
 <body>
-  <div id="t"></div>
+  <div id="t">
+    <input type="text" id="ASIN"/>
+    <input type="button" onclick="get(g('ASIN').value)" value="Dame datos!" />
+  </div>
   <script type="text/javascript">
-    let tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
-    tz = tz.split("/");
-    tz = tz[0];
-    document.getElementById("t").innerHTML = tz;
+    //File Reader
+    let filePromise = async function (file) {
+      let p = new Promise(function (resolve, reject) {
+        let req = new XMLHttpRequest();
+
+        req.open('GET', file);
+        req.onload = function () {
+          if (req.status == 200) {
+            resolve(req.response);
+          } else {
+            reject("File " + file + " not Found");
+          }
+        };
+
+        req.send();
+      });
+
+      return p;
+    };
+
+    function g(id) { return document.getElementById(id); }
+
+    async function get(ASIN) {
+      let res = "";
+      let bookInfo;
+
+      let bp = filePromise("https://dohitb.ddns.net/curl.reg?q=" + ASIN).then(
+        function (value) { res = value },
+        function (error) { console.log(error); }
+      );
+
+      await bp;
+
+      bookInfo = JSON.parse(res);
+      //console.log("ASIN: " + bookInfo.ASIN + " author: " + bookInfo.author + " cover: " + bookInfo.cover + "synopsis: " + bookInfo.synopsis + " title" + bookInfo.title);
+      g('t').innerHTML += "<br /><br /><b>ASIN del libro:</b> " + bookInfo.ASIN + "<br />";
+      g('t').innerHTML += "<b>Cubierta del libro:</b> <img src='" + bookInfo.cover + "'><br />";
+      g('t').innerHTML += "<b>Sinopsis:</b> " + bookInfo.synopsis + "<br />";
+      g('t').innerHTML += "<b>Título:</b> " + bookInfo.title + "<br />";
+    }
   </script>
 </body>
 </html>
