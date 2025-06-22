@@ -1,1 +1,20 @@
-{ "Auth": { "Id": "55", "AuthorName": "Magali R. Mátar", "Name": "Anonymous", "Genres": [], "Presentation": "", "ProfilePic": "","Networks": []}}
+{
+  "Auth": {
+    "Id": "55",
+    "AuthorName": "Magali R. Mátar",
+    "Name": "Anonymous",
+    "Genres": [],
+    "Presentation": "",
+    "ProfilePic": "",
+    "Networks": [
+      {
+        "type": "INSTAGRAM",
+        "user": "magalirmatar"
+      },
+      {
+        "type": "TIKTOK",
+        "user": "magalirmatar"
+      }
+    ]
+  }
+}
