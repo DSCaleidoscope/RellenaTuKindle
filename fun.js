@@ -37,7 +37,7 @@ var Bcollapsed = [];
 //Config
 var forceRefresh = true; //During the event, move it to false to avoid forcing refresh!
 var eventDate = "24 de Junio";
-var isEventWaiting = true; //Move it to false to show links to Amazon
+var isEventWaiting = false; //Move it to false to show links to Amazon
 var tracking = true; //Move it to false to avoid calling tracking function
 
 //helpers & redefines
@@ -189,6 +189,15 @@ function collapseBook(e) {
         childs[i].style.visibility = "hidden";
         childs[i].style.height = "0px";
       }
+
+      if (childs[i].nodeName == "IMG") {
+        //loading real image!
+        let src = childs[i].src.split("/");
+
+        if (src[src.length - 1] == "placeholder.png") {
+          childs[i].src = getImgSrcByBookId(e.id);
+        }
+      }
     }
 
     //adding 40px because of padding
@@ -203,8 +212,19 @@ function collapseBook(e) {
       childs[i].style.visibility = "hidden";
       childs[i].style.height = "initial";
     }
+  } 
+}
+
+function getImgSrcByBookId(id) {
+  let gis = 0;
+
+  for (; gis < bookList.length; gis++) {
+    if (bookList[gis].Id == id) {
+      return bookList[gis].getImgSrc();
+    }
   }
-  
+
+  return "";
 }
 //visuals - END
 
@@ -453,10 +473,15 @@ function addBookMethods(book) {
     if (this.getCover() == "") { }
     else {
       //node.innerHTML += "<img src='./data/" + this.getCover() + "' width='150px' />";
-      node.innerHTML += "<img src='https://m.media-amazon.com/images/I/" + this.getCover() + this.getSize() + "jpg' width='150px' />";
+      //node.innerHTML += "<img src='" + this.getImgSrc() + "' width='150px' />";
+      node.innerHTML += "<img src='./img/placeholder.png' width='150px' />";
       
     }
   };
+
+  book.getImgSrc = function () {
+    return "https://m.media-amazon.com/images/I/" + this.getCover() + this.getSize() + "jpg";
+  }
 
   book.addNetworksInfo = function (node) {
     //node.innerHTML += "<div class='networks'>" + this.getNetworks() + "</div>";
@@ -693,4 +718,6 @@ function navigate(asin, bookId) {
   } catch (e) {}
 
   window.open(getAmazonLink(tz, asin), '_blank');
+
+  collapseBook(g(bookId));
 }
