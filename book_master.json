@@ -386,7 +386,7 @@
     },
     {
       "id_book": "96",
-      "participate": "N"
+      "participate": "Y"
     },
     {
       "id_book": "97",
@@ -466,6 +466,10 @@
     },
     {
       "id_book": "116",
+      "participate": "Y"
+    },
+    {
+      "id_book": "117",
       "participate": "Y"
     }
   ]

@@ -1,1 +1,1 @@
-{ "Auth": { "Id": "20", "AuthorName": "Charlotte T. Loy", "Name": "Anonymous", "Genres": [], "Presentation": "", "ProfilePic": "","Networks": []}}
+{ "Auth": { "Id": "20", "AuthorName": "Charlotte T. Loy", "Name": "Anonymous", "Genres": [], "Presentation": "", "ProfilePic": "","Networks": [{"type":  "INSTAGRAM", "user": "charlottetloyauthor"},{"type": "TIKTOK", "user": "charlottetloyauthor"}]}}

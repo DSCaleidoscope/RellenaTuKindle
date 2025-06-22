@@ -1,1 +1,1 @@
-{ "Auth": { "Id": "45", "AuthorName": "Javier Alonso Fraile", "Name": "Anonymous", "Genres": [], "Presentation": "", "ProfilePic": "","Networks": []}}
+{ "Auth": { "Id": "45", "AuthorName": "Javier Alonso Fraile", "Name": "Anonymous", "Genres": [], "Presentation": "", "ProfilePic": "","Networks": [{"type":  "INSTAGRAM", "user": "javieralonsofrailewriter"},{"type": "TIKTOK", "user": "javiwritingorread"}]}}

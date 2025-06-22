@@ -1,1 +1,1 @@
-{ "Auth": { "Id": "3", "AuthorName": "AJ Sánchez", "Name": "Anonymous", "Genres": [], "Presentation": "", "ProfilePic": "","Networks": []}}
+{ "Auth": { "Id": "3", "AuthorName": "AJ Sánchez", "Name": "Anonymous", "Genres": [], "Presentation": "", "ProfilePic": "","Networks": [{"type":  "INSTAGRAM", "user": "ajsanchezescritor"},{"type": "TIKTOK", "user": "ajsanchezescritor"}]}}

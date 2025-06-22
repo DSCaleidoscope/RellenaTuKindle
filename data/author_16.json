@@ -1,1 +1,1 @@
-{ "Auth": { "Id": "16", "AuthorName": "Cat Olivares Román", "Name": "Anonymous", "Genres": [], "Presentation": "", "ProfilePic": "","Networks": []}}
+{ "Auth": { "Id": "16", "AuthorName": "Cat Olivares Román", "Name": "Anonymous", "Genres": [], "Presentation": "", "ProfilePic": "","Networks": [{"type":  "INSTAGRAM", "user": "catolivaresroman"},{"type": "TIKTOK", "user": "catolivares_escritora"}]}}
