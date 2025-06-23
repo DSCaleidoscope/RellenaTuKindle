@@ -312,6 +312,8 @@ function addAuthorMethods(auth) {
           gnr += "<a href='https://www.instagram.com/" + this.Networks[gni].user + "' target='_blank'><img src='./img/ig_logo.png' style='position: relative;top: 7px;width: 25px;margin-left: 12px;'/></a>";
         } else if (this.Networks[gni].type == "TIKTOK") {
           gnr += "<a href='https://www.tiktok.com/@" + this.Networks[gni].user + "' target='_blank'><img src='./img/tt_logo.png' style='position: relative;top: 6px;width: 20px;margin-left: 12px;'/></a>";
+        } else if (this.Networks[gni].type == "OTHER") {
+          gnr += "<a href='" + this.Networks[gni].user + "' target='_blank'><img src='./img/web_logo.png' style='position: relative;top: 6px;width: 23px;margin-left: 12px;'/></a>";
         }
       }
     } catch (e) { }

@@ -1,1 +1,24 @@
-{ "Auth": { "Id": "24", "AuthorName": "D. S. Caleidoscope", "Name": "Anonymous", "Genres": [], "Presentation": "", "ProfilePic": "","Networks": [{"type":  "INSTAGRAM", "user": "d.s.caleidoscope"},{"type": "TIKTOK", "user": "dscaleidoscope"}]}}
+{
+  "Auth": {
+    "Id": "24",
+    "AuthorName": "D. S. Caleidoscope",
+    "Name": "Anonymous",
+    "Genres": [],
+    "Presentation": "",
+    "ProfilePic": "",
+    "Networks": [
+      {
+        "type": "INSTAGRAM",
+        "user": "d.s.caleidoscope"
+      },
+      {
+        "type": "TIKTOK",
+        "user": "dscaleidoscope"
+      },
+      {
+        "type": "OTHER",
+        "user": "https://dscaleidoscope.github.io/DSCaleidoscope/"
+      }
+    ]
+  }
+}
