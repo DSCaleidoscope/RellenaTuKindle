@@ -1,1 +1,16 @@
-{ "Auth": { "Id": "40", "AuthorName": "Iris Infantes", "Name": "Anonymous", "Genres": [], "Presentation": "", "ProfilePic": "","Networks": []}}
+{
+  "Auth": {
+    "Id": "40",
+    "AuthorName": "Iris Infantes",
+    "Name": "Anonymous",
+    "Genres": [],
+    "Presentation": "",
+    "ProfilePic": "",
+    "Networks": [
+      {
+        "type": "INSTAGRAM",
+        "user": "nefilim_624"
+      }
+    ]
+  }
+}

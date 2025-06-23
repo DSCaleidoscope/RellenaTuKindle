@@ -1,1 +1,11 @@
-{ "Auth": { "Id": "69", "AuthorName": "Natalia Corbillón", "Name": "Anonymous", "Genres": [], "Presentation": "", "ProfilePic": "","Networks": []}}
+{
+  "Auth": {
+    "Id": "69",
+    "AuthorName": "Natalia Corbillón",
+    "Name": "Anonymous",
+    "Genres": [],
+    "Presentation": "",
+    "ProfilePic": "",
+    "Networks": [ {"type" : "OTHER", "user" : "https://loshijosdegea.com/"} ]
+  }
+}

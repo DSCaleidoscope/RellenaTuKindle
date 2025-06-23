@@ -1,1 +1,20 @@
-{ "Auth": { "Id": "64", "AuthorName": "Monica DIAZ OREÑA", "Name": "Anonymous", "Genres": [], "Presentation": "", "ProfilePic": "","Networks": []}}
+{
+  "Auth": {
+    "Id": "64",
+    "AuthorName": "Monica DIAZ OREÑA",
+    "Name": "Anonymous",
+    "Genres": [],
+    "Presentation": "",
+    "ProfilePic": "",
+    "Networks": [
+      {
+        "type": "INSTAGRAM",
+        "user": "akhesadiaz"
+      },
+      {
+        "type": "TIKTOK",
+        "user": "akhesahunter"
+      }
+    ]
+  }
+}

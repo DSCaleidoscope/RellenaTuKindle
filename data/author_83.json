@@ -1,1 +1,24 @@
-{ "Auth": { "Id": "83", "AuthorName": "Tivi Mizu", "Name": "Anonymous", "Genres": [], "Presentation": "", "ProfilePic": "","Networks": [{"type":  "INSTAGRAM", "user": "tivimizu"},{"type": "TIKTOK", "user": "tivimizu"}]}}
+{
+  "Auth": {
+    "Id": "83",
+    "AuthorName": "Tivi Mizu",
+    "Name": "Anonymous",
+    "Genres": [],
+    "Presentation": "",
+    "ProfilePic": "",
+    "Networks": [
+      {
+        "type": "INSTAGRAM",
+        "user": "tivimizu"
+      },
+      {
+        "type": "TIKTOK",
+        "user": "tivimizu"
+      },
+      {
+        "type": "OTHER",
+        "user": "tivimizu.com"
+      }
+    ]
+  }
+}
