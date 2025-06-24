@@ -13,7 +13,9 @@ var bookList = [];
 
 //locale
 var tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+var tz2;
 tz = tz.split("/");
+tz2 = tz[1];
 tz = tz[0];
 
 //promises
@@ -507,6 +509,10 @@ function addBookMethods(book) {
 
 function getAmazonLink(tz, ASIN) {
   if (tz == "Europe") {
+    return "https://amazon.es/dp/" + ASIN;
+  }
+
+  if (tz2 == "Canary") {
     return "https://amazon.es/dp/" + ASIN;
   }
 
