@@ -11,7 +11,7 @@
     tz = tz.split("/");
     tz = tz[0];
 
-    document.getElementById("t").innerHTML = tz;
+    document.getElementById("t").innerHTML = Intl.DateTimeFormat().resolvedOptions().timeZone;
   </script>
 </body>
 </html>
