@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <title>Rellena tu Kindle</title>
+</head>
+<body>
+  <div id="t">
+  </div>
+  <script type="text/javascript">
+    var tz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+    tz = tz.split("/");
+    tz = tz[0];
+
+    document.getElementById("t").innerHTML = tz;
+  </script>
+</body>
+</html>
