@@ -1,1 +1,12 @@
-{ "Book": {"Id": "105", "Title": "Diecinueve domingos sin verte", "Authors": [ 11 ], "Genres": [ "ROMANCE"], "Synopsis": "«Martí y Laia no necesitan a nadie a su lado.<br />Ella es feliz con la vida que tiene. Sus amigas, con las que cada instante es una aventura. Su trabajo, con el que se siente totalmente realizada. Sus ratos consigo misma, tan necesarios…<br />Él no piensa ni por un instante en una relación. Ha salido del fango, de su tragedia que aún le asfixia. ¿Mujeres? No, gracias.<br />Sin embargo, se encuentran… Y todo sucede».<br />Una historia fresca, actual y divertida. En las que las relaciones de pareja, las situaciones rocambolescas, las aventuras más locas, se entremezclan con las sombras del pasado.<br />En primavera, «Diecinueve domingos sin verte».", "Cover": "71m6m+V5xUL", "Networks": "", "ASIN": "B0B11FT5G9"}}
+{
+  "Book": {
+    "Id": "105",
+    "Title": "Diecinueve domingos sin verte",
+    "Authors": [ 11 ],
+    "Genres": [ "ROMANCE" ],
+    "Synopsis": "«Martí y Laia no necesitan a nadie a su lado.<br />Ella es feliz con la vida que tiene. Sus amigas, con las que cada instante es una aventura. Su trabajo, con el que se siente totalmente realizada. Sus ratos consigo misma, tan necesarios…<br />Él no piensa ni por un instante en una relación. Ha salido del fango, de su tragedia que aún le asfixia. ¿Mujeres? No, gracias.<br />Sin embargo, se encuentran… Y todo sucede».<br />Una historia fresca, actual y divertida. En las que las relaciones de pareja, las situaciones rocambolescas, las aventuras más locas, se entremezclan con las sombras del pasado.<br />En primavera, «Diecinueve domingos sin verte».",
+    "Cover": "71m6m+V5xUL",
+    "Networks": "",
+    "ASIN": "B09ZBCTBL3"
+  }
+}
