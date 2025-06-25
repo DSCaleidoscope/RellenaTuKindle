@@ -38,7 +38,7 @@ var Bcollapsed = [];
 
 //Config
 var forceRefresh = false; //During the event, move it to false to avoid forcing refresh!
-var eventDate = "próximamente";
+var eventDate = "evento";
 var isEventWaiting = true; //Move it to false to show links to Amazon
 var tracking = false; //Move it to false to avoid calling tracking function
 
