@@ -1,0 +1,12 @@
+{
+  "Book": {
+    "Id": "0",
+    "Title": "¡Pulsa aqu&iacute;!",
+    "Authors": [ 0 ],
+    "Genres": [ "Todos los g&eacute;neros" ],
+    "Synopsis": "¡El pr&oacute;ximo evento, aqu&iacute; aparecer&aacute;n todos los libros!",
+    "Cover": "",
+    "Networks": "Redes",
+    "ASIN": ""
+  }
+}
