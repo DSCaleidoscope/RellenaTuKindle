@@ -562,7 +562,7 @@ async function fill(){
     await Promise.allSettled(brList);
   } else {
     //new user
-    let bp = filePromise("book_master.json").then(
+    let bp = filePromise("book_master_backup.json").then(
       function (value) { bookMaster = value },
       function (error) { console.log(error); }
     );

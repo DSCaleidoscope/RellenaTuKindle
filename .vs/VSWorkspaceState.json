@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\data",
+    "\\_old\\rtk_2024"
   ],
-  "SelectedNode": "\\tz.html",
+  "SelectedNode": "\\data\\book_0.json",
   "PreviewInSolutionExplorer": false
 }
