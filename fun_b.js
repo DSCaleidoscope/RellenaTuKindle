@@ -376,6 +376,7 @@ function addBookMethods(book) {
     node.classList.add("book");
     node.setAttribute('id', (parseInt(this.getID()) + offset));
     node.addEventListener("click", function (e) { collapseBook(this); });
+    //node.style = "--delay: " + i / 10 + "s";
   };
 
   book.appendNode = function (node) {
@@ -407,6 +408,8 @@ function addBookMethods(book) {
         //string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
         g('genresContent').innerHTML += '<a href="#' + genres[i] +'">' + genres[i].charAt(0).toUpperCase() + genres[i].slice(1).toLowerCase() + '</a> | ';
       }
+
+      lnode.style = "--delay: " + mnode.childElementCount + "s";
 
       mnode.appendChild(lnode);
     }

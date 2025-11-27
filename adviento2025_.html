@@ -1,10 +1,16 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Web para descargar ebooks gratis durante el evento 'Rellena tu Kindle'">
+  <meta name="keywords" content="ebook gratis amazon">
+  <meta name="author" content="D. S. Caleidoscope">
   <title>Rellena tu Kindle</title>
+  <script type="text/javascript" src="fun_ca2025.js"></script>
   <style type="text/css">
     body {
-      background: #1976D2;
+      background: url('./img/462576443_599465762436219_2521808324849147485_n.jpg')
     }
 
     .wrapper {
@@ -38,9 +44,9 @@
     .flip-container,
     .front,
     .back {
-      width: 180px;
+      width: 150px;
       /*height: 240px;*/
-      height:400px;
+      height: 333px;
     }
 
     /* flip speed goes here */
@@ -99,9 +105,9 @@
     }
 
     img {
-      width: 360px;
+      width: 300px;
       /*height: 240px;*/
-      height: 400px;
+      height: 333px;
     }
 
     .back-left img {
@@ -114,32 +120,87 @@
       right: 0;
     }
 
+    #bookTitle {
+      position: relative;
+      width: 36%;
+      left: 32%;
+      text-align: center;
+      font-size: 32px;
+      margin-top: 50px;
+      margin-bottom: 15px;
+      font-weight: 700;
+      background-color: rgba(243, 242, 237, .5);
+      border-radius: 25px;
+    }
   </style>
 </head>
 <body>
   <!-- CSS - Cards - Flip 360 -->
-
-  <div class="wrapper">
+  <div id="bookTitle">Haz click!</div>
+  <div class="wrapper" style="top: 33%">
     <div class="flip-container">
       <div class="flip flip-left">
         <div class="front front-left">
-          <div class="circle"></div>
+          <!--<div class="circle"></div>-->
         </div>
-        <div class="back back-left">
-          <img src="https://m.media-amazon.com/images/I/81a5ntDEGmL._SL1500_.jpg" />
+        <div class="back back-left" id="bbody11">
+
         </div>
       </div>
     </div><div class="flip-container">
       <div class="flip flip-right">
         <div class="front front-right">
-          <div class="circle"></div>
+          <!--<div class="circle"></div>-->
         </div>
-        <div class="back back-right">
-          <img src="https://m.media-amazon.com/images/I/81a5ntDEGmL._SL1500_.jpg" />
+        <div class="back back-right" id="bbody21">
+
         </div>
       </div>
     </div>
   </div>
+  <div class="wrapper" style="top: 75%">
+    <div class="flip-container">
+      <div class="flip flip-left">
+        <div class="front front-left">
+          <!--<div class="circle"></div>-->
+        </div>
+        <div class="back back-left" id="bbody12">
+
+        </div>
+      </div>
+    </div><div class="flip-container">
+      <div class="flip flip-right">
+        <div class="front front-right">
+          <!--<div class="circle"></div>-->
+        </div>
+        <div class="back back-right" id="bbody22">
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="wrapper" style="top: 117%">
+    <div class="flip-container">
+      <div class="flip flip-left">
+        <div class="front front-left">
+          <!--<div class="circle"></div>-->
+        </div>
+        <div class="back back-left" id="bbody13">
+
+        </div>
+      </div>
+    </div><div class="flip-container">
+      <div class="flip flip-right">
+        <div class="front front-right">
+          <!--<div class="circle"></div>-->
+        </div>
+        <div class="back back-right" id="bbody23">
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <script type="text/javascript">setMulti(); getParams(); fill();</script>
 </body>
 </html>
 

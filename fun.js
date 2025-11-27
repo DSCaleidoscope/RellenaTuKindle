@@ -521,7 +521,19 @@ function getAmazonLink(tz, ASIN) {
 //BOOKS - END
 
 //LAUNCHER
-async function fill(){
+async function fill() {
+  //Christmas advent check
+  let currDate = new Date(Date.now());
+  let cd = currDate.getDate();
+  let cm = currDate.getMonth();
+
+  if (cm == 11) {
+    if (cd <= 24) {
+      //only from 1 to 24
+      window.location.href = "adviento2025.html";
+    }
+  }
+
   let fList = [];
   clear();
 

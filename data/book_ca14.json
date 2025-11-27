@@ -1,0 +1,16 @@
+{
+  "Book": [
+    {
+      "id_book": "90",
+      "participate": "Y"
+    },
+    {
+      "id_book": "21",
+      "participate": "Y"
+    },
+    {
+      "id_book": "117",
+      "participate": "Y"
+    }
+  ]
+}
