@@ -230,6 +230,10 @@ async function fill() {
     window.location.href = "adviento2025_.html";
   }
 
+  if (bookMax == 1 && window.location.href.split("/")[3].split("?")[0] == "adviento2025_.html") {
+    window.location.href = "adviento2025.html";
+  }
+
   while (pbi < bookMax) {
     parseBooks(bookMaster);
 
