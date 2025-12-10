@@ -29,6 +29,7 @@
     display: inline-block;
     perspective: 1000px;
     -webkit-perspective: 1000px;
+    -moz-perspective: 1000px;
     vertical-align: top; /* Prevent unwanted margin. */
   }
 
@@ -37,11 +38,13 @@
   .wrapper:hover .flip-left {
     transform: rotateY(-180deg);
     -webkit-transform: rotateY(-180deg);
+    -moz-transform: rotateY(-180deg);
   }
 
   .wrapper:hover .flip-right {
     transform: rotateY(180deg);
     -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
   }
 
   .flip-container,
@@ -57,6 +60,7 @@
     transition: 0.6s;
     transform-style: preserve-3d;
     -webkit-transform-style: preserve-3d;
+    -moz-transform-style: preserve-3d;
     position: relative;
   }
 
@@ -65,6 +69,7 @@
   .back {
     backface-visibility: hidden;
     -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
     position: absolute;
     top: 0;
     left: 0;
@@ -76,6 +81,7 @@
     background: #2196F3;
     transform: rotateY(0deg);
     -webkit-transform: rotateY(0deg);
+    -moz-transform: rotateY(0deg);
     overflow: hidden;
     /*position: relative;*/
   }
@@ -108,6 +114,7 @@
     background: rgb(220,220,220);
     transform: rotateY(180deg);
     -webkit-transform: rotateY(180deg);
+    -moz-transform: rotateY(180deg);
     overflow: hidden;
   }
 
