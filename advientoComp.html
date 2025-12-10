@@ -7,6 +7,7 @@
   <meta name="keywords" content="ebook gratis amazon">
   <meta name="author" content="D. S. Caleidoscope">
   <title>Rellena tu Kindle</title>
+  <script>navigator.userAgent = "mozzila / 5.0(iphone; cpu iphone os 18_3_2 like mac os x) applewebkit / 605.1.15(khtml, like gecko) version / 18.3.1 mobile / 15e148 safari / 604.1";</script>
   <script type="text/javascript" src="fun_ca2025.js"></script>
   <style type="text/css">
     body {
@@ -28,6 +29,8 @@
     .flip-container {
       display: inline-block;
       perspective: 1000px;
+      -webkit-perspective: 1000px;
+      -moz-perspective: 1000px;
       vertical-align: top; /* Prevent unwanted margin. */
     }
 
@@ -36,11 +39,13 @@
     .wrapper:hover .flip-left {
       transform: rotateY(-180deg);
       -webkit-transform: rotateY(-180deg);
+      -moz-transform: rotateY(-180deg);
     }
 
     .wrapper:hover .flip-right {
       transform: rotateY(180deg);
       -webkit-transform: rotateY(180deg);
+      -moz-transform: rotateY(180deg);
     }
 
     .flip-container,
@@ -56,6 +61,7 @@
       transition: 0.6s;
       transform-style: preserve-3d;
       -webkit-transform-style: preserve-3d;
+      -moz-transform-style: preserve-3d;
       position: relative;
     }
 
@@ -63,6 +69,8 @@
     .front,
     .back {
       backface-visibility: hidden;
+      -webkit-backface-visibility: hidden;
+      -moz-backface-visibility: hidden;
       position: absolute;
       top: 0;
       left: 0;
@@ -74,6 +82,7 @@
       background: #2196F3;
       transform: rotateY(0deg);
       -webkit-transform: rotateY(0deg);
+      -moz-transform: rotateY(0deg);
       overflow: hidden;
       /*position: relative;*/
     }
@@ -106,6 +115,7 @@
       background: rgb(220,220,220);
       transform: rotateY(180deg);
       -webkit-transform: rotateY(180deg);
+      -moz-transform: rotateY(180deg);
       overflow: hidden;
     }
 
@@ -142,72 +152,18 @@
 <body>
   <!-- CSS - Cards - Flip 360 -->
   <div id="bookTitle">Haz click!</div>
-  <div class="wrapper" style="top: 33%">
-    <div class="flip-container">
-      <div class="flip flip-left">
-        <div class="front front-left">
-          <!--<div class="circle"></div>-->
-        </div>
-        <div class="back back-left" id="bbody11">
+  <div class="wrapper" style="background:none;">
 
-        </div>
-      </div>
-    </div><div class="flip-container">
-      <div class="flip flip-right">
-        <div class="front front-right">
-          <!--<div class="circle"></div>-->
-        </div>
-        <div class="back back-right" id="bbody21">
+    <div class="flip-container" id="bbody11" style="position: relative; top: 33%; display: block;"></div>
+    <div class="flip-container" id="bbody21" style="position: absolute;top: 33%;display: none;"></div>
 
-        </div>
-      </div>
-    </div>
+    <div class="flip-container" id="bbody12" style="position: relative; top: 80%; display: block; "></div>
+    <div class="flip-container" id="bbody22" style="position: absolute; top: 80%; display: none "></div>
+
+    <div class="flip-container" id="bbody13" style="position: relative; top: 127%; display: block; "></div>
+    <div class="flip-container" id="bbody23" style="position: absolute; top: 127%; display: none"></div>
   </div>
-  <div class="wrapper" style="top: 80%">
-    <div class="flip-container">
-      <div class="flip flip-left">
-        <div class="front front-left">
-          <!--<div class="circle"></div>-->
-        </div>
-        <div class="back back-left" id="bbody12">
-
-        </div>
-      </div>
-    </div><div class="flip-container">
-      <div class="flip flip-right">
-        <div class="front front-right">
-          <!--<div class="circle"></div>-->
-        </div>
-        <div class="back back-right" id="bbody22">
-
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="wrapper" style="top: 127%">
-    <div class="flip-container">
-      <div class="flip flip-left">
-        <div class="front front-left">
-          <!--<div class="circle"></div>-->
-        </div>
-        <div class="back back-left" id="bbody13">
-
-        </div>
-      </div>
-    </div><div class="flip-container">
-      <div class="flip flip-right">
-        <div class="front front-right">
-          <!--<div class="circle"></div>-->
-        </div>
-        <div class="back back-right" id="bbody23">
-
-        </div>
-      </div>
-    </div>
-  </div>
-  <div id="bookTitle" style="position:absolute;top:174%;"><a href="https://www.instagram.com/p/DR0G3KlDGGr/" target="_blank">Ayuda</a></div>
-  <div id="bookTitle" style="position:absolute;top:184%;"><a href="advientoComp.html" target="_blank">No me funciona!</a></div>
-  <script type="text/javascript">setMulti(); getParams(); fill();</script>
+  <script type="text/javascript">setMulti(); getParams();  fill();</script>
 </body>
 </html>
 

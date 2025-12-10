@@ -194,8 +194,6 @@ async function fill() {
   let cm = currDate.getMonth();
   let bp = null;
 
-
-
   if (cd == 25) {
     //on 25th, we're using regular page
     window.location.href = "index.html";
