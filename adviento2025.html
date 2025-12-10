@@ -28,6 +28,7 @@
   .flip-container {
     display: inline-block;
     perspective: 1000px;
+    -webkit-perspective: 1000px;
     vertical-align: top; /* Prevent unwanted margin. */
   }
 
@@ -63,6 +64,7 @@
   .front,
   .back {
     backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
     position: absolute;
     top: 0;
     left: 0;
