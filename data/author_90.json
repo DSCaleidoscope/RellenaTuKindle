@@ -6,6 +6,15 @@
     "Genres": [],
     "Presentation": "",
     "ProfilePic": "",
-    "Networks": []
+    "Networks": [
+      {
+        "type": "INSTAGRAM",
+        "user": "sugus_books"
+      },
+      {
+        "type": "TIKTOK",
+        "user": "sugusdekiwi98"
+      }
+    ]
   }
 }

@@ -1,0 +1,12 @@
+{
+  "Book": {
+    "Id": "137",
+    "Title": "Perfume de Canela",
+    "Authors": [ 80 ],
+    "Genres": [ "HISTÓRICA" ],
+    "Synopsis": "Los Duques de Covent Garden planean una Navidad más hogareña que de costumbre, sin las habladurías de la sociedad londinense.<br /><br />Las diferentes situaciones cotidianas llevan a Patrick a disfrutar de una de las mejores Navidades, nada parecida a las típicas en su casa de Londres o en la casa de campo.<br /><br />Desastres climáticos, problemas con el fuego y una seguidilla de sucesos hacen que Los Lemacks tengan una Navidad perfecta en familia, sin contar con una preciosa sorpresa que llegará como regalo navideño.",
+    "Cover": "81T7+C2HRgL",
+    "Networks": "",
+    "ASIN": "B0FYLLTT9D"
+  }
+}
