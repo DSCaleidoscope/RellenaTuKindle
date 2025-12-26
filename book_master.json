@@ -2,19 +2,19 @@
   "Book": [
     {
       "id_book": "0",
-      "participate": "N"
+      "participate": "Y"
     },
     {
       "id_book": "1",
-      "participate": "Y"
+      "participate": "N"
     },
     {
       "id_book": "2",
-      "participate": "Y"
+      "participate": "N"
     },
     {
       "id_book": "3",
-      "participate": "Y"
+      "participate": "N"
     },
     {
       "id_book": "4",
@@ -30,15 +30,15 @@
     },
     {
       "id_book": "7",
-      "participate": "Y"
+      "participate": "N"
     },
     {
       "id_book": "8",
-      "participate": "Y"
+      "participate": "N"
     },
     {
       "id_book": "9",
-      "participate": "Y"
+      "participate": "N"
     },
     {
       "id_book": "10",
@@ -50,7 +50,7 @@
     },
     {
       "id_book": "12",
-      "participate": "Y"
+      "participate": "N"
     },
     {
       "id_book": "13",
@@ -86,11 +86,11 @@
     },
     {
       "id_book": "21",
-      "participate": "Y"
+      "participate": "N"
     },
     {
       "id_book": "22",
-      "participate": "Y"
+      "participate": "N"
     },
     {
       "id_book": "23",
@@ -170,7 +170,7 @@
     },
     {
       "id_book": "42",
-      "participate": "Y"
+      "participate": "N"
     },
     {
       "id_book": "43",
@@ -186,11 +186,11 @@
     },
     {
       "id_book": "46",
-      "participate": "Y"
+      "participate": "N"
     },
     {
       "id_book": "47",
-      "participate": "Y"
+      "participate": "N"
     },
     {
       "id_book": "48",
@@ -230,7 +230,7 @@
     },
     {
       "id_book": "57",
-      "participate": "Y"
+      "participate": "N"
     },
     {
       "id_book": "58",
@@ -250,7 +250,7 @@
     },
     {
       "id_book": "62",
-      "participate": "Y"
+      "participate": "N"
     },
     {
       "id_book": "63",
@@ -318,7 +318,7 @@
     },
     {
       "id_book": "79",
-      "participate": "Y"
+      "participate": "N"
     },
     {
       "id_book": "80",
@@ -362,7 +362,7 @@
     },
     {
       "id_book": "90",
-      "participate": "Y"
+      "participate": "N"
     },
     {
       "id_book": "91",
@@ -470,7 +470,7 @@
     },
     {
       "id_book": "117",
-      "participate": "Y"
+      "participate": "N"
     },
     {
       "id_book": "118",
@@ -478,51 +478,51 @@
     },
     {
       "id_book": "119",
-      "participate": "Y"
+      "participate": "N"
     },
     {
       "id_book": "121",
-      "participate": "Y"
+      "participate": "N"
     },
     {
       "id_book": "122",
-      "participate": "Y"
+      "participate": "N"
     },
     {
       "id_book": "123",
-      "participate": "Y"
+      "participate": "N"
     },
     {
       "id_book": "124",
-      "participate": "Y"
+      "participate": "N"
     },
     {
       "id_book": "126",
-      "participate": "Y"
+      "participate": "N"
     },
     {
       "id_book": "130",
-      "participate": "Y"
+      "participate": "N"
     },
     {
       "id_book": "132",
-      "participate": "Y"
+      "participate": "N"
     },
     {
       "id_book": "134",
-      "participate": "Y"
+      "participate": "N"
     },
     {
       "id_book": "135",
-      "participate": "Y"
+      "participate": "N"
     },
     {
       "id_book": "136",
-      "participate": "Y"
+      "participate": "N"
     },
     {
       "id_book": "137",
-      "participate": "Y"
+      "participate": "N"
     }
   ]
 }
