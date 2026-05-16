@@ -120,7 +120,8 @@ function amazonGetHTMLText(type) {
   let ret = "";
 
   if (type == "ASIN") {
-    ret += "Entra en <a href='https://kdp.amazon.com/es_ES/bookshelf' target='_blank'>Amazon</a> y busca tu libro. Ah&iacute; encontrar&aacute;s el ASIN<br/><img src='./help/ASIN-1.png' width='90%' style='padding:20px'/>"
+    //ret += "Entra en <a href='https://kdp.amazon.com/es_ES/bookshelf' target='_blank'>Amazon</a> y busca tu libro. Ah&iacute; encontrar&aacute;s el ASIN<br/><img src='./help/ASIN-1.png' width='90%' style='padding:20px'/>"
+    ret += "Entra en <a href='https://www.goodreads.com/author/dashboard?ref=nav_profile_authordash' target='_blank'>Tu Dashboard</a> y busca tu libro. Entra y busca el ID en la URL (Solo la parte numérica)<br/><img src='./help/ASIN-3.png' width='90%' style='padding:20px'/>"
   }
 
   return ret;
@@ -804,7 +805,7 @@ function navigate(asin, bookId, base) {
 
 
 function checkASIN(e) {
-  let threshold = 10; //10 is default for az
+  let threshold = 9; //9 is default for az/gr
   let asin = g('ASIN').value;
 
   if (regType == 'bb') { threshold = 3; }
@@ -881,8 +882,12 @@ let magicWait = async function (asin) {
  */
 function parseMagicResponse(found) {
   if (found) {
-    let data = JSON.parse(res);
+    let data;
 
+    if (regType == 'az') { data = parseGoodreads(res); }
+    else if (regType == 'bb') { data = JSON.parse(res); }
+
+    g('ASIN').value = data.ASIN;
     g('TITULO').value = data.title;
     g('COVER').value = data.cover;
     g('AUTOR').value = data.author;
@@ -896,4 +901,88 @@ function parseMagicResponse(found) {
 
 async function startMagic(asin) {
   await magicWait(asin);
+}
+
+function parseGoodreads(res) {
+  let i = 0;
+  let ex = true;
+  let isPaperback = false;
+  let data = JSON.parse(res);
+  let apollo = data.props.pageProps.apolloState;
+  //grBookId;
+  let ret = {};
+
+  console.log(data);
+
+  //get all the properties.
+  //let props = Object.getOwnPropertyNames(apollo);
+
+  i = 0;
+
+  while (ex) {
+    //find a book node
+    grBookId = checkObjectExist(apollo, "Book:kca", i);
+
+    //check if it has title
+    let title = checkObjectExist(grBookId, "title", 0);
+
+    if (title != null) {
+      //title was found
+      ex = false;
+    }
+
+    i++;
+  }
+
+  i = 0;
+
+  console.log(grBookId);
+
+  //construct ret object
+
+  //first, check format
+  if (grBookId.details.format == "Paperback") {
+    isPaperback = true;
+  }
+
+  //get ASIN
+  if (isPaperback) {
+    //get correct ASIN
+    let affiliatedLinks = grBookId.links.primaryAffiliateLink;
+    let alURL = affiliatedLinks.url.split("gp/product/")[1];
+
+    ret.ASIN = alURL.split("/")[0];
+  } else {
+    ret.ASIN = grBookId.details.asin;
+  }
+
+  //title
+  ret.title = grBookId.title;
+
+  //cover
+  //      return "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com" + this.getCover() + this.getSize() + "jpg";
+  //                     /books/1693935859i/197537008
+  ret.cover = "/books/" + grBookId.imageUrl.split("/books/")[1].split(".jpg")[0];
+
+  //author
+  ret.author = apollo[grBookId.primaryContributorEdge.node.__ref].name;
+
+  //synopsis
+  ret.synopsis = checkObjectExist(grBookId, "stripped", 0);
+
+  console.log(ret);
+
+  return ret;
+}
+
+function checkObjectExist(object, string, start) {
+  let props = Object.getOwnPropertyNames(object);
+
+  for (; start < props.length; start++) {
+    if (props[start].includes(string)) {
+      return object[props[start]];
+    }
+  }
+
+  return null;
 }
