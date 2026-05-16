@@ -1,8 +1,10 @@
 {
   "ExpandedNodes": [
     "",
-    "\\data"
+    "\\data",
+    "\\img",
+    "\\_old"
   ],
-  "SelectedNode": "\\data\\book_138.json",
+  "SelectedNode": "\\book_master.json",
   "PreviewInSolutionExplorer": false
 }

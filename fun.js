@@ -39,17 +39,21 @@ var Bcollapsed = [];
 //Config
 var forceRefresh = true; //During the event, move it to false to avoid forcing refresh!
 var eventDate = "evento";
-var isEventWaiting = true; //Move it to false to show links to Amazon
+var isEventWaiting = false; //Move it to false to show links to platforms
 var tracking = false; //Move it to false to avoid calling tracking function
+
+//Register vars
+var regType = "az";
+let res;
+let searched = false;
 
 //helpers & redefines
 function g(id){return document.getElementById(id);}
 function clear(){g("bbody").innerHTML = '';}
 function add(t) { g("bbody").innerHTML += t + '<br />'; }
 function reload() { if (reloadPage) { location.replace(".");; } }
-
-//Register
-function sendReg() { return;/*g('fsub').submit();*/ /*form is closed*/ }
+function setSource(source) { regType = source; updateSource(); }
+function updateSource() {if (regType == 'az') {g('BASE').value = 'AMAZON';} else if (regType == 'bb') {g('BASE').value = 'BUBOK';} else if (regType == 'wp') {g('BASE').value = 'PAGINA WEB';}}
 
 //Params
 function getParams(){
@@ -78,27 +82,41 @@ function getParams(){
 
 //Help INI - for register only
 function help(type) {
+  g('loaderMsg').innerHTML = '';
   g('loader').style.visibility = "initial";
   g('mbody').style.backgroundColor = "#80808087";
   g('mainScreen').style.visibility = "hidden";
   g('whatContent').style.visibility = "hidden";
   clear();
-  g('loginWrapper').innerHTML = getHTML(type);
+  g('loginWrapper').style.border = 'none';
+  g('loginWrapper').style.background = 'none';
+  g('loginWrapper').innerHTML = getHTML(regType, type);
   g('loader').style.height = "initial";
   g('loader').style.width = "initial";
   g('loader').style.top = "initial";
   g('loader').style.position = "initial";
 }
 
-function getHTML(type) {
+function getHTML(source, type) {
   let ret = "";
+
+  if (source == 'az') { ret = amazonGetHTML(type); }
+  else if (source == 'bb') { ret = bubokGetHTML(type); }
+  else if (source == 'wp') { ret = webPageGetHTML(type); }
+  
+  return ret;
+}
+
+function amazonGetHTML(type) {
+  let ret = "";
+
   ret += "<div id='helpClose' onclick='closeHelp();'>X</div>";
-  ret += "<div id='helpContent'>" + getHTMLText(type) + "</div>";
+  ret += "<div id='helpContent'>" + amazonGetHTMLText(type) + "</div>";
 
   return ret;
 }
 
-function getHTMLText(type) {
+function amazonGetHTMLText(type) {
   let ret = "";
 
   if (type == "ASIN") {
@@ -108,10 +126,48 @@ function getHTMLText(type) {
   return ret;
 }
 
+function bubokGetHTML(type) {
+  let ret = "";
+
+  ret += "<div id='helpClose' onclick='closeHelp();'>X</div>";
+  ret += "<div id='helpContent'>" + bubokGetHTMLText(type) + "</div>";
+
+  return ret;
+}
+
+function bubokGetHTMLText(type) {
+  let ret = "";
+
+  if (type == "ASIN") {
+    ret += "Entra en <a href='https://www.bubok.es/autores/tu_pagina' target='_blank'>Bubok</a> y busca tu libro. Ah&iacute; encontrar&aacute;s el ID<br/><img src='./help/ASIN-2.png' width='90%' style='padding:20px'/>"
+  }
+
+  return ret;
+}
+
+function webPageGetHTML(type) {
+  let ret = "";
+
+  ret += "<div id='helpClose' onclick='closeHelp();'>X</div>";
+  ret += "<div id='helpContent'>" + webPageGetHTMLText(type) + "</div>";
+
+  return ret;
+}
+
+function webPageGetHTMLText(type) {
+  let ret = "";
+
+  if (type == "ASIN") {
+    ret += "Texto para ayuda de página web";
+  }
+
+  return ret;
+}
+
 function closeHelp() {
   clear();
   g('loader').style.position = "fixed";
-  endLoad();
+  closeLoad();
   g('whatContent').style.visibility = "initial";
 }
 //Help END - for register only
@@ -123,17 +179,17 @@ function startLoad() {
 }
 
 function endLoad() {
+  autocloseLoad();
+}
+
+function closeLoad() {
   g('mbody').style.backgroundColor = "#f3f2ed";
   g('mainScreen').style.visibility = "initial";
   g('loader').style.visibility = "hidden";
 }
 
-function uploadLoad(curr, tot) {
-  let width = (curr * 100) / tot;
-
-  g('loading').style.width = "" + width + "%";
-  g('msg').innerHTML = "" + Math.round(width) + "%";
-}
+function autocloseLoad() {
+  setTimeout(() => {closeLoad()}, 3000);}
 //Loading screen - END
 
 //visuals - INI
@@ -175,7 +231,6 @@ function collapseBook(e) {
 
   if (Bcollapsed[e.id] == true) {
     //it's collapsed, it will expand
-    //e.style.height = "initial";
     Bcollapsed[e.id] = false;
 
     //show all childs
@@ -184,7 +239,6 @@ function collapseBook(e) {
       childs[i].style.height = "initial";
 
       //Don't show synopsis if we're short on space
-      //if (childs[i].className == "syn" && defHeight > 50) {
       if (childs[i].className == "syn" && document.documentElement.clientWidth <= '430') { 
         //mobile!
         finalHeight -= childs[i].clientHeight;
@@ -368,6 +422,7 @@ function addBookMethods(book) {
   book.getGenres = function () { return this.Genres; };
   book.getSynopsis = function () { return this.Synopsis; };
   book.getCover = function () { return this.Cover; };
+  book.getBase = function () { return this.Base; };
   book.getSize = function () { return this.size; };
   book.getNetworks = function () { return this.Networks; };
   book.getASIN = function () { return this.ASIN; };
@@ -403,8 +458,6 @@ function addBookMethods(book) {
         mnode = g(genres[i]);
 
         //after create it, add it to the list
-
-        //string.charAt(0).toUpperCase() + string.slice(1).toLowerCase();
         g('genresContent').innerHTML += '<a href="#' + genres[i] +'">' + genres[i].charAt(0).toUpperCase() + genres[i].slice(1).toLowerCase() + '</a> | ';
       }
 
@@ -476,20 +529,20 @@ function addBookMethods(book) {
   book.addCoverInfo = function (node) {
     if (this.getCover() == "") { }
     else {
-      //node.innerHTML += "<img src='./data/" + this.getCover() + "' width='150px' />";
-      //node.innerHTML += "<img src='" + this.getImgSrc() + "' width='150px' />";
       node.innerHTML += "<img src='./img/placeholder.png' width='150px' />";
       
     }
   };
 
   book.getImgSrc = function () {
-    return "https://m.media-amazon.com/images/I/" + this.getCover() + this.getSize() + "jpg";
+    if (this.getBase() == "AMAZON") {
+      return "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com" + this.getCover() + this.getSize() + "jpg";
+    } else if (this.getBase() == "BUBOK") {
+      return "https://www.bubok.es/libro/portadaLibro/" + this.ASIN + "/4/" + this.getCover() + ".webp";
+    }
   }
 
-  book.addNetworksInfo = function (node) {
-    //node.innerHTML += "<div class='networks'>" + this.getNetworks() + "</div>";
-  };
+  book.addNetworksInfo = function (node) {};
 
   book.addASINInfo = function (node) {
     if (this.getASIN() == "") { }
@@ -498,13 +551,18 @@ function addBookMethods(book) {
         node.innerHTML += "<div class='ASIN'>Gratis el pr&oacute;ximo " + eventDate + "</div>";
       } else {
         if (tracking) {
-          node.innerHTML += "<div class='ASIN' onclick=\"navigate('" + this.getASIN() + "', " + this.getID() + ")\">Descargar en Amazon</div>";
+          node.innerHTML += "<div class='ASIN' onclick=\"navigate('" + this.getASIN() + "', " + this.getID() + ", '" + this.getBase() +"')\">Descargar en " + this.getBase().charAt(0).toUpperCase() + this.getBase().slice(1).toLowerCase() + "</div>";
         } else {
-          node.innerHTML += "<div class='ASIN'><a href='" + getAmazonLink(tz, this.getASIN()) + "' target='_blank'>Descargar en Amazon</a></div>";
+          node.innerHTML += "<div class='ASIN'><a href='" + getLink(tz, this.getASIN(), this.getBase()) + "' target='_blank'>Descargar en " + this.getBase().charAt(0).toUpperCase() + this.getBase().slice(1).toLowerCase() + "</a></div>";
         }
       }
     }
   };
+}
+
+function getLink(tz, ASIN, base) {
+  if (base == "AMAZON") { return getAmazonLink(tz, ASIN); }
+  else if (base == "BUBOK") { return getBubokLink(tz, ASIN); }
 }
 
 function getAmazonLink(tz, ASIN) {
@@ -517,6 +575,10 @@ function getAmazonLink(tz, ASIN) {
   }
 
   return "https://amazon.com/dp/" + ASIN;
+}
+
+function getBubokLink(tz, ASIN) {
+  return "https://bubok.es/comprar-libro/" + ASIN;
 }
 //BOOKS - END
 
@@ -617,9 +679,6 @@ async function fill() {
 
       //performance (uncomment when needed)
       //add("Time: " + (Date.now() - ini));
-
-      //update loading bar
-      uploadLoad((pai + pbi), (authorMax + bookMax));
     }
 
     //save data into local storage
@@ -729,7 +788,7 @@ function submitBrevo() {
 }
 
 //Analytics
-function navigate(asin, bookId) {
+function navigate(asin, bookId, base) {
 
   try {
     var xhttp = new XMLHttpRequest();
@@ -737,7 +796,104 @@ function navigate(asin, bookId) {
     xhttp.send();
   } catch (e) {}
 
-  window.open(getAmazonLink(tz, asin), '_blank');
+  window.open(getLink(tz, asin, base), '_blank');
 
   collapseBook(g(bookId));
+}
+
+
+
+function checkASIN(e) {
+  let threshold = 10; //10 is default for az
+  let asin = g('ASIN').value;
+
+  if (regType == 'bb') { threshold = 3; }
+  else if(regType == 'wp'){ threshold = 999999; }
+
+  //check if the lenght has decreased (mabe because we're deletting data)
+  if (asin.length < threshold)
+    searched = false;
+
+  if (e.key.length > 1) {
+    return;
+  }
+
+  if (searched) {
+    //If we press Ctrl+C for example it will trigger this piece and will skip
+    return;
+  }
+
+  if (asin.length >= threshold) {
+    //only search when we have full ASIN
+    g('loginWrapper').innerHTML = "";
+    g('loginWrapper').style.border = 'none';
+    g('loginWrapper').style.background = 'none';
+    g('loaderMsg').innerHTML = 'Rellen&iacute;n (nuestra mascota) est&aacute buscando tu libro.<br /><br />&iexcl;Gracias por participar en este evento!<br />Recuerda seguirnos en redes (RellenaTuKindle) y no dudes en escribirnos o etiquetarnos.';
+    g('loader').style.visibility = "initial";
+    g('mbody').style.backgroundColor = "#80808087";
+    g('mainScreen').style.visibility = "hidden";
+    g('whatContent').style.visibility = "hidden";
+    startLoad();
+    startMagic(asin);
+    searched = true;
+  }
+}
+
+function magic(asin) {
+  try {
+    var xhttp = new XMLHttpRequest();
+
+    xhttp.onreadystatechange = function () {
+      if (this.readyState == 4) {
+        if (this.status == 200) {
+          res = this.responseText;
+          parseMagicResponse(true);
+          closeLoad();
+          collapseWhat('whatContent');
+          collapseWhat('whatContent');
+        } else {
+          parseMagicResponse(false);
+          closeLoad();
+          collapseWhat('whatContent');
+          collapseWhat('whatContent');
+        }
+      }
+    };
+
+    xhttp.open("GET", "https://dohitb.ddns.net/magic.reg?q=" + asin + "&t=" + regType, true);
+    xhttp.send();
+  } catch (e) {
+  }
+}
+
+let magicWait = async function (asin) {
+  let p = new Promise(function (resolve, reject) {
+    magic(asin);
+    resolve(true);
+  });
+
+  return p;
+};
+
+
+/*
+ * {"ASIN" : "B0CVNT3824" , "title" : "The Herbalist&#39;s Apprentice: The encounter" , "cover" : "/books/1707948044i/208506703" , "author":"D. S. Caleidoscope" , "synopsis" : "Here is where the journey starts. Immerse yourself on a world of elves and fae; a world of nature and wonder; a wolrd of lies and love. This fascicle covers chapters one to six of the full book The Herbalist's Apprentice."}
+ */
+function parseMagicResponse(found) {
+  if (found) {
+    let data = JSON.parse(res);
+
+    g('TITULO').value = data.title;
+    g('COVER').value = data.cover;
+    g('AUTOR').value = data.author;
+    g('SINOPSIS').value = data.synopsis;
+  } else {
+    g('TITULO').removeAttribute("disabled");
+    g('AUTOR').removeAttribute("disabled");
+    g('SINOPSIS').removeAttribute("disabled");
+  }
+}
+
+async function startMagic(asin) {
+  await magicWait(asin);
 }

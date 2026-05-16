@@ -261,6 +261,27 @@ input[type='radio']:hover {
   cursor: pointer;
 }
 
+.chooseOne img {
+  height: 26px;
+  padding-right: 36px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+.chooseOne {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
 @media only screen and (max-device-width: 430px) {
   #whatContent {
     position: relative;
