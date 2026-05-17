@@ -897,6 +897,11 @@ function parseMagicResponse(found) {
     g('AUTOR').removeAttribute("disabled");
     g('SINOPSIS').removeAttribute("disabled");
   }
+
+  if (g('SINOPSIS').value.length > 500) {
+    g('SINOPSIS').style = "border: 1px solid red;";
+    g('SINOPSIS').value = g('SINOPSIS').value.substring(0, 500);
+  }
 }
 
 async function startMagic(asin) {
@@ -909,14 +914,10 @@ function parseGoodreads(res) {
   let isPaperback = false;
   let data = JSON.parse(res);
   let apollo = data.props.pageProps.apolloState;
-  //grBookId;
+  let grBookId = {};
   let ret = {};
 
-  console.log(data);
-
   //get all the properties.
-  i = 0;
-
   while (ex) {
     //find a book node
     grBookId = checkObjectExist(apollo, "Book:kca", i);
@@ -931,10 +932,6 @@ function parseGoodreads(res) {
 
     i++;
   }
-
-  i = 0;
-
-  console.log(grBookId);
 
   //construct ret object
 
@@ -958,8 +955,6 @@ function parseGoodreads(res) {
   ret.title = grBookId.title;
 
   //cover
-  //      return "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com" + this.getCover() + this.getSize() + "jpg";
-  //                     /books/1693935859i/197537008
   ret.cover = "/books/" + grBookId.imageUrl.split("/books/")[1].split(".jpg")[0];
 
   //author
@@ -967,8 +962,6 @@ function parseGoodreads(res) {
 
   //synopsis
   ret.synopsis = checkObjectExist(grBookId, "stripped", 0);
-
-  console.log(ret);
 
   return ret;
 }
