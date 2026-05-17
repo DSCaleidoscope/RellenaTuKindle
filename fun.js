@@ -121,7 +121,7 @@ function amazonGetHTMLText(type) {
 
   if (type == "ASIN") {
     //ret += "Entra en <a href='https://kdp.amazon.com/es_ES/bookshelf' target='_blank'>Amazon</a> y busca tu libro. Ah&iacute; encontrar&aacute;s el ASIN<br/><img src='./help/ASIN-1.png' width='90%' style='padding:20px'/>"
-    ret += "Entra en <a href='https://www.goodreads.com/author/dashboard?ref=nav_profile_authordash' target='_blank'>Tu Dashboard</a> y busca tu libro. Entra y busca el ID en la URL (Solo la parte numérica)<br/><img src='./help/ASIN-3.png' width='90%' style='padding:20px'/>"
+    ret += "Entra en <a href='https://www.goodreads.com/author/dashboard?ref=nav_profile_authordash' target='_blank'>Tu Dashboard</a> y busca tu libro. Entra y busca el ID en la URL (Solo la parte num&eacute;rica)<br/><img src='./help/ASIN-3.png' width='90%' style='padding:20px'/>"
   }
 
   return ret;
@@ -915,8 +915,6 @@ function parseGoodreads(res) {
   console.log(data);
 
   //get all the properties.
-  //let props = Object.getOwnPropertyNames(apollo);
-
   i = 0;
 
   while (ex) {
