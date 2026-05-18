@@ -808,6 +808,13 @@ function navigate(asin, bookId, base) {
 }
 
 //Magic stuff for register
+function truncateData() {
+  if (g('SINOPSIS').value.length > 500) {
+    g('SINOPSIS').style = "border: 1px solid red;";
+    g('SINOPSIS').value = g('SINOPSIS').value.substring(0, 500);
+  }
+}
+
 function checkASIN(e) {
   let threshold = 9; //9 is default for az/gr
   let asin = g('ASIN').value;
