@@ -822,9 +822,9 @@ function checkASIN(e) {
   if (asin.length < threshold)
     searched = false;
 
-  if (e.key.length > 1) {
+  /*if (e.key.length > 1) {
     return;
-  }
+  }*/
 
   if (searched) {
     //If we press Ctrl+C for example it will trigger this piece and will skip
