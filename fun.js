@@ -802,14 +802,16 @@ function navigate(asin, bookId, base) {
   collapseBook(g(bookId));
 }
 
-
-
+//Magic stuff for register
 function checkASIN(e) {
   let threshold = 9; //9 is default for az/gr
   let asin = g('ASIN').value;
 
   if (regType == 'bb') { threshold = 3; }
-  else if(regType == 'wp'){ threshold = 999999; }
+  else if (regType == 'wp') { threshold = 999999; }
+
+  //ASIN was directly put. No call to goodreads
+  if (asin.charAt(0) == 'B') { threshold = 999999; }
 
   //check if the lenght has decreased (mabe because we're deletting data)
   if (asin.length < threshold)
