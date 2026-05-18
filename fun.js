@@ -785,6 +785,11 @@ function submitBrevo() {
   g("EMAIL").value = y[0] + "+" + a + "@" + x[1];
   console.log(g("EMAIL").value);
 
+  if (g('SINOPSIS').value.length > 500) {
+    g('SINOPSIS').style = "border: 1px solid red;";
+    g('SINOPSIS').value = g('SINOPSIS').value.substring(0, 500);
+  }
+
   g("sib-form").submit();
 }
 
