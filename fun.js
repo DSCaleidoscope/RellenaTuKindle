@@ -606,7 +606,7 @@ function getBubokLink(tz, ASIN) {
 }
 
 function getKoboLink(tz, ASIN) {
-  return "https://www.kobo.com/es/es/ebook/" + ASIN;
+  return "https://www.kobo.com/es/es/search?query=" + ASIN;
 }
 //BOOKS - END
 
