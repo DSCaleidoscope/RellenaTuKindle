@@ -950,7 +950,7 @@ function parseGoodreads(res) {
   //construct ret object
 
   //first, check format
-  if (grBookId.details.format == "Paperback") {
+  if (grBookId.details.format == "Paperback" || grBookId.details.format == "Hardcover") {
     isPaperback = true;
   }
 
