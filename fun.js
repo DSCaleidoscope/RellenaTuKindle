@@ -53,7 +53,7 @@ function clear(){g("bbody").innerHTML = '';}
 function add(t) { g("bbody").innerHTML += t + '<br />'; }
 function reload() { if (reloadPage) { location.replace(".");; } }
 function setSource(source) { regType = source; updateSource(); }
-function updateSource() {if (regType == 'az') {g('BASE').value = 'AMAZON';} else if (regType == 'bb') {g('BASE').value = 'BUBOK';} else if (regType == 'wp') {g('BASE').value = 'PAGINA WEB';}}
+function updateSource() { if (regType == 'az') { g('BASE').value = 'AMAZON'; } else if (regType == 'bb') { g('BASE').value = 'BUBOK'; } else if (regType == 'wp') { g('BASE').value = 'PAGINA WEB'; } else if (regType == 'kb') { g('BASE').value = 'KOBO'; } }
 
 //Params
 function getParams(){
@@ -103,6 +103,7 @@ function getHTML(source, type) {
   if (source == 'az') { ret = amazonGetHTML(type); }
   else if (source == 'bb') { ret = bubokGetHTML(type); }
   else if (source == 'wp') { ret = webPageGetHTML(type); }
+  else if (source == 'kb') { ret = koboGetHTML(type); }
   
   return ret;
 }
@@ -160,6 +161,25 @@ function webPageGetHTMLText(type) {
 
   if (type == "ASIN") {
     ret += "Texto para ayuda de página web";
+  }
+
+  return ret;
+}
+
+function koboGetHTML(type) {
+  let ret = "";
+
+  ret += "<div id='helpClose' onclick='closeHelp();'>X</div>";
+  ret += "<div id='helpContent'>" + koboGetHTMLText(type) + "</div>";
+
+  return ret;
+}
+
+function koboGetHTMLText(type) {
+  let ret = "";
+
+  if (type == "ASIN") {
+    ret += "Texto para ayuda de kobo";
   }
 
   return ret;
@@ -540,6 +560,8 @@ function addBookMethods(book) {
       return "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com" + this.getCover() + this.getSize() + "jpg";
     } else if (this.getBase() == "BUBOK") {
       return "https://www.bubok.es/libro/portadaLibro/" + this.ASIN + "/4/" + this.getCover() + ".webp";
+    } else if (this.getBase() == "KOBO") {
+      return this.getCover();
     }
   }
 
@@ -564,6 +586,7 @@ function addBookMethods(book) {
 function getLink(tz, ASIN, base) {
   if (base == "AMAZON") { return getAmazonLink(tz, ASIN); }
   else if (base == "BUBOK") { return getBubokLink(tz, ASIN); }
+  else if (base == "KOBO") { return getKoboLink(tz, ASIN); }
 }
 
 function getAmazonLink(tz, ASIN) {
@@ -580,6 +603,10 @@ function getAmazonLink(tz, ASIN) {
 
 function getBubokLink(tz, ASIN) {
   return "https://bubok.es/comprar-libro/" + ASIN;
+}
+
+function getKoboLink(tz, ASIN) {
+  return "https://www.kobo.com/es/es/ebook/" + ASIN;
 }
 //BOOKS - END
 
@@ -820,7 +847,7 @@ function checkASIN(e) {
   let asin = g('ASIN').value;
 
   if (regType == 'bb') { threshold = 3; }
-  else if (regType == 'wp') { threshold = 999999; }
+  else if (regType == 'wp' || regType == 'kb') { /* register types without magic */ threshold = 999999; }
 
   //ASIN was directly put. No call to goodreads
   if (asin.charAt(0) == 'B') { threshold = 999999; }
@@ -828,10 +855,6 @@ function checkASIN(e) {
   //check if the lenght has decreased (mabe because we're deletting data)
   if (asin.length < threshold)
     searched = false;
-
-  /*if (e.key.length > 1) {
-    return;
-  }*/
 
   if (searched) {
     //If we press Ctrl+C for example it will trigger this piece and will skip

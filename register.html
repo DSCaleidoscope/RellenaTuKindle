@@ -78,7 +78,7 @@
                   <div class="sib-form-block" style="font-size:16px; text-align:left; font-family:Helvetica, sans-serif; color:#3C4858; background-color:transparent; text-align:left">
                     <div class="sib-text-form-block">
                       <p><b>¡NUEVO!</b> Ahora puedes apuntarte con más plataformas. Elige entre Amazon o Bubok.<br /><br /></p>
-                      <div class="chooseOne"><img src="./img/az.png" onclick="setSource('az');" /><img src="./img/bb.png" onclick="setSource('bb');" /><!--<img src="./img/web_logo.png" onclick="setSource('wp');" />--></div>
+                      <div class="chooseOne"><img src="./img/az.png" onclick="setSource('az');" /><img src="./img/bb.png" onclick="setSource('bb');" /><img src="./img/kb_logo.png" onclick="setSource('kb');" style="height: 60px;"/><!--<img src="./img/web_logo.png" onclick="setSource('wp');" />--></div>
                       <p><br /><b>¡NUEVO!</b> Rellena el el ID de <b>GoodReads</b> o el de <b>Bubok</b> y deja que la magia (magia de verdad, nada de IA) rellene el formulario usando tus datos de Internet. <br /><br />Si luego tienes que hacer cualquier cambio, no te preocupes. Siempre contactamos con los autores para asegurar que todo esta en orden.<br /><br /></p>
                       <p>Si ves que la web tarda en responder y no carga los datos, <a href="https://www.instagram.com/d.s.caleidoscope/">busca al mago</a> y cántale las cuarenta!<br /><br /><br /></p>
                     </div>
@@ -106,10 +106,10 @@
                       <div class="sib-input sib-form-block">
                         <div class="form__entry entry_block">
                           <div class="form__label-row ">
-                            <label class="entry__label" style="font-weight: 700; text-align:left; font-size:16px; text-align:left; font-weight:700; font-family:Helvetica, sans-serif; color:#3c4858;" for="ASIN" data-required="*">Aquí el ID de GoodReads o Bubok (o el ASIN de Amazon, pero entonces tienes que rellenar todo a mano)</label>
+                            <label class="entry__label" style="font-weight: 700; text-align:left; font-size:16px; text-align:left; font-weight:700; font-family:Helvetica, sans-serif; color:#3c4858;" for="ASIN" data-required="*">Aquí el ID de la plataforma. Si usas el ID de GoodReads o Bubok, cargará automáticamente. Con ASIN o con ID de Kobo, tendrás que llenarlo a mano.</label>
 
                             <div class="entry__field">
-                              <input class="input " maxlength="200" type="text" id="ASIN" name="ASIN" autocomplete="off" placeholder="ID de GoodReads o Bubok" data-required="true" required oninput="checkASIN(event);" />
+                              <input class="input " maxlength="200" type="text" id="ASIN" name="ASIN" autocomplete="off" placeholder="ID de tu plataforma" data-required="true" required oninput="checkASIN(event);" />
                             </div>
                           </div>
 
