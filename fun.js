@@ -53,7 +53,7 @@ function clear(){g("bbody").innerHTML = '';}
 function add(t) { g("bbody").innerHTML += t + '<br />'; }
 function reload() { if (reloadPage) { location.replace(".");; } }
 function setSource(source) { regType = source; updateSource(); }
-function updateSource() { if (regType == 'az') { g('BASE').value = 'AMAZON'; } else if (regType == 'bb') { g('BASE').value = 'BUBOK'; } else if (regType == 'wp') { g('BASE').value = 'PAGINA WEB'; } else if (regType == 'kb') { g('BASE').value = 'KOBO'; } }
+function updateSource() { if (regType == 'az') { g('BASE').value = 'AMAZON'; } else if (regType == 'bb') { g('BASE').value = 'BUBOK'; } else if (regType == 'wp') { g('BASE').value = 'PAGINA WEB'; } else if (regType == 'kb') { g('BASE').value = 'KOBO'; } else if (regType == 'gb') { g('BASE').value = 'GOOGLE BOOKS'; } }
 
 //Params
 function getParams(){
@@ -81,6 +81,7 @@ function getParams(){
 }
 
 //Help INI - for register only
+/*
 function help(type) {
   g('loaderMsg').innerHTML = '';
   g('loader').style.visibility = "initial";
@@ -191,6 +192,7 @@ function closeHelp() {
   closeLoad();
   g('whatContent').style.visibility = "initial";
 }
+*/
 //Help END - for register only
 
 //Loading screen - INI
@@ -562,6 +564,8 @@ function addBookMethods(book) {
       return "https://www.bubok.es/libro/portadaLibro/" + this.ASIN + "/4/" + this.getCover() + ".webp";
     } else if (this.getBase() == "KOBO") {
       return this.getCover();
+    } else if (this.getBase() == "GOOGLE BOOKS") {
+      return "";
     }
   }
 
@@ -587,6 +591,7 @@ function getLink(tz, ASIN, base) {
   if (base == "AMAZON") { return getAmazonLink(tz, ASIN); }
   else if (base == "BUBOK") { return getBubokLink(tz, ASIN); }
   else if (base == "KOBO") { return getKoboLink(tz, ASIN); }
+  else if (base == "GOOGLE BOOKS") { return getGoogleLink(tz, ASIN); }
 }
 
 function getAmazonLink(tz, ASIN) {
@@ -607,6 +612,10 @@ function getBubokLink(tz, ASIN) {
 
 function getKoboLink(tz, ASIN) {
   return "https://www.kobo.com/es/es/search?query=" + ASIN;
+}
+
+function getGoogleLink(tz, ASIN) {
+  return "";
 }
 //BOOKS - END
 
@@ -847,10 +856,11 @@ function checkASIN(e) {
   let asin = g('ASIN').value;
 
   if (regType == 'bb') { threshold = 3; }
+  else if (regType == 'gb') { threshold = 12; }
   else if (regType == 'wp' || regType == 'kb') { /* register types without magic */ threshold = 999999; }
 
-  //ASIN was directly put. No call to goodreads
-  if (asin.charAt(0) == 'B') { threshold = 999999; }
+  //Amazon ASIN was directly put. No call to goodreads
+  if (asin.charAt(0) == 'B' && regType == 'az') { threshold = 999999; }
 
   //check if the lenght has decreased (mabe because we're deletting data)
   if (asin.length < threshold)
@@ -922,7 +932,7 @@ function parseMagicResponse(found) {
     let data;
 
     if (regType == 'az') { data = parseGoodreads(res); }
-    else if (regType == 'bb') { data = JSON.parse(res); }
+    else if (regType == 'bb' || regType == 'gb') { data = JSON.parse(res); }
 
     g('ASIN').value = data.ASIN;
     g('TITULO').value = data.title;
