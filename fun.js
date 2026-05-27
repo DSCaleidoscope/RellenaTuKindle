@@ -80,120 +80,6 @@ function getParams(){
   }
 }
 
-//Help INI - for register only
-/*
-function help(type) {
-  g('loaderMsg').innerHTML = '';
-  g('loader').style.visibility = "initial";
-  g('mbody').style.backgroundColor = "#80808087";
-  g('mainScreen').style.visibility = "hidden";
-  g('whatContent').style.visibility = "hidden";
-  clear();
-  g('loginWrapper').style.border = 'none';
-  g('loginWrapper').style.background = 'none';
-  g('loginWrapper').innerHTML = getHTML(regType, type);
-  g('loader').style.height = "initial";
-  g('loader').style.width = "initial";
-  g('loader').style.top = "initial";
-  g('loader').style.position = "initial";
-}
-
-function getHTML(source, type) {
-  let ret = "";
-
-  if (source == 'az') { ret = amazonGetHTML(type); }
-  else if (source == 'bb') { ret = bubokGetHTML(type); }
-  else if (source == 'wp') { ret = webPageGetHTML(type); }
-  else if (source == 'kb') { ret = koboGetHTML(type); }
-  
-  return ret;
-}
-
-function amazonGetHTML(type) {
-  let ret = "";
-
-  ret += "<div id='helpClose' onclick='closeHelp();'>X</div>";
-  ret += "<div id='helpContent'>" + amazonGetHTMLText(type) + "</div>";
-
-  return ret;
-}
-
-function amazonGetHTMLText(type) {
-  let ret = "";
-
-  if (type == "ASIN") {
-    //ret += "Entra en <a href='https://kdp.amazon.com/es_ES/bookshelf' target='_blank'>Amazon</a> y busca tu libro. Ah&iacute; encontrar&aacute;s el ASIN<br/><img src='./help/ASIN-1.png' width='90%' style='padding:20px'/>"
-    ret += "Entra en <a href='https://www.goodreads.com/author/dashboard?ref=nav_profile_authordash' target='_blank'>Tu Dashboard</a> y busca tu libro. Entra y busca el ID en la URL (Solo la parte num&eacute;rica)<br/><img src='./help/ASIN-3.png' width='90%' style='padding:20px'/>"
-  }
-
-  return ret;
-}
-
-function bubokGetHTML(type) {
-  let ret = "";
-
-  ret += "<div id='helpClose' onclick='closeHelp();'>X</div>";
-  ret += "<div id='helpContent'>" + bubokGetHTMLText(type) + "</div>";
-
-  return ret;
-}
-
-function bubokGetHTMLText(type) {
-  let ret = "";
-
-  if (type == "ASIN") {
-    ret += "Entra en <a href='https://www.bubok.es/autores/tu_pagina' target='_blank'>Bubok</a> y busca tu libro. Ah&iacute; encontrar&aacute;s el ID<br/><img src='./help/ASIN-2.png' width='90%' style='padding:20px'/>"
-  }
-
-  return ret;
-}
-
-function webPageGetHTML(type) {
-  let ret = "";
-
-  ret += "<div id='helpClose' onclick='closeHelp();'>X</div>";
-  ret += "<div id='helpContent'>" + webPageGetHTMLText(type) + "</div>";
-
-  return ret;
-}
-
-function webPageGetHTMLText(type) {
-  let ret = "";
-
-  if (type == "ASIN") {
-    ret += "Texto para ayuda de página web";
-  }
-
-  return ret;
-}
-
-function koboGetHTML(type) {
-  let ret = "";
-
-  ret += "<div id='helpClose' onclick='closeHelp();'>X</div>";
-  ret += "<div id='helpContent'>" + koboGetHTMLText(type) + "</div>";
-
-  return ret;
-}
-
-function koboGetHTMLText(type) {
-  let ret = "";
-
-  if (type == "ASIN") {
-    ret += "Texto para ayuda de kobo";
-  }
-
-  return ret;
-}
-
-function closeHelp() {
-  clear();
-  g('loader').style.position = "fixed";
-  closeLoad();
-  g('whatContent').style.visibility = "initial";
-}
-*/
-//Help END - for register only
 
 //Loading screen - INI
 function startLoad() {
@@ -299,7 +185,7 @@ function getImgSrcByBookId(id) {
 
   for (; gis < bookList.length; gis++) {
     if (bookList[gis].Id == id) {
-      return bookList[gis].getImgSrc();
+      return bookList[gis].getImgSrc(bookList[gis].getBases()[0]);
     }
   }
 
@@ -445,10 +331,11 @@ function addBookMethods(book) {
   book.getGenres = function () { return this.Genres; };
   book.getSynopsis = function () { return this.Synopsis; };
   book.getCover = function () { return this.Cover; };
-  book.getBase = function () { return this.Base; };
   book.getSize = function () { return this.size; };
   book.getNetworks = function () { return this.Networks; };
-  book.getASIN = function () { return this.ASIN; };
+  book.getBases = function () { return this.Bases; };
+  book.getBase = function (base) { return base.Base; };
+  book.getASIN = function (base) { return base.ASIN; };
   book.createNode = function (id) { return document.createElement("div"); }
   book.stylizeNode = function (node, offset) {
     node.classList.add("book");
@@ -534,9 +421,7 @@ function addBookMethods(book) {
     }
   };
 
-  book.addGenresInfo = function (node) {
-    return;
-  };
+  book.addGenresInfo = function (node) {return;};
 
   book.addSynopsisInfo = function (node) {
     //local node
@@ -557,34 +442,72 @@ function addBookMethods(book) {
     }
   };
 
-  book.getImgSrc = function () {
-    if (this.getBase() == "AMAZON") {
+  book.getImgSrc = function (base) {
+    if (this.getBase(base) == "AMAZON") {
       return "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com" + this.getCover() + this.getSize() + "jpg";
-    } else if (this.getBase() == "BUBOK") {
-      return "https://www.bubok.es/libro/portadaLibro/" + this.ASIN + "/4/" + this.getCover() + ".webp";
-    } else if (this.getBase() == "KOBO") {
-      return this.getCover();
-    } else if (this.getBase() == "GOOGLE BOOKS") {
-      return "";
+    } else if (this.getBase(base) == "BUBOK") {
+      return "https://www.bubok.es/libro/portadaLibro/" + this.getASIN(base) + "/4/" + this.getCover() + ".webp";
+    } else if (this.getBase(base) == "KOBO") {
+      return this.getCover(base);
+    } else if (this.getBase(base) == "GOOGLE BOOKS") {
+      return "https://play.google.com/books/publisher/content/images/frontcover/" + this.getCover() + "?fife=w240-h345";
     }
   }
 
   book.addNetworksInfo = function (node) {};
 
   book.addASINInfo = function (node) {
-    if (this.getASIN() == "") { }
+    if (this.getBases() == null) { }
     else {
       if (isEventWaiting) {
         node.innerHTML += "<div class='ASIN'>Gratis el pr&oacute;ximo " + eventDate + "</div>";
       } else {
-        if (tracking) {
-          node.innerHTML += "<div class='ASIN' onclick=\"navigate('" + this.getASIN() + "', " + this.getID() + ", '" + this.getBase() +"')\">Descargar en " + this.getBase().charAt(0).toUpperCase() + this.getBase().slice(1).toLowerCase() + "</div>";
-        } else {
-          node.innerHTML += "<div class='ASIN'><a href='" + getLink(tz, this.getASIN(), this.getBase()) + "' target='_blank'>Descargar en " + this.getBase().charAt(0).toUpperCase() + this.getBase().slice(1).toLowerCase() + "</a></div>";
+        let ih = "";
+        let allBases = this.getBases();
+        let bi = 0;
+        ih += "<div class='chooseOne'>";
+
+        for (; bi < allBases.length; bi++) {
+          if (tracking) {
+            ih += "<span onclick=\"navigate('" + this.getASIN(allBases[bi]) + "', " + this.getID() + ", '" + this.getBase(allBases[bi]) + "')\">";
+          } else {
+            ih += "<a href='" + getLink(tz, this.getASIN(allBases[bi]), this.getBase(allBases[bi])) + "' target='_blank'>";
+          }
+
+          ih += getLogo(this.getBase(allBases[bi]));
+
+          if (tracking) {
+            ih += "</span>";
+          } else {
+            ih += "</a>";
+          }
         }
+
+        ih += "</div>";
+
+        node.innerHTML += ih;
       }
     }
   };
+}
+
+function getLogo(base) {
+  let ret = "<img src='./img/";
+
+  if (base == "AMAZON") { ret += "az"; }
+  else if (base == "BUBOK") { ret += "bb"; }
+  else if (base == "KOBO") { ret += "kb_logo"; }
+  else if (base == "GOOGLE BOOKS") { ret += "gp"; }
+
+  ret += ".png'"
+
+  if (base == "KOBO") {
+    ret += " style='height: 60px;'"
+  }
+
+  ret += ">";
+
+  return ret;
 }
 
 function getLink(tz, ASIN, base) {
@@ -615,7 +538,7 @@ function getKoboLink(tz, ASIN) {
 }
 
 function getGoogleLink(tz, ASIN) {
-  return "";
+  return "https://play.google.com/store/books/details?id=" + ASIN;
 }
 //BOOKS - END
 

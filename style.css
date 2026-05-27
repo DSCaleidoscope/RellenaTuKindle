@@ -263,6 +263,7 @@ input[type='radio']:hover {
 
 .chooseOne img {
   height: 26px;
+  margin-top: 36px;
   padding-right: 36px;
   display: flex;
   flex-direction: row;
