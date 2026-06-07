@@ -53,7 +53,7 @@ function clear(){g("bbody").innerHTML = '';}
 function add(t) { g("bbody").innerHTML += t + '<br />'; }
 function reload() { if (reloadPage) { location.replace(".");; } }
 function setSource(source) { regType = source; updateSource(); }
-function updateSource() { if (regType == 'az') { g('BASE').value = 'AMAZON'; } else if (regType == 'bb') { g('BASE').value = 'BUBOK'; } else if (regType == 'wp') { g('BASE').value = 'PAGINA WEB'; } else if (regType == 'kb') { g('BASE').value = 'KOBO'; } else if (regType == 'gb') { g('BASE').value = 'GOOGLE BOOKS'; } }
+function updateSource() { if (regType == 'az') { g('BASE').value = 'AMAZON'; } else if (regType == 'bb') { g('BASE').value = 'BUBOK'; } else if (regType == 'wp') { g('BASE').value = 'PAGINA WEB'; } else if (regType == 'kb') { g('BASE').value = 'KOBO'; } else if (regType == 'gb') { g('BASE').value = 'GOOGLE BOOKS'; } else if (regType == 'ab') { g('BASE').value = 'APPLE BOOKS'; } }
 
 //Params
 function getParams(){
@@ -451,6 +451,8 @@ function addBookMethods(book) {
       return this.getCover(base);
     } else if (this.getBase(base) == "GOOGLE BOOKS") {
       return "https://play.google.com/books/publisher/content/images/frontcover/" + this.getCover() + "?fife=w240-h345";
+    } else if (this.getBase(base) == "APPLE BOOKS") {
+      return this.getCover(base);
     }
   }
 
@@ -498,11 +500,14 @@ function getLogo(base) {
   else if (base == "BUBOK") { ret += "bb"; }
   else if (base == "KOBO") { ret += "kb_logo"; }
   else if (base == "GOOGLE BOOKS") { ret += "gp"; }
+  else if (base == "APPLE BOOKS") { ret += "ab"; }
 
   ret += ".png'"
 
   if (base == "KOBO") {
-    ret += " style='height: 60px;'"
+    ret += " style='height: 60px;'";
+  } else if (base == "APPLE BOOKS") {
+    ret += " style='height: 36px;'";
   }
 
   ret += ">";
@@ -515,6 +520,7 @@ function getLink(tz, ASIN, base) {
   else if (base == "BUBOK") { return getBubokLink(tz, ASIN); }
   else if (base == "KOBO") { return getKoboLink(tz, ASIN); }
   else if (base == "GOOGLE BOOKS") { return getGoogleLink(tz, ASIN); }
+  else if (base == "APPLE BOOKS") { return getAppleLink(tz, ASIN); }
 }
 
 function getAmazonLink(tz, ASIN) {
@@ -539,6 +545,10 @@ function getKoboLink(tz, ASIN) {
 
 function getGoogleLink(tz, ASIN) {
   return "https://play.google.com/store/books/details?id=" + ASIN;
+}
+
+function getAppleLink(tz, ASIN) {
+  return "http://books.apple.com/es/book/id" + ASIN;
 }
 //BOOKS - END
 
@@ -855,6 +865,7 @@ function parseMagicResponse(found) {
     let data;
 
     if (regType == 'az') { data = parseGoodreads(res); }
+    else if (regType == 'ab') { data = parseAppleBooks(res); }
     else if (regType == 'bb' || regType == 'gb') { data = JSON.parse(res); }
 
     g('ASIN').value = data.ASIN;
@@ -932,6 +943,30 @@ function parseGoodreads(res) {
 
   //synopsis
   ret.synopsis = checkObjectExist(grBookId, "stripped", 0);
+
+  return ret;
+}
+
+function parseAppleBooks(res) {
+  let obj = JSON.parse(res);
+  let ret = {};
+
+  console.log(obj);
+
+  //ASIN
+  ret.ASIN = g('ASIN').value;
+
+  //title
+  ret.title = obj.name;
+
+  //cover
+  ret.cover = obj.image;
+
+  //author
+  ret.author = obj.author;
+
+  //synopsis
+  ret.synopsis = obj.description;
 
   return ret;
 }
