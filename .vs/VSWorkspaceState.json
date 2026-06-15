@@ -2,8 +2,10 @@
   "ExpandedNodes": [
     "",
     "\\data",
-    "\\img"
+    "\\img",
+    "\\_old",
+    "\\_old\\rtk_2025"
   ],
-  "SelectedNode": "\\data\\book_0.json",
+  "SelectedNode": "\\_old\\rtk_2025\\book_138.json",
   "PreviewInSolutionExplorer": false
 }
