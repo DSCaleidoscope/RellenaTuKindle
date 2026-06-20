@@ -39,7 +39,7 @@ var Bcollapsed = [];
 //Config
 var forceRefresh = true; //During the event, move it to false to avoid forcing refresh!
 var eventDate = "evento";
-var isEventWaiting = true; //Move it to false to show links to platforms
+var isEventWaiting = false; //Move it to false to show links to platforms
 var tracking = false; //Move it to false to avoid calling tracking function
 
 //Register vars
@@ -443,16 +443,20 @@ function addBookMethods(book) {
   };
 
   book.getImgSrc = function (base) {
-    if (this.getBase(base) == "AMAZON") {
-      return "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com" + this.getCover() + this.getSize() + "jpg";
-    } else if (this.getBase(base) == "BUBOK") {
-      return "https://www.bubok.es/libro/portadaLibro/" + this.getASIN(base) + "/4/" + this.getCover() + ".webp";
-    } else if (this.getBase(base) == "KOBO") {
-      return this.getCover(base);
-    } else if (this.getBase(base) == "GOOGLE BOOKS") {
-      return "https://play.google.com/books/publisher/content/images/frontcover/" + this.getCover() + "?fife=w240-h345";
-    } else if (this.getBase(base) == "APPLE BOOKS") {
-      return this.getCover(base);
+    if (this.getCover().includes("canonical::")) {
+      return this.getCover().split("canonical::")[1];
+    } else {
+      if (this.getBase(base) == "AMAZON") {
+        return "https://i.gr-assets.com/images/S/compressed.photo.goodreads.com" + this.getCover() + this.getSize() + "jpg";
+      } else if (this.getBase(base) == "BUBOK") {
+        return "https://www.bubok.es/libro/portadaLibro/" + this.getASIN(base) + "/4/" + this.getCover() + ".webp";
+      } else if (this.getBase(base) == "KOBO") {
+        return this.getCover(base);
+      } else if (this.getBase(base) == "GOOGLE BOOKS") {
+        return "https://play.google.com/books/publisher/content/images/frontcover/" + this.getCover() + "?fife=w240-h345";
+      } else if (this.getBase(base) == "APPLE BOOKS") {
+        return this.getCover(base);
+      }
     }
   }
 
@@ -516,11 +520,16 @@ function getLogo(base) {
 }
 
 function getLink(tz, ASIN, base) {
-  if (base == "AMAZON") { return getAmazonLink(tz, ASIN); }
-  else if (base == "BUBOK") { return getBubokLink(tz, ASIN); }
-  else if (base == "KOBO") { return getKoboLink(tz, ASIN); }
-  else if (base == "GOOGLE BOOKS") { return getGoogleLink(tz, ASIN); }
-  else if (base == "APPLE BOOKS") { return getAppleLink(tz, ASIN); }
+  if (ASIN.includes("::canonical::")) {
+    //We can't forge an URL and we added an ad-hoc one
+    return ASIN.split("::canonical::")[1];
+  } else {
+    if (base == "AMAZON") { return getAmazonLink(tz, ASIN); }
+    else if (base == "BUBOK") { return getBubokLink(tz, ASIN); }
+    else if (base == "KOBO") { return getKoboLink(tz, ASIN); }
+    else if (base == "GOOGLE BOOKS") { return getGoogleLink(tz, ASIN); }
+    else if (base == "APPLE BOOKS") { return getAppleLink(tz, ASIN); }
+  }
 }
 
 function getAmazonLink(tz, ASIN) {
