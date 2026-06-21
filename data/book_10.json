@@ -1,0 +1,17 @@
+{
+  "Book": {
+    "Id": "10",
+    "Title": "Tormenta de azar",
+    "Authors": [ 23 ],
+    "Genres": [ "THRILLER / TERROR" ],
+    "Synopsis": "Una mujer misteriosa le entrega dos dados. La regla es simple: tres tiradas al día durante una semana. Vero no sabe qué ocurrirá en cada lanzamiento. No sabe qué puede ganar… ni qué está dispuesta a perder. Lo que empieza como un juego pronto se convierte en una prueba donde el azar decide encuentros, decisiones y consecuencias imposibles de ignorar. Porque cuando el destino se lanza al aire, no todos los resultados son inocentes. Vero acepta el desafío. Al fin y al cabo, ella no le teme a nada.",
+    "Cover": "canonical::https://m.media-amazon.com/images/I/813E1K93piL._SY466_.jpg",
+    "Networks": "",
+    "Bases": [
+      {
+        "ASIN": "B0CJ5DF3ZB",
+        "Base": "AMAZON"
+      }
+    ]
+  }
+}

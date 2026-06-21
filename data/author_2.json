@@ -1,0 +1,20 @@
+{
+  "Auth": {
+    "Id": "2",
+    "AuthorName": "A. F. Cárdenas",
+    "Name": "Anonymous",
+    "Genres": [],
+    "Presentation": "",
+    "ProfilePic": "",
+    "Networks": [
+      {
+        "type": "INSTAGRAM",
+        "user": "a_entre_letras"
+      },
+      {
+        "type": "TIKTOK",
+        "user": "af_cardenas"
+      }
+    ]
+  }
+}

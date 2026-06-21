@@ -1,0 +1,20 @@
+{
+  "Auth": {
+    "Id": "38",
+    "AuthorName": "Miguel Monsivais",
+    "Name": "Anonymous",
+    "Genres": [],
+    "Presentation": "",
+    "ProfilePic": "",
+    "Networks": [
+      {
+        "type": "INSTAGRAM",
+        "user": "usermiguel1994"
+      },
+      {
+        "type": "TIKTOK",
+        "user": "escritordelinea"
+      }
+    ]
+  }
+}

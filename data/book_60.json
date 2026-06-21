@@ -1,0 +1,21 @@
+{
+  "Book": {
+    "Id": "61",
+    "Title": "Mutagénesis Convergente",
+    "Authors": [ 33 ],
+    "Genres": [ "SCIFI / DISTOPIA" ],
+    "Synopsis": "Carmen Ari?stegui descubre las leyes que permiten predecir, con extrema precisión, cómo evolucionará un organismo. El reconocimiento cienti?fico que conlleva su descubrimiento atrae las miradas de la comunidad, entre ellas la de Eli Hadid, un astrofi?sico que dirige el desarrollo de un proyecto de vela solar. Alonso Echegaray es un magnate español que ha levantado un emporio en base a la ecología y el medioambiente, y está obsesionado con construir el mejor campus científico del mundo en medio de La Mancha. Tras ciertas intrigas, que les llevarán a cruzar sus caminos, el Dr. Hadid desea contrastar con ambos la viabilidad de una idea. ¿Sera? posible llevarla a cabo?",
+    "Cover": "https://m.media-amazon.com/images/I/61tFitdOZqL._SL1499_.jpg",
+    "Networks": "",
+    "Bases": [
+      {
+        "ASIN": "1230009472839",
+        "Base": "KOBO"
+      },
+      {
+        "ASIN": "s3_UEQAAQBAJ",
+        "Base": "GOOGLE BOOKS"
+      }
+    ]
+  }
+}

@@ -1,0 +1,25 @@
+{
+  "Book": {
+    "Id": "51",
+    "Title": "Clasmathia - Un lugar mejor",
+    "Authors": [ 43 ],
+    "Genres": [ "SCIFI / DISTOPIA" ],
+    "Synopsis": "¿Qué pasaría si destrozáramos tanto el mundo que la humanidad tuviera que volver a empezar desde cero? Siglos tras la Última Guerra, los humanos se esfuerzan por sobrevivir en las resecas llanuras de Clasmathia. Entre las altas montañas y la Niebla que les separa del oscuro mar, sus leyendas hablan de otros seres, Extraños hijos de sus mismos antepasados, cuya prosperidad se alza amenazante sobre la frágil supervivencia humana.",
+    "Cover": "https://cdn.kobo.com/book-images/30a4bd34-717a-4ca0-a166-6393bdbd3f73/353/569/90/False/clasmathia-un-lugar-mejor.jpg",
+    "Networks": "",
+    "Bases": [
+      {
+        "ASIN": "1230009870314",
+        "Base": "KOBO"
+      },
+      {
+        "ASIN": "khbQEQAAQBAJ",
+        "Base": "GOOGLE BOOKS"
+      },
+      {
+        "ASIN": "6773486828",
+        "Base": "APPLE BOOKS"
+      }
+    ]
+  }
+}

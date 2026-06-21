@@ -1,0 +1,21 @@
+{
+  "Book": {
+    "Id": "66",
+    "Title": "Malditos Americanos",
+    "Authors": [ 33 ],
+    "Genres": [ "SCIFI / DISTOPIA" ],
+    "Synopsis": "La EUS Terror y la EUS Erebus regresan a la Tierra tras cumplir con éxito la primera misión tripulada en Marte, pero su regreso no está exento de problemas. En las proximidades de nuestro planeta ha surgido un contratiempo que no estaba ahí cuando emprendieron la misión. La capitana Sara García, de la Agencia Espacial Europea, se verá obligada a tomar importantes decisiones para salvaguardar la vida de su tripulación.",
+    "Cover": "https://cdn.kobo.com/book-images/b37a6626-1ea8-4c99-a7fc-34f5cd90d305/353/569/90/False/malditos-americanos.jpg",
+    "Networks": "",
+    "Bases": [
+      {
+        "ASIN": "1230009995444",
+        "Base": "KOBO"
+      },
+      {
+        "ASIN": "l5bZEQAAQBAJ",
+        "Base": "GOOGLE BOOKS"
+      }
+    ]
+  }
+}

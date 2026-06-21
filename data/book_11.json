@@ -1,0 +1,17 @@
+{
+  "Book": {
+    "Id": "11",
+    "Title": "Incendio de posibilidades",
+    "Authors": [ 23 ],
+    "Genres": [ "THRILLER / TERROR" ],
+    "Synopsis": "Tres papeles. Tres posibilidades que quemar. Un mechero capaz de hacerlas realidad. Gustavo, con su talento innato para la negociación y su dominio de las reacciones químicas, se ve arrastrado a un juego siniestro que amenaza no solo su vida, sino también la de quienes lo rodean. Dispuesto a prender fuego a todo lo necesario, tendrá que decidir hasta dónde está dispuesto a llegar para proteger a quienes ama.",
+    "Cover": "canonical::https://m.media-amazon.com/images/I/71coy7L22iL._SL1500_.jpg",
+    "Networks": "",
+    "Bases": [
+      {
+        "ASIN": "B0DCV25KBK",
+        "Base": "AMAZON"
+      }
+    ]
+  }
+}

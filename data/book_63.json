@@ -1,0 +1,17 @@
+{
+  "Book": {
+    "Id": "64",
+    "Title": "Del otro lado del lago",
+    "Authors": [ 2 ],
+    "Genres": [ "FANTASÍA" ],
+    "Synopsis": "Un lago. Una chica. Una maldición. Ana se siente atraída por el lago que hay cerca de su nueva casa que, según cuenta la leyenda, es el hogar de un espíritu que concede deseos a cambio de monedas. Ella no cree en leyendas ni en historias de fantasmas, pero cuando todos en el pueblo desaparecen y su vida corre peligro, se ve obligada a replantearse todo lo que creía conocer. Para cortar los lazos que la atan a una antigua maldición y evitar que la historia se repita, Ana deberá confrontar los secretos del pasado y su propio destino en un viaje que la llevará a través de la magia, enfrentándose a los límites de la realidad y la muerte. Un relato de misterio, redención y justicia, Del otro lado del lago es una historia que cautivará a los lectores, transportándolos a un mundo donde el pasado y el presente se entrelazan en una danza de revelaciones y enigmas.",
+    "Cover": "/books/1729333191i/220566208",
+    "Networks": "",
+    "Bases": [
+      {
+        "ASIN": "B0DLLP4N6Q",
+        "Base": "AMAZON"
+      }
+    ]
+  }
+}

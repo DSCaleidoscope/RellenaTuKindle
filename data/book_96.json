@@ -1,0 +1,17 @@
+{
+  "Book": {
+    "Id": "98",
+    "Title": "Fiesta, neones y alcohol (wish club 1)",
+    "Authors": [ 21 ],
+    "Genres": [ "OTROS" ],
+    "Synopsis": "Soy Paolo, dueño de un local liberal en Ibiza, un lobo solitario y un alma libre. Cuando ella entró en mi local para organizar su fiesta de cumpleaños, algo en mí cambió, convirtiéndose esta en una obsesión. Solo quería tenerla entre mis piernas, pero cuando lo conseguí, me desestabilizó por completo. Ella me ofrecerá un acuerdo que no podré rechazar, en un principio solo es sexo, pero... ¿Qué pasará si alguno quiere algo más? Mi ritmo es difícil de seguir y yo no busco ninguna relación. ¿Será capaz de darme lo que necesito para enamorarme o solo será sexo sin compromiso? Adéntrate en mi mundo y conoce poco a poco lo que se cuece en nuestras vidas.  Fiesta, neones y alcohol es el primer relato de la serie Wish Club, adéntrate y conoce a sus empleados y todos sus secretos.",
+    "Cover": "/books/1664444522i/62821450",
+    "Networks": "",
+    "Bases": [
+      {
+        "ASIN": "B0BGJNNWNH",
+        "Base": "AMAZON"
+      }
+    ]
+  }
+}

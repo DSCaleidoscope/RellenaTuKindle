@@ -1,0 +1,17 @@
+{
+  "Book": {
+    "Id": "5",
+    "Title": "Las últimas páginas",
+    "Authors": [ 58 ],
+    "Genres": [ "ROMANCE" ],
+    "Synopsis": "¿Has perdido el rumbo alguna vez? La vida de Laura se derrumba: su matrimonio y su inmobiliaria están en crisis, y la muerte de su madre la deja al borde del abismo. Pero al descubrir el diario que Isabel escribió antes de morir, comprende que la vida está hecha de instantes. Página a página hallará una nueva forma de seguir adelante. Un viaje íntimo hacia los recuerdos, la infancia y aquello que de verdad importa. ¿Te atreves a revivir tus propios momentos?",
+    "Cover": "canonical::https://m.media-amazon.com/images/I/611hXOkhxjL._SL1500_.jpg",
+    "Networks": "",
+    "Bases": [
+      {
+        "ASIN": "B0DP9T23TJ",
+        "Base": "AMAZON"
+      }
+    ]
+  }
+}
