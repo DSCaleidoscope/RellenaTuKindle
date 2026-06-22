@@ -56,6 +56,14 @@
         getParams();
         fill();
         reload();
+
+        if ('serviceWorker' in navigator) {
+          window.addEventListener('load', () => {
+            navigator.serviceWorker.register('./cache.js')
+              .then(reg => console.log('', reg))
+              .catch(err => console.error('Cache error', err));
+          });
+        }
       </script>
     </div>
   </div>
