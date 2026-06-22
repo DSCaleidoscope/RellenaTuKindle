@@ -1,1 +1,17 @@
-{ "Book": { "Id": "6", "Title": "Pinceladas de Sangre", "Authors": [ 18 ], "Genres": [ "FANTASÍA" ], "Synopsis": "La estirpe Blackwood siempre ha estado marcada por un legado oscuro. Sus vidas se entrelazan con una antigua maldición que acecha a las mujeres de la familia a través de un misterioso espejo. Cuando Eliza, una restauradora de arte, es contratada por la última señora Blackwood para recuperar el legado familiar, debe enfrentarse a las fuerzas sobrenaturales que amenazan con consumirla a ella y a todo lo que ama.", "Cover": "/books/1747470494i/234310711", "Networks": "", "Bases": [ { "ASIN": "B0F9165L26", "Base": "AMAZON" }]}}
+{
+  "Book": {
+    "Id": "6",
+    "Title": "Pinceladas de Sangre",
+    "Authors": [ 18 ],
+    "Genres": [ "FANTASÍA" ],
+    "Synopsis": "La estirpe Blackwood siempre ha estado marcada por un legado oscuro. Sus vidas se entrelazan con una antigua maldición que acecha a las mujeres de la familia a través de un misterioso espejo. Cuando Eliza, una restauradora de arte, es contratada por la última señora Blackwood para recuperar el legado familiar, debe enfrentarse a las fuerzas sobrenaturales que amenazan con consumirla a ella y a todo lo que ama.",
+    "Cover": "canonical::https://m.media-amazon.com/images/I/813C-kQb4vL._SL1500_.jpg",
+    "Networks": "",
+    "Bases": [
+      {
+        "ASIN": "B0F9165L26",
+        "Base": "AMAZON"
+      }
+    ]
+  }
+}

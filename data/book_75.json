@@ -1,1 +1,17 @@
-{ "Book": { "Id": "77", "Title": "REQUIEM", "Authors": [ 5 ], "Genres": [ "FANTASÍA" ], "Synopsis": "Marcada por un poder que apenas comienza a comprender, entrenada por Brayden y guiada por un deseo feroz de entender su origen, Aika se adentra en un camino donde la magia, el amor y el pasado se entrelazan. Pero en su búsqueda por la verdad, deberá decidir si su identidad será una liberación o una condena. Mientras tanto, al otro lado del continente de Gallevya, la reina Susan y el rey Yrian enfrentan los sutiles venenos de la corte en Elegor. Intrigas políticas, alianzas inesperadas y traiciones silenciosas amenazan con destruir lo que tanto han luchado por construir. La llegada de su primer hijo sólo intensifica la urgencia de unir un reino que parece desmoronarse desde dentro. En esta continuación cargada de emociones, Réquiem explora los lazos del deber, la fuerza del amor y la fragilidad de los secretos. Cuando el destino de un continente depende de corazones divididos, ¿podrán elegir correctamente…? A veces, el mayor sacrificio es descubrir quién eres.", "Cover": "/books/1766336170i/245606148", "Networks": "", "Bases": [ { "ASIN": "B0F91GCTK3", "Base": "AMAZON" }]}}
+{
+  "Book": {
+    "Id": "77",
+    "Title": "REQUIEM",
+    "Authors": [ 5 ],
+    "Genres": [ "FANTASÍA" ],
+    "Synopsis": "Marcada por un poder que apenas comienza a comprender, entrenada por Brayden y guiada por un deseo feroz de entender su origen, Aika se adentra en un camino donde la magia, el amor y el pasado se entrelazan. Pero en su búsqueda por la verdad, deberá decidir si su identidad será una liberación o una condena. Mientras tanto, al otro lado del continente de Gallevya, la reina Susan y el rey Yrian enfrentan los sutiles venenos de la corte en Elegor. Intrigas políticas, alianzas inesperadas y traiciones silenciosas amenazan con destruir lo que tanto han luchado por construir. La llegada de su primer hijo sólo intensifica la urgencia de unir un reino que parece desmoronarse desde dentro. En esta continuación cargada de emociones, Réquiem explora los lazos del deber, la fuerza del amor y la fragilidad de los secretos. Cuando el destino de un continente depende de corazones divididos, ¿podrán elegir correctamente…? A veces, el mayor sacrificio es descubrir quién eres.",
+    "Cover": "canonical::https://m.media-amazon.com/images/I/71dfYSI0GvL._SL1500_.jpg",
+    "Networks": "",
+    "Bases": [
+      {
+        "ASIN": "B0F91GCTK3",
+        "Base": "AMAZON"
+      }
+    ]
+  }
+}

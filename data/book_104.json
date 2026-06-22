@@ -1,0 +1,21 @@
+{
+  "Book": {
+    "Id": "106",
+    "Title": "PRELUDE",
+    "Authors": [
+      5
+    ],
+    "Genres": [
+      "FANTASÍA"
+    ],
+    "Synopsis": "En un continente dividido por las guerras, Susan, prometida desde niña al futuro rey, ha sido criada para servir a un propósito: ser una esposa perfecta a través del deber y la obediencia. Pero cuando conoce a una joven de espíritu libre, algo en ella cambia. Lo que comienza como una amistad improbable se convierte en el faro que ilumina un nuevo camino, uno que podría liberarla de sus cadenas, y no solo a ella... Mientras, Aika vive ajena al poder que habita en su interior. Su destino la persigue en silencio, hasta que cruza caminos con Brayden, un hombre marcado por sombras que se convierte en su refugio en un mundo donde amar, es un acto de valor. Lo que las separa es la distancia, lo que las une es un continente devastado. En sus caminos encontrarán aliados inesperados, secretos y profecías que pondrán a prueba todo lo que creían saber... sobre el mundo y sobre sí mismas. Entre reinos en guerra, romance y alianzas imposibles, PRELUDE es una sinfonía de emociones: la lucha entre el deber y el deseo, las cadenas y la libertad, la esperanza y la pérdida... Prelude combina magia, batallas épicas y personajes memorables, una historia ideal para los seguidores de Sarah J. Maas, Brandon Sanderson y George R. R. Martin, con mundos vibrantes, protagonistas complejas y un romance intenso en medio del caos. Si te gustan las novelas con tensión emocional, poderosos conflictos políticos y secretos que pueden cambiar el destino de un reino, Prelude te atrapará.",
+    "Cover": "canonical::https://m.media-amazon.com/images/I/714fUpSWM-L._SL1500_.jpg",
+    "Networks": "",
+    "Bases": [
+      {
+        "ASIN": "B0F9XRWYJR",
+        "Base": "AMAZON"
+      }
+    ]
+  }
+}

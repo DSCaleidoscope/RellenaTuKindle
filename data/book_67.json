@@ -1,1 +1,17 @@
-{ "Book": { "Id": "68", "Title": "El talismán de la luna roja", "Authors": [ 18 ], "Genres": [ "FANTASÍA" ], "Synopsis": "Atrapada entre el amor y el deber, Alma deberá desentrañar los secretos del talismán, dominar el poder que fluye por sus venas y decidir si está dispuesta a sacrificarlo todo para cumplir su destino y proteger a Dreamwood Valley, incluso si eso significa renunciar al amor que siente por Ray.", "Cover": "/books/1739542218i/228012295", "Networks": "", "Bases": [ { "ASIN": "B0DX76Z4S7", "Base": "AMAZON" }]}}
+{
+  "Book": {
+    "Id": "68",
+    "Title": "El talismán de la luna roja",
+    "Authors": [ 18 ],
+    "Genres": [ "FANTASÍA" ],
+    "Synopsis": "Atrapada entre el amor y el deber, Alma deberá desentrañar los secretos del talismán, dominar el poder que fluye por sus venas y decidir si está dispuesta a sacrificarlo todo para cumplir su destino y proteger a Dreamwood Valley, incluso si eso significa renunciar al amor que siente por Ray.",
+    "Cover": "canonical::https://m.media-amazon.com/images/I/71VkIEXQsOL._SL1500_.jpg",
+    "Networks": "",
+    "Bases": [
+      {
+        "ASIN": "B0DX76Z4S7",
+        "Base": "AMAZON"
+      }
+    ]
+  }
+}

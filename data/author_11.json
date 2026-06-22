@@ -1,1 +1,20 @@
-{ "Auth": { "Id": "11", "AuthorName": "ARACELI LUQUE PINEDA", "Name": "Anonymous", "Genres": [], "Presentation": "", "ProfilePic": "", "Networks": [{"type": "INSTAGRAM", "user": "aracelilupi_instawriter"}]}}
+{
+  "Auth": {
+    "Id": "11",
+    "AuthorName": "ARACELI LUQUE PINEDA",
+    "Name": "Anonymous",
+    "Genres": [],
+    "Presentation": "",
+    "ProfilePic": "",
+    "Networks": [
+      {
+        "type": "INSTAGRAM",
+        "user": "aracelilupi_instawriter"
+      },
+      {
+        "type": "TIKTOK",
+        "user": "araceliluquepin"
+      }
+    ]
+  }
+}
