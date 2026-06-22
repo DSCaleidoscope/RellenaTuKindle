@@ -1,1 +1,17 @@
-{ "Book": { "Id": "85", "Title": "Las aventuras de Aroa y Manuel: El Secreto del Hielo Gigante (Lectura Juvenil)", "Authors": [ 4 ], "Genres": [ "OTROS" ], "Synopsis": "Cuatro primos y su perrita Maca viven una aventura mágica en Barcelona, llena de escenarios imaginarios como un caballo de piedra encantado y un iceberg gigante. Al final del día, comprenden que la verdadera magia no está en los lugares exóticos, sino en ver la vida como un juego y disfrutar de los pequeños momentos compartidos.", "Cover": "/books/1757921648i/241641186", "Networks": "", "Bases": [ { "ASIN": "B0FSZH16V7", "Base": "AMAZON" }]}}
+{
+  "Book": {
+    "Id": "85",
+    "Title": "Las aventuras de Aroa y Manuel: El Secreto del Hielo Gigante (Lectura Juvenil)",
+    "Authors": [ 4 ],
+    "Genres": [ "OTROS" ],
+    "Synopsis": "Cuatro primos y su perrita Maca viven una aventura mágica en Barcelona, llena de escenarios imaginarios como un caballo de piedra encantado y un iceberg gigante. Al final del día, comprenden que la verdadera magia no está en los lugares exóticos, sino en ver la vida como un juego y disfrutar de los pequeños momentos compartidos.",
+    "Cover": "canonical::https://m.media-amazon.com/images/I/91nKUeLTC7L._SL1500_.jpg",
+    "Networks": "",
+    "Bases": [
+      {
+        "ASIN": "B0FSZH16V7",
+        "Base": "AMAZON"
+      }
+    ]
+  }
+}

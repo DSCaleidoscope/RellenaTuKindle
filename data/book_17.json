@@ -1,1 +1,17 @@
-{ "Book": { "Id": "17", "Title": "Cuentos de esto y lo otro", "Authors": [ 48 ], "Genres": [ "OTROS" ], "Synopsis": "Os propongo un viaje, un reencuentro con los monstruos de vuestra infancia que os invitan a visitar lugares tan exóticos como el Far West, Egipto o el Japón feudal.Cuentos de esto y lo otro son seis historias cargadas de misterio que os harán vivir terroríficas aventuras. Hombres-lobo, momias, vampiros y extraterrestres intentarán estremeceros y entreteneros. ¡Hasta el mismo demonio os acecha entre estas páginas!Sed valientes y atreveos con Cuentos de esto y lo otro.", "Cover": "/books/1725312728i/218407745", "Networks": "", "Bases": [ { "ASIN": "B0DB5ZL3G3", "Base": "AMAZON" }]}}
+{
+  "Book": {
+    "Id": "17",
+    "Title": "Cuentos de esto y lo otro",
+    "Authors": [ 48 ],
+    "Genres": [ "OTROS" ],
+    "Synopsis": "Os propongo un viaje, un reencuentro con los monstruos de vuestra infancia que os invitan a visitar lugares tan exóticos como el Far West, Egipto o el Japón feudal.Cuentos de esto y lo otro son seis historias cargadas de misterio que os harán vivir terroríficas aventuras. Hombres-lobo, momias, vampiros y extraterrestres intentarán estremeceros y entreteneros. ¡Hasta el mismo demonio os acecha entre estas páginas!Sed valientes y atreveos con Cuentos de esto y lo otro.",
+    "Cover": "canonical::https://m.media-amazon.com/images/I/71tOll7TMJL._SL1500_.jpg",
+    "Networks": "",
+    "Bases": [
+      {
+        "ASIN": "B0DB5ZL3G3",
+        "Base": "AMAZON"
+      }
+    ]
+  }
+}

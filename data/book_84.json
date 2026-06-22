@@ -1,1 +1,17 @@
-{ "Book": { "Id": "86", "Title": "Las aventuras de Carmen y Eila: El Verano del Mapa Secreto (Lectura Juvenil)", "Authors": [ 4 ], "Genres": [ "OTROS" ], "Synopsis": "Cuatro primos pasan el verano juntos junto al mar. Dos de ellas, Carmen y Eila (las soñadoras), encuentran un cofre con un mapa y una brújula en la playa. Desobedeciendo las reglas, siguen las pistas y descubren que el verdadero tesoro no es oro, sino una vista espectacular y un recuerdo familiar tallado en un árbol hace casi cincuenta años.", "Cover": "/books/1757669901i/241537016", "Networks": "", "Bases": [ { "ASIN": "B0FSZQL6LF", "Base": "AMAZON" }]}}
+{
+  "Book": {
+    "Id": "86",
+    "Title": "Las aventuras de Carmen y Eila: El Verano del Mapa Secreto (Lectura Juvenil)",
+    "Authors": [ 4 ],
+    "Genres": [ "OTROS" ],
+    "Synopsis": "Cuatro primos pasan el verano juntos junto al mar. Dos de ellas, Carmen y Eila (las soñadoras), encuentran un cofre con un mapa y una brújula en la playa. Desobedeciendo las reglas, siguen las pistas y descubren que el verdadero tesoro no es oro, sino una vista espectacular y un recuerdo familiar tallado en un árbol hace casi cincuenta años.",
+    "Cover": "canonical::https://m.media-amazon.com/images/I/91YLyJ9wqXL._SL1500_.jpg",
+    "Networks": "",
+    "Bases": [
+      {
+        "ASIN": "B0FSZQL6LF",
+        "Base": "AMAZON"
+      }
+    ]
+  }
+}
