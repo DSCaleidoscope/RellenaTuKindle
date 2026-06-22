@@ -40,7 +40,8 @@ var Bcollapsed = [];
 var forceRefresh = true; //During the event, move it to false to avoid forcing refresh!
 var eventDate = "evento";
 var isEventWaiting = true; //Move it to false to show links to platforms
-var tracking = false; //Move it to false to avoid calling tracking function
+var tracking = true; //Move it to false to avoid calling tracking function
+var trackingURL = "https://dohitb.ddns.net/rtklog.rtk?bookid=";
 
 //Register vars
 var regType = "az";
@@ -314,7 +315,7 @@ async function parseBooks(t){
   }
 }
 
-function parseSingleBook(t){
+function parseSingleBook(t) {
   let singleBook = JSON.parse(t);
   
   //create methods & push it to the array
@@ -775,7 +776,7 @@ function navigate(asin, bookId, base) {
 
   try {
     var xhttp = new XMLHttpRequest();
-    xhttp.open("GET", "https://dohitb.ddns.net/rtklog.rtk?bookid=" + bookId, true);
+    xhttp.open("GET", trackingURL + bookId, true);
     xhttp.send();
   } catch (e) {}
 
