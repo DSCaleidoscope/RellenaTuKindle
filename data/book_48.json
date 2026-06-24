@@ -1,1 +1,17 @@
-{ "Book": { "Id": "48", "Title": "Apocalipsis Porcina", "Authors": [ 1 ], "Genres": [ "SCIFI / DISTOPIA" ], "Synopsis": "Los apocalipsis zombis suelen desarrollarse en torno a una infección humana. Pero ¿qué pasaría si esa infección afectara a los cerdos? La frenética historia de Apocalipsis porcina se centra en esta hipótesis. Además, es protagonizada por unos supervivientes que están lejos de ser los héroes habituales (inteligentes, fuertes, con recursos). Son los vecinos de Cuenca, esas personas que te puedes encontrar cualquier día en la parada de bus.", "Cover": "apocalipsis-porcina", "Networks": "", "Bases": [ { "ASIN": "282622", "Base": "BUBOK" }]}}
+{
+  "Book": {
+    "Id": "48",
+    "Title": "Apocalipsis Porcina",
+    "Authors": [ 1 ],
+    "Genres": [ "SCIFI / DISTOPIA" ],
+    "Synopsis": "Los apocalipsis zombis suelen desarrollarse en torno a una infección humana. Pero ¿qué pasaría si esa infección afectara a los cerdos? La frenética historia de Apocalipsis porcina se centra en esta hipótesis. Además, es protagonizada por unos supervivientes que están lejos de ser los héroes habituales (inteligentes, fuertes, con recursos). Son los vecinos de Cuenca, esas personas que te puedes encontrar cualquier día en la parada de bus.",
+    "Cover": "canonical::https://www.bubok.es/libro/portadaLibro/282622/1/apocalipsis-porcina.jpg?v=20260624105220",
+    "Networks": "",
+    "Bases": [
+      {
+        "ASIN": "282622::canonical::https://www.bubok.es/libros/282622/apocalipsis-porcina",
+        "Base": "BUBOK"
+      }
+    ]
+  }
+}

@@ -1,1 +1,17 @@
-{ "Book": { "Id": "20", "Title": "La Era del Oráculo", "Authors": [ 20 ], "Genres": [ "FANTASÍA" ], "Synopsis": "La Conciliación sigue su curso. Una rebelión se fragua entre aquellos que atentan contra la paz entre fae y elfos. Elige bien quiénes son aliados, y quiénes te traicionarán, pues solo podrás elegir un bando para afrontar esta nueva batalla. Mientras los Campeones investigan extraños sucesos en los bosques, Ely emprende un viaje de autoconocimiento que le permitirá conocer su verdadero potencial, pero sin alejarse de lo que verdaderamente su esencia. La Era del Oráculo se acerca... ¿Serán capaces de llegar a tiempo? Sólo el Destino lo decidirá.", "Cover": "la-era-del-oraculo", "Networks": "", "Bases": [ { "ASIN": "285775", "Base": "BUBOK" }]}}
+{
+  "Book": {
+    "Id": "20",
+    "Title": "La Era del Oráculo",
+    "Authors": [ 20 ],
+    "Genres": [ "FANTASÍA" ],
+    "Synopsis": "La Conciliación sigue su curso. Una rebelión se fragua entre aquellos que atentan contra la paz entre fae y elfos. Elige bien quiénes son aliados, y quiénes te traicionarán, pues solo podrás elegir un bando para afrontar esta nueva batalla. Mientras los Campeones investigan extraños sucesos en los bosques, Ely emprende un viaje de autoconocimiento que le permitirá conocer su verdadero potencial, pero sin alejarse de lo que verdaderamente su esencia. La Era del Oráculo se acerca... ¿Serán capaces de llegar a tiempo? Sólo el Destino lo decidirá.",
+    "Cover": "canonical::https://www.bubok.es/libro/portadaLibro/285775/1/la-era-del-oraculo.webp?v=20260624133221",
+    "Networks": "",
+    "Bases": [
+      {
+        "ASIN": "285775::canonical::https://www.bubok.es/libros/285775/la-era-del-oraculo",
+        "Base": "BUBOK"
+      }
+    ]
+  }
+}
