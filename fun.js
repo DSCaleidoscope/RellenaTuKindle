@@ -39,8 +39,8 @@ var Bcollapsed = [];
 //Config
 var forceRefresh = true; //During the event, move it to false to avoid forcing refresh!
 var eventDate = "evento";
-var isEventWaiting = false; //Move it to false to show links to platforms
-var tracking = true; //Move it to false to avoid calling tracking function
+var isEventWaiting = true; //Move it to false to show links to platforms
+var tracking = false; //Move it to false to avoid calling tracking function
 var trackingURL = "https://dohitb.ddns.net/rtklog.rtk?bookid=";
 
 //Register vars
